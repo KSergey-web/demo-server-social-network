@@ -1,10 +1,15 @@
 import { Document } from 'mongoose';
-import { IProfession } from './profession.interface';
+import { genderEnum } from '../enums/gender.enum';
 
 export interface IUser extends Document {
-  readonly email: string;
+  //readonly email: string;
 
-  readonly name: string;
+  
+  readonly password: string;
+
+  login: string;
+
+ /* readonly name: string;
 
   readonly surname: string;
 
@@ -20,7 +25,5 @@ export interface IUser extends Document {
 
   readonly avatar: string;
 
-  readonly telephone: string;
-
-  readonly profession: [IProfession];
+  readonly telephone: string;*/
 }

@@ -7,13 +7,15 @@ import {
   IsEnum,
   IsPhoneNumber,
   IsDate,
+  MinLength,
+  MaxLength,
 } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { genderEnum } from '../enums/gender.enum';
-import { ProfessionDto } from './profession.dto';
 
-export class CreateUserDto {
+/*export class CreateUserDto {
   @ApiProperty()
+  @MinLength(4)
   @IsEmail()
   readonly email: string;
 
@@ -66,8 +68,26 @@ export class CreateUserDto {
   @ApiPropertyOptional()
   @IsPhoneNumber('RU')
   readonly telephone: string;
+}*/
 
-  @IsOptional()
-  @ApiPropertyOptional()
-  readonly profession: [ProfessionDto];
+export class LoginDTO {
+  @IsString()
+  @MinLength(4)
+  login: string;
+
+  @IsString()
+  @MinLength(4)
+  password: string;
+}
+
+export class RegisterDTO extends LoginDTO {
+  @IsString()
+  @MinLength(4)
+  @MaxLength(20)
+  login: string;
+}
+
+
+export interface AuthPayload {
+  login: string;
 }
