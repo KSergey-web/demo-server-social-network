@@ -9,6 +9,7 @@ import { UserController } from './user/user.controller';
 import { UserModule } from './user/user.module';
 import { AuthController } from './auth/auth.controller';
 import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { AuthModule } from './auth/auth.module';
     MongooseModule.forRoot(process.env.MONGODB_WRITE_CONNECTION_STRING),
     UserModule,
     AuthModule,
+    SharedModule,
   ],
   controllers: [AppController, UserController, AuthController],
   providers: [AppService],

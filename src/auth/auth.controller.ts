@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, UseGuards, Request } from '@nestjs/common';
+import { Body, Controller, Get, Post, UseGuards, Request, UnprocessableEntityException } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { LoginDTO, RegisterDTO } from 'src/user/dto/create-user.dto';
 import { UserService } from 'src/user/user.service';
@@ -31,11 +31,5 @@ export class AuthController {
      };
      const token = await this.authService.login(payload);
      return { user, token };
-   }
-
-   @UseGuards(JwtAuthGuard)
-   @Get('check')
-   getProfile(@Request() req) {
-     return req.user;
    }
 }

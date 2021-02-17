@@ -1,26 +1,28 @@
 const axios = require('axios');
 
+
+
 (async () => {
   try {
-    const { data: res1 } = await axios.post('http://localhost:3001/auth/register', {
+    const  req1  = await axios.post('http://localhost:4000/auth/register', {
       login: 'sergey',
       password: '6324ab',
     });
-    console.log(res1);
+    console.log(req1.data);
 
-    const { data } = await axios.post('http://localhost:3001/auth/login', {
+    const req2 = await axios.post('http://localhost:4000/auth/login', {
       login: 'sergey',
       password: '6324ab',
     });
-    console.log(data);
+    console.log(req2.data);
 
-    const { token } = data;
-    const { data: res2 } = await axios.get('http://localhost:3001/auth/check', {
+    const { token } = req2.data;
+    const req3 = await axios.get('http://localhost:4000/user', {
       headers: { authorization: `Token ${token}` },
     });
 
-    console.log(res2);
+    console.log(req3.data);
   } catch (err) {
-    console.log(err);
+    console.log(err.response.data);
   }
 })();

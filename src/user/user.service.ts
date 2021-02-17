@@ -38,7 +38,7 @@ export class UserService {
 
   async findByPayload(payload: any) {
     const { login } = payload;
-    return await this.userModel.findOne({ login });
+    return this.sanitizeUser(await this.userModel.findOne({ login }));
   }
 
   // TODO this method is for development only, remove later
@@ -47,6 +47,8 @@ export class UserService {
   }
 
   sanitizeUser(user: IUser) {
-    return user.depopulate('password');
+    const sanitized = user.toObject();
+    delete sanitized['password'];
+    return sanitized;
   }
 }
