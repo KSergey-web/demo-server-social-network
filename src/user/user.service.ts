@@ -45,9 +45,22 @@ export class UserService {
     return await this.userModel.find().exec();
   }
 
-  sanitizeUser(user: IUser) {
+  sanitizeUser(user: UserDocument) {
     const sanitized = user.toObject();
     delete sanitized['password'];
     return sanitized;
+  }
+
+  async checkUserById(
+    id:string
+  ): Promise<UserDocument> {
+    const user = await this.userModel.findById(id);
+    if (!user){
+        throw new HttpException(
+            'User not found',
+            HttpStatus.BAD_REQUEST,
+          );
+    } 
+    return user;
   }
 }

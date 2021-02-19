@@ -1,7 +1,7 @@
 import { Document } from 'mongoose';
 import { genderEnum } from '../enums/gender.enum';
 
-export interface IUser extends Document {
+export interface IUser {
   //readonly email: string;
 
   

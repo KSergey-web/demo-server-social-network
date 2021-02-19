@@ -1,7 +1,7 @@
 import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
 
-export interface IOrganization extends Document {
+export interface IOrganization  {
   name: string;
 
   description: string;

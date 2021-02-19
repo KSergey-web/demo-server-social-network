@@ -1,14 +1,6 @@
 import {
-  IsEmail,
   IsString,
-  IsNotEmpty,
-  Matches,
-  IsOptional,
-  IsEnum,
-  IsPhoneNumber,
-  IsDate,
-  MinLength,
-  MaxLength,
+  IsMongoId,
 } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
@@ -22,4 +14,12 @@ export class CreateOrganizationDTO {
 
   @IsString()
   avatar: string;
+}
+
+export class FireUserDTO {
+  @IsMongoId()
+  userId: string;
+
+  @IsMongoId()
+  organizationId: string
 }
