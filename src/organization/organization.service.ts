@@ -92,6 +92,15 @@ export class OrganizationService {
     } else return await link.deleteOne();
   }
 
+  async checkOrganizationAndLink(id: string, user: UserDocument) {
+    const link = await this.organizationUserLink(
+      await this.checkOrganizationById(id),
+      user,
+    );
+    return link;
+  }
+  
+
   async fireUser(id: string, admin: UserDocument, user: string) {
     const organization = await this.checkOrganizationById(id);
     const link = await this.organizationUserModel.findOne({
@@ -104,6 +113,20 @@ export class OrganizationService {
       user: await this.userService.checkUserById(user),
     });
     return await link.deleteOne();
+  }
+
+  async hireUser(id: string, admin: UserDocument, user: string) {
+    const organization = await this.checkOrganizationById(id);
+    const link = await this.organizationUserModel.findOne({
+      user: admin._id,
+      organization: organization,
+    });
+    await this.checkOwnerOrganization(link);
+    const createdOrganizationUser = new this.organizationUserModel({
+      organization: organization,
+      user: await this.userService.checkUserById(user)
+  });
+    return await createdOrganizationUser.save();
   }
 
   async checkOrganizationById(id: string): Promise<OrganizationDocument> {

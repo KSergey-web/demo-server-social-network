@@ -6,6 +6,8 @@ import {
   Param,
   Patch,
   Post,
+  Req,
+  Res,
   UseGuards,
 } from '@nestjs/common';
 import { ObjectIdDTO } from '../shared/shared.dto';
@@ -13,10 +15,9 @@ import { UserDocument } from '../user/schemas/user.schema';
 import { JwtAuthGuard } from '../auth/jwt-auth.gaurd';
 import { User } from '../utilities/user.decorator';
 import { CreateOrganizationDTO, FireUserDTO, UpdateOrganizationDTO } from './dto/organization.dto';
-import { IOrganization } from './interfaces/organization.interface';
 import { OrganizationService } from './organization.service';
-import { OrganizationDocument } from './schemas/organization.schema';
 import { ApiBearerAuth } from '@nestjs/swagger';
+import {Response} from 'express'
 
 @Controller('organization')
 export class OrganizationController {
@@ -63,7 +64,7 @@ export class OrganizationController {
       user,
       params.userId,
     );
-    return 'Worker fired';
+    return 'Worker is fired';
   }
 
   @ApiBearerAuth()
@@ -71,5 +72,29 @@ export class OrganizationController {
   @Patch(':id')
   async update(@Param() params: ObjectIdDTO, @Body() organizationDTO: UpdateOrganizationDTO, @User() user: UserDocument) {
     return  this.organizationService.updateOrganization(organizationDTO, params.id, user);
+  }
+
+  @ApiBearerAuth()
+  @Get('hire/:organizationId/:userId')
+  @UseGuards(JwtAuthGuard)
+  async hireUser(@Param() params: FireUserDTO, @User() user: UserDocument) {
+    await this.organizationService.hireUser(
+      params.organizationId,
+      user,
+      params.userId,
+    );
+    return 'Worker is hired';
+  }
+
+  @ApiBearerAuth()
+  @Get('set/:id')
+  @UseGuards(JwtAuthGuard)
+  async setCurrentOrganization(
+    @Param() params: ObjectIdDTO,
+    @User() user: UserDocument,
+    @Res({ passthrough: true }) response: Response
+  ) {
+    await this.organizationService.checkOrganizationAndLink(params.id, user);
+    return response.cookie('organization', params.id);
   }
 }
