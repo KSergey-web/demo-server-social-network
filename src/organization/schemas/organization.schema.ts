@@ -5,7 +5,6 @@ export type OrganizationDocument = Organization & Document;
 
 @Schema()
 export class Organization {
-
   @Prop({ required: true })
   name: string;
 
@@ -15,7 +14,7 @@ export class Organization {
   @Prop({ required: true })
   avatar: string;
 
-  @Prop( {select: false})
+  @Prop({ select: false })
   __v: Number;
 }
 

@@ -8,18 +8,23 @@ export type OrganizationUserDocument = OrganizationUser & Document;
 
 @Schema()
 export class OrganizationUser {
-
-  @Prop( {default: 'worker'})
+  @Prop({ default: 'worker' })
   roleUser: string;
 
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Organization', required: true })
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Organization',
+    required: true,
+  })
   organization: Organization;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
   user: User;
 
-  @Prop( {select: false})
+  @Prop({ select: false })
   __v: Number;
 }
 
-export const OrganizationUserSchema = SchemaFactory.createForClass(OrganizationUser);
+export const OrganizationUserSchema = SchemaFactory.createForClass(
+  OrganizationUser,
+);

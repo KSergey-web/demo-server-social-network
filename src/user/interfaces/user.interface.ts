@@ -4,12 +4,11 @@ import { genderEnum } from '../enums/gender.enum';
 export interface IUser {
   //readonly email: string;
 
-  
   readonly password: string;
 
   login: string;
 
- /* readonly name: string;
+  /* readonly name: string;
 
   readonly surname: string;
 

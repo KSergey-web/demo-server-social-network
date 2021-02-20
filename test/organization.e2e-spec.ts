@@ -1,6 +1,5 @@
 import { HttpStatus } from '@nestjs/common';
 import * as mongoose from 'mongoose';
-import { consoleOut } from 'src/debug';
 import { CreateOrganizationDTO } from 'src/organization/dto/organization.dto';
 import { OrganizationDocument } from 'src/organization/schemas/organization.schema';
 import { LoginDTO, RegisterDTO } from 'src/user/dto/user.dto';
@@ -78,8 +77,6 @@ afterAll(async done => {
 //       .expect(HttpStatus.CREATED);
 //   });
 
-
-
 //   it('should create organization', () => {
 //     return request(app)
 //       .post('/organization')
@@ -94,31 +91,34 @@ afterAll(async done => {
 //   });
 // });
 
-
 describe('Delete Organization', () => {
   const admin: RegisterDTO = {
     login: 'username',
     password: 'password',
   };
-  
+
   let adminToken: string;
 
-  it('reg', () => {return request(app)
+  it('reg', () => {
+    return request(app)
       .post('/auth/register')
       .set('Accept', 'application/json')
-      .send(admin).expect(({ body }) => {
+      .send(admin)
+      .expect(({ body }) => {
         console.log(body);
         adminToken = body.token;
-      })});
+      });
+  });
 
   const organization: CreateOrganizationDTO = {
     name: 'org',
     description: 'desc',
-    avatar: 'ava'
+    avatar: 'ava',
   };
 
-let id;
-it('create org', () => { return request(app)
+  let id;
+  it('create org', () => {
+    return request(app)
       .post('/organization')
       .set('Accept', 'application/json')
       .set('Authorization', `Token ${adminToken}`)
@@ -129,7 +129,8 @@ it('create org', () => { return request(app)
         expect(body.organization.name).toEqual(organization.name);
         expect(body.organization.description).toEqual(organization.description);
         expect(body.organization.avatar).toEqual(organization.avatar);
-      })});
+      });
+  });
 
   it('should delete organization', () => {
     return request(app)

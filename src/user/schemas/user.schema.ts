@@ -8,7 +8,7 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
- // @Prop({ required: true })
+  // @Prop({ required: true })
   //email: string;
 
   @Prop({ required: true })
@@ -17,7 +17,7 @@ export class User {
   @Prop({ required: true })
   login: string;
 
-  @Prop( {select: false})
+  @Prop({ select: false })
   __v: Number;
   /*@Prop({ required: true })
   name: string;
@@ -39,7 +39,6 @@ export class User {
 
   @Prop({ default: null })
   telephone: string;*/
-
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

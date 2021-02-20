@@ -8,14 +8,14 @@ import { AuthService } from './auth.service';
 import { JwtStrategy } from './jwt.strategy';
 
 @Module({
-  imports:
-  [UserModule, 
+  imports: [
+    UserModule,
     PassportModule,
     JwtModule.register({
       secret: process.env.SECRET,
       signOptions: { expiresIn: 3600 },
     }),
-    SharedModule
+    SharedModule,
   ],
   providers: [AuthService, JwtStrategy],
   controllers: [AuthController],

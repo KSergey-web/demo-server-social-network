@@ -10,7 +10,7 @@ import {
   MinLength,
   MaxLength,
 } from 'class-validator';
-import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+import { ApiProperty, ApiPropertyOptional, OmitType, PartialType } from '@nestjs/swagger';
 import { genderEnum } from '../enums/gender.enum';
 
 /*export class CreateUserDto {
@@ -73,21 +73,16 @@ import { genderEnum } from '../enums/gender.enum';
 export class LoginDTO {
   @IsString()
   @MinLength(4)
+  @MaxLength(20)
+  @ApiProperty()
   login: string;
 
   @IsString()
   @MinLength(4)
+  @ApiProperty()
   password: string;
 }
 
-export class RegisterDTO extends LoginDTO {
-  @IsString()
-  @MinLength(4)
-  @MaxLength(20)
-  login: string;
-}
+export class RegisterDTO extends LoginDTO {}
 
-
-export interface AuthPayload {
-  login: string;
-}
+export class UpdateUserDTO extends OmitType(PartialType(RegisterDTO), ['password'] as const) {}

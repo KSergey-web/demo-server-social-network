@@ -8,6 +8,6 @@ import { HttpExceptionFilter } from './http-exception.filter';
       provide: APP_FILTER,
       useClass: HttpExceptionFilter,
     },
-  ]
+  ],
 })
 export class SharedModule {}

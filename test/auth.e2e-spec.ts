@@ -67,7 +67,6 @@ describe('AUTH', () => {
       .expect(HttpStatus.CREATED);
   });
 
-
   it('current user', () => {
     return request(app)
       .get('/user')

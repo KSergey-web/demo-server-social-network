@@ -5,6 +5,7 @@ import {
   HttpException,
   HttpStatus,
 } from '@nestjs/common';
+import { consoleOut } from 'src/debug';
 
 @Catch()
 export class HttpExceptionFilter implements ExceptionFilter {
@@ -15,7 +16,6 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const status = exception.getStatus
       ? exception.getStatus()
       : HttpStatus.INTERNAL_SERVER_ERROR;
-
     const errorResponse = {
       code: status,
       timestamp: new Date().toLocaleDateString(),
@@ -25,7 +25,8 @@ export class HttpExceptionFilter implements ExceptionFilter {
         status !== HttpStatus.INTERNAL_SERVER_ERROR
           ? exception.message || null
           : 'Internal server error',
-      bodyreq:request.body
+      details:exception.getResponse != undefined ? exception.getResponse():{},
+      bodyreq: request.body,
     };
 
     response.status(status).json(errorResponse);

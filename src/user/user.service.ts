@@ -3,8 +3,9 @@ import { Model } from 'mongoose';
 import { User, UserDocument } from './schemas/user.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { IUser } from './interfaces/user.interface';
-import { LoginDTO, RegisterDTO } from './dto/user.dto';
+import { LoginDTO, RegisterDTO, UpdateUserDTO } from './dto/user.dto';
 import * as bcrypt from 'bcrypt';
+import { consoleOut } from '../debug';
 
 @Injectable()
 export class UserService {
@@ -51,16 +52,16 @@ export class UserService {
     return sanitized;
   }
 
-  async checkUserById(
-    id:string
-  ): Promise<UserDocument> {
+  async checkUserById(id: string): Promise<UserDocument> {
     const user = await this.userModel.findById(id);
-    if (!user){
-        throw new HttpException(
-            'User not found',
-            HttpStatus.BAD_REQUEST,
-          );
-    } 
+    if (!user) {
+      throw new HttpException('User not found', HttpStatus.BAD_REQUEST);
+    }
     return user;
+  }
+
+  async updateUser(userDTO: UpdateUserDTO, user: UserDocument): Promise<string> {
+    await (await this.userModel.findOne(user)).updateOne(userDTO);
+    return "User updated";
   }
 }
