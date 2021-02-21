@@ -16,8 +16,10 @@ import { JwtAuthGuard } from '../auth/jwt-auth.gaurd';
 import { User } from '../utilities/user.decorator';
 import { CreateOrganizationDTO, FireUserDTO, UpdateOrganizationDTO } from './dto/organization.dto';
 import { OrganizationService } from './organization.service';
-import { ApiBearerAuth } from '@nestjs/swagger';
-import {Response} from 'express'
+import { ApiBearerAuth, ApiHeader } from '@nestjs/swagger';
+import {Response, Request} from 'express'
+import { cookiesEnum } from 'src/enums/cookies.enum';
+import { consoleOut } from 'src/debug';
 
 @Controller('organization')
 export class OrganizationController {
@@ -95,6 +97,21 @@ export class OrganizationController {
     @Res({ passthrough: true }) response: Response
   ) {
     await this.organizationService.checkOrganizationAndLink(params.id, user);
-    return response.cookie('organization', params.id);
+    response.cookie(cookiesEnum.organizationId, params.id);
+    return "Success cookies set";
+  }
+
+  @ApiBearerAuth()
+  @ApiHeader({
+    name: 'Cookie',
+    description: 'set "organization=Id;"',
+  })
+  @Get('users')
+  @UseGuards(JwtAuthGuard)
+  async getUsers(
+    @Req() request: Request
+  ) {
+    let organizationId = request.cookies[cookiesEnum.organizationId];
+    return await this.organizationService.getUsers(organizationId);
   }
 }

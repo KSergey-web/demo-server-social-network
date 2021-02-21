@@ -36,7 +36,7 @@ export class UserService {
     }
   }
 
-  async findByPayload(payload: any) {
+  async findByPayload(payload: any) {//используется для получения пользователя в JWTStrategy
     const { login } = payload;
     return this.sanitizeUser(await this.userModel.findOne({ login }));
   }

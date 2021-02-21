@@ -6,6 +6,7 @@ import * as cookieParser from 'cookie-parser';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.use(cookieParser());
   const options = new DocumentBuilder()
     .setTitle('rest API')
     .setDescription('API description')
@@ -21,6 +22,5 @@ async function bootstrap() {
     }),
   );
   await app.listen(process.env.PORT || 4000);
-  app.use(cookieParser());
 }
 bootstrap();

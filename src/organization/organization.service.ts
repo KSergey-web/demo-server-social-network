@@ -17,6 +17,7 @@ import {
   Organization,
   OrganizationDocument,
 } from './schemas/organization.schema';
+import { consoleOut } from 'src/debug';
 
 @Injectable()
 export class OrganizationService {
@@ -97,22 +98,26 @@ export class OrganizationService {
       await this.checkOrganizationById(id),
       user,
     );
+    consoleOut(link,"lll");
     return link;
   }
   
 
   async fireUser(id: string, admin: UserDocument, user: string) {
     const organization = await this.checkOrganizationById(id);
+    consoleOut(id,"org");
+    consoleOut(admin,"adm");
+    consoleOut(user,"user");
     const link = await this.organizationUserModel.findOne({
       user: admin._id,
       organization: organization,
     });
+    consoleOut(await this.userService.checkUserById(user),"link")
     await this.checkOwnerOrganization(link);
-    await this.organizationUserModel.deleteOne({
+    return await this.organizationUserModel.deleteOne({
       organization: organization,
       user: await this.userService.checkUserById(user),
     });
-    return await link.deleteOne();
   }
 
   async hireUser(id: string, admin: UserDocument, user: string) {
@@ -143,5 +148,10 @@ export class OrganizationService {
     await this.checkOwnerOrganization(link);
     await organization.updateOne(organizationDTO);
     return "Organization updated";
+  }
+
+  async getUsers(organizationId:any): Promise<OrganizationUserDocument[]> {
+    let links = await this.organizationUserModel.find({organization:organizationId}).populate('user');
+    return links;
   }
 }

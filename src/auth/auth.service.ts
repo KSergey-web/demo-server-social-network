@@ -14,7 +14,15 @@ export class AuthService {
     return this.jwtService.sign(payload);
   }
 
-  async validateUser(payload: any) {
+  async validateUser(payload: any) {//Сюда передаются данные декодированного токена
     return await this.userService.findByPayload(payload);
+  }
+
+  async verifyUser(token: any) {
+    const payload = this.jwtService.verify(
+      token,
+    );
+    const user = await this.userService.findByPayload(payload);
+    return user;
   }
 }
