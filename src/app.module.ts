@@ -12,6 +12,8 @@ import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { OrganizationModule } from './organization/organization.module';
 import { SocketModule } from './socket/socket.module';
+import { MessageModule } from './message/message.module';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -22,6 +24,8 @@ import { SocketModule } from './socket/socket.module';
     SharedModule,
     OrganizationModule,
     SocketModule,
+    MessageModule,
+    ChatModule,
   ],
   controllers: [AppController, UserController, AuthController],
   providers: [AppService],
