@@ -33,13 +33,13 @@ export class ChatController {
   }
 
   @ApiBearerAuth()
-  @Get('hire/:chatId/:userId')
+  @Get('add/:chat/:user')
   @UseGuards(JwtAuthGuard)
-  async hireUser(@Param() params: AddChatUserDTO, @User() {_id}: UserDocument) {
+  async addUser(@Param() params: AddChatUserDTO, @User() {_id}: UserDocument) {
     await this.chatService.addUser(
       params,
       _id,
     );
-    return 'Worker is hired';
+    return 'Worker is added to chat';
   }
 }

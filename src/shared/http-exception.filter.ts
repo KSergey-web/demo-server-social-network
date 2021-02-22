@@ -16,7 +16,8 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const status = exception.getStatus
       ? exception.getStatus()
       : HttpStatus.INTERNAL_SERVER_ERROR;
-     let details: any = exception.getResponse(); 
+     // consoleOut(request,"req");
+     let details: any = exception.getResponse != undefined ? exception.getResponse(): exception; 
     const errorResponse = {
       code: status,
       timestamp: new Date().toLocaleDateString(),
@@ -28,6 +29,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
           : 'Internal server error',
       details: details?.message,
       bodyreq: request.body,
+      paramreq: request.params,
+      queryreq: request.query,
+      cookiesreq: request.cookies,
     };
 
     response.status(status).json(errorResponse);

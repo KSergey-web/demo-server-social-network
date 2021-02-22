@@ -1,9 +1,10 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { consoleOut } from 'src/debug';
 import { AddChatUserDTO, CreateChatDTO } from './dto/chat.dto';
 import { IChatUser } from './interfaces/chat.interface';
-import { ChatUserDocument } from './schemas/chat-user.schema';
+import { ChatUser, ChatUserDocument } from './schemas/chat-user.schema';
 import { Chat, ChatDocument } from './schemas/chat.schema';
 
 @Injectable()
@@ -11,8 +12,8 @@ export class ChatService {
     constructor(
         @InjectModel(Chat.name)
         private chatModel: Model<ChatDocument>,
-        @InjectModel(Chat.name)
-        private chatUserModel: Model<ChatUserDocument>
+        @InjectModel(ChatUser.name)
+        private chatUserModel: Model<ChatUserDocument>,
       ) {}
       
       async create(chatDTO: CreateChatDTO, userid: string) {
@@ -44,7 +45,7 @@ export class ChatService {
       ): Promise<ChatUserDocument> {
         const link = await this.chatUserModel.findOne({
           user: userid,
-          Chat: chatid,
+          chat: chatid,
         });
         if (!link) {
           throw new HttpException(
