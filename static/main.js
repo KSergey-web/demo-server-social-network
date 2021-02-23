@@ -37,6 +37,7 @@ const app = new Vue({
     created() {
         this.socket = io.connect('http://localhost:4000')
         this.socket.on('msgToClient', (message) => {
+            console.log(message);
             this.receivedMessage(message)
         })
     }

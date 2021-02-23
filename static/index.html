@@ -18,12 +18,13 @@
                     <br>
                     <div id="status"></div>
                     <div id="chat">
-                        <input type="text" v-model="name" id="username" class="form-control" placeholder="Enter name...">
+                        <input type="text" v-model="name" id="username" class="form-control" placeholder="Enter token...">
+                        <input type="text" v-model="chat" id="chat" class="form-control" placeholder="Enter chat...">
                         <br>
                         <div class="card">
                             <div id="messages" class="card-block">
                                 <ul>
-                                    <li v-for="message of messages">{{ message.name }}: {{ message.text }}</li>
+                                    <li v-for="message of messages">{{ message.chat }}: {{ message.text }}</li>
                                 </ul>
                             </div>
                         </div>

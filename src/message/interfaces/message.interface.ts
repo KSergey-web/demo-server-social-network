@@ -1,7 +1,9 @@
 import { Document } from 'mongoose';
 
 export interface IMessage {
-  message: string;
+  _id?: string;
+
+  text: string;
   
   date: Date;
 

@@ -5,7 +5,7 @@ export class CreateMessageDTO {
   @IsString()
   @MinLength(1)
   @ApiProperty()
-  message: string;
+  text: string;
 
   @IsMongoId()
   @ApiProperty()

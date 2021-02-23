@@ -30,6 +30,7 @@ export class SocketService {
     try{
     const user = await this.authService.verifyUser(token);
     this.usersOnline.set(user._id, client.id);
+    this.logger.log( `auth ${this.usersOnline.get(user._id)}`);
     this.addClientToRooms(client, user._id);
     } catch (err) {
       this.logger.error(`Invalid token: ${token}`);
@@ -44,12 +45,25 @@ export class SocketService {
       });
   }
 
-  async addUserToRoom(userid: string, chatid: string) {
+  addUserToRoom(userid: string, chatid: string) {
+    const client = this.getClient(userid);
+    if (!client) return;
+    client.join(chatid);
+    return;
+  }
+
+  deleteUserFromRoom(userid: any, chatid: any) {
+    const client = this.getClient(userid);
+    if (!client) return;
+    client.leave(chatid);
+    return;
+  }
+
+  getClient(userid: any){
     if (!this.usersOnline.has(userid)) {
       this.logger.log(`user with id ${userid} offline`);
-      return;
+      return null;
     };
-    const client: Socket = this.server.sockets.connected[this.usersOnline.get(userid)];
-    client.join(chatid);
+    return this.server.sockets.connected[this.usersOnline.get(userid)];
   }
 }

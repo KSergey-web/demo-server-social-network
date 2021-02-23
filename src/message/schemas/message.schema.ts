@@ -10,7 +10,7 @@ export type MessageDocument = Message & Document;
 export class Message {
   
   @Prop({required: true})
-  message: string;
+  text: string;
   
   @Prop({required: true})
   date: Date;

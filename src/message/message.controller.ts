@@ -1,10 +1,11 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { MessageService } from './message.service';
 import { User } from '../utilities/user.decorator';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { CreateMessageDTO } from './dto/message.dto';
+import { ObjectIdDTO } from 'src/shared/shared.dto';
 
 @Controller('message')
 export class MessageController {
@@ -18,5 +19,15 @@ export class MessageController {
     @User() user: UserDocument,
   ) {
     return await this.messageService.create(createMessageDTO, user._id);
+  }
+
+  @ApiBearerAuth()
+  @Get(':id')
+  @UseGuards(JwtAuthGuard)
+  async getMessagesFromChat(
+    @Param() params: ObjectIdDTO,
+    @User() user: UserDocument
+  ) {
+    return await this.messageService.getMessagesFromChat(params.id, user._id);
   }
 }

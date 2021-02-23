@@ -7,6 +7,7 @@ import { UserService } from 'src/user/user.service';
 import { AuthService } from 'src/auth/auth.service';
 import { BaseWsExceptionFilter } from '@nestjs/websockets';
 import { consoleOut } from 'src/debug';
+import { IMessage } from 'src/message/interfaces/message.interface';
 
 @WebSocketGateway()
 export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
@@ -29,8 +30,9 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('msgToServer')
-  handleMessage(client: Socket, payload: string): void {
-    this.server.emit('msgToClient', payload);
+  handleMessage(message: IMessage): void {
+    this.logger.log(message.text);
+    this.server.to(message.chat).emit('msgToClient', message);
   }
 
   

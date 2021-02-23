@@ -66,7 +66,9 @@ export class ChatService {
           chatid,
           userid,
         );
-       return await link.deleteOne();
+        await link.deleteOne();
+        this.socketService.deleteUserFromRoom(link.user, link.chat);
+         return;
     }
 
     async addUser( addChatUserDTO: AddChatUserDTO, userid: any) {
@@ -79,7 +81,7 @@ export class ChatService {
         await this.userService.checkUserById(addChatUserDTO.user);
         const createdChatUser = new this.chatUserModel(addChatUserDTO);
         await createdChatUser.save();
-
+        this.socketService.addUserToRoom(addChatUserDTO.user,chatid);
         return ;
     }
 

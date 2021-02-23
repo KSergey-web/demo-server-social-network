@@ -26,7 +26,7 @@ import { join } from 'path';
     SharedModule,
     OrganizationModule,
     //SocketModule,
-    ChatModule,
+    //ChatModule,
     MessageModule,
       ServeStaticModule.forRoot({
         rootPath: join(__dirname, '..', 'static'),
