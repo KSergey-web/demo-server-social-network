@@ -1,9 +1,11 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { forwardRef, HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { consoleOut } from 'src/debug';
+import { UserService } from 'src/user/user.service';
+import { SocketService } from '../socket/socket.service';
 import { AddChatUserDTO, CreateChatDTO } from './dto/chat.dto';
-import { IChatUser } from './interfaces/chat.interface';
+import { IChat, IChatUser } from './interfaces/chat.interface';
 import { ChatUser, ChatUserDocument } from './schemas/chat-user.schema';
 import { Chat, ChatDocument } from './schemas/chat.schema';
 
@@ -14,6 +16,9 @@ export class ChatService {
         private chatModel: Model<ChatDocument>,
         @InjectModel(ChatUser.name)
         private chatUserModel: Model<ChatUserDocument>,
+        @Inject(forwardRef(() => SocketService))
+        private readonly socketService: SocketService,
+        private readonly userService: UserService
       ) {}
       
       async create(chatDTO: CreateChatDTO, userid: string) {
@@ -71,7 +76,21 @@ export class ChatService {
           user: userid,
           chat: chatid,
         });
+        await this.userService.checkUserById(addChatUserDTO.user);
         const createdChatUser = new this.chatUserModel(addChatUserDTO);
-        return await createdChatUser.save();
+        await createdChatUser.save();
+
+        return ;
     }
+
+    async getChats(userid: any):  Promise<Array<IChat>> {
+      const links = await this.chatUserModel.find({
+        user: userid
+      }).populate('chat');
+      let chats: Array<IChat> = [];
+      links.forEach(function (item, i, arr) {
+      chats.push(item.chat);
+      });
+      return chats;
+  }
 }

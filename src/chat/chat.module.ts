@@ -1,10 +1,11 @@
-import { Module } from '@nestjs/common';
+import { forwardRef, Module } from '@nestjs/common';
 import { ChatService } from './chat.service';
 import { ChatController } from './chat.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Chat, ChatSchema } from './schemas/chat.schema';
 import { UserModule } from 'src/user/user.module';
 import { ChatUser, ChatUserSchema } from './schemas/chat-user.schema';
+import { SocketModule } from '../socket/socket.module';
 
 @Module({
   imports: [
@@ -12,7 +13,8 @@ import { ChatUser, ChatUserSchema } from './schemas/chat-user.schema';
       { name: Chat.name, schema: ChatSchema },
       { name: ChatUser.name, schema: ChatUserSchema }
     ]),
-    UserModule
+    UserModule, 
+    forwardRef(() => SocketModule)
   ],
   controllers: [ChatController],
   providers: [ChatService],

@@ -42,4 +42,11 @@ export class ChatController {
     );
     return 'Worker is added to chat';
   }
+
+  @ApiBearerAuth()
+  @Get()
+  @UseGuards(JwtAuthGuard)
+  async getChats(@User() {_id}: UserDocument) {
+    return await this.chatService.getChats(_id);
+  }
 }

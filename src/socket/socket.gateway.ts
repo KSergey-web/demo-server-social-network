@@ -1,16 +1,16 @@
-import { WebSocketGateway, SubscribeMessage, MessageBody, WebSocketServer, OnGatewayConnection, OnGatewayDisconnect } from '@nestjs/websockets';
+import { WebSocketGateway, SubscribeMessage, MessageBody, WebSocketServer, OnGatewayConnection, OnGatewayDisconnect, WsException, ConnectedSocket } from '@nestjs/websockets';
 import { SocketService } from './socket.service';
-import { CreateSocketDto } from './dto/create-socket.dto';
+import { AuthDto, CreateSocketDto } from './dto/socket.dto';
 import { Socket, Server } from 'socket.io';
-import { Logger } from '@nestjs/common';
+import { Logger, UseFilters } from '@nestjs/common';
 import { UserService } from 'src/user/user.service';
 import { AuthService } from 'src/auth/auth.service';
+import { BaseWsExceptionFilter } from '@nestjs/websockets';
+import { consoleOut } from 'src/debug';
 
 @WebSocketGateway()
 export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
   constructor(private readonly socketService: SocketService,
-    private readonly userService: UserService,
-    private readonly authService: AuthService,
     ) {}
 
   @WebSocketServer() server: Server;
@@ -22,13 +22,24 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
     return this.socketService.create(createSocketDto);
   }
 
+  @SubscribeMessage('auth')
+  auth(@MessageBody() createSocketDto: AuthDto,
+  @ConnectedSocket() client: Socket) {
+    return this.socketService.auth(client, createSocketDto);
+  }
+
+  @SubscribeMessage('msgToServer')
+  handleMessage(client: Socket, payload: string): void {
+    this.server.emit('msgToClient', payload);
+  }
+
+  
   handleDisconnect(client: Socket) {
     this.logger.log(`Client disconnected: ${client.id}`);
   }
-
+  
+  
   async handleConnection(client: Socket, ...args: any[]) {
     this.logger.log(`Client connected: ${client.id}`);
-    const user = await this.authService.verifyUser(client.handshake.headers.authorization);
-    !user && client.disconnect();
   }
 }

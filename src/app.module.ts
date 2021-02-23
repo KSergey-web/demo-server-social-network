@@ -14,20 +14,25 @@ import { OrganizationModule } from './organization/organization.module';
 import { SocketModule } from './socket/socket.module';
 import { MessageModule } from './message/message.module';
 import { ChatModule } from './chat/chat.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
     configModule,
     MongooseModule.forRoot(process.env.MONGODB_WRITE_CONNECTION_STRING),
-    UserModule,
-    AuthModule,
+    //UserModule,
+    //AuthModule,
     SharedModule,
     OrganizationModule,
-    SocketModule,
-    MessageModule,
+    //SocketModule,
     ChatModule,
+    MessageModule,
+      ServeStaticModule.forRoot({
+        rootPath: join(__dirname, '..', 'static'),
+      })
   ],
-  controllers: [AppController, UserController, AuthController],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
