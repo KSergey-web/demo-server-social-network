@@ -14,10 +14,16 @@ import { ObjectIdDTO } from '../shared/shared.dto';
 import { UserDocument } from '../user/schemas/user.schema';
 import { JwtAuthGuard } from '../auth/jwt-auth.gaurd';
 import { User } from '../utilities/user.decorator';
-import { CreateOrganizationDTO, FireUserDTO, UpdateOrganizationDTO } from './dto/organization.dto';
+import {
+  AssignPositionDTO,
+  CreateOrganizationDTO,
+  FireUserDTO,
+  HireUserDTO,
+  UpdateOrganizationDTO,
+} from './dto/organization.dto';
 import { OrganizationService } from './organization.service';
 import { ApiBearerAuth, ApiHeader } from '@nestjs/swagger';
-import {Response, Request} from 'express'
+import { Response, Request } from 'express';
 import { cookiesEnum } from 'src/enums/cookies.enum';
 import { consoleOut } from 'src/debug';
 
@@ -72,19 +78,23 @@ export class OrganizationController {
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard)
   @Patch(':id')
-  async update(@Param() params: ObjectIdDTO, @Body() organizationDTO: UpdateOrganizationDTO, @User() user: UserDocument) {
-    return  this.organizationService.updateOrganization(organizationDTO, params.id, user);
+  async update(
+    @Param() params: ObjectIdDTO,
+    @Body() organizationDTO: UpdateOrganizationDTO,
+    @User() user: UserDocument,
+  ) {
+    return this.organizationService.updateOrganization(
+      organizationDTO,
+      params.id,
+      user,
+    );
   }
 
   @ApiBearerAuth()
-  @Get('hire/:organizationId/:userId')
+  @Post('hire')
   @UseGuards(JwtAuthGuard)
-  async hireUser(@Param() params: FireUserDTO, @User() user: UserDocument) {
-    await this.organizationService.hireUser(
-      params.organizationId,
-      user,
-      params.userId,
-    );
+  async hireUser(@Body() body: HireUserDTO, @User() user: UserDocument) {
+    await this.organizationService.hireUser(body, user);
     return 'Worker is hired';
   }
 
@@ -94,11 +104,11 @@ export class OrganizationController {
   async setCurrentOrganization(
     @Param() params: ObjectIdDTO,
     @User() user: UserDocument,
-    @Res({ passthrough: true }) response: Response
+    @Res({ passthrough: true }) response: Response,
   ) {
     await this.organizationService.checkOrganizationAndLink(params.id, user);
     response.cookie(cookiesEnum.organizationId, params.id);
-    return "Success cookies set";
+    return 'Success cookies set';
   }
 
   @ApiBearerAuth()
@@ -108,10 +118,28 @@ export class OrganizationController {
   })
   @Get('users')
   @UseGuards(JwtAuthGuard)
-  async getUsers(
-    @Req() request: Request
-  ) {
+  async getUsers(@Req() request: Request) {
     let organizationId = request.cookies[cookiesEnum.organizationId];
     return await this.organizationService.getUsers(organizationId);
+  }
+
+  @ApiBearerAuth()
+  @ApiHeader({
+    name: 'Cookie',
+    description: 'set "organization=Id;"',
+  })
+  @Patch('position')
+  @UseGuards(JwtAuthGuard)
+  async assignPosition(
+    @Body() assignPositionDTO: AssignPositionDTO,
+    @User() { _id }: UserDocument,
+    @Req() request: Request,
+  ) {
+    let organizationId = request.cookies[cookiesEnum.organizationId];
+    return await this.organizationService.assignPosition(
+      assignPositionDTO,
+      organizationId,
+      _id,
+    );
   }
 }

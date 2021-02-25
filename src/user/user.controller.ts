@@ -30,6 +30,6 @@ export class UserController {
   @UseGuards(JwtAuthGuard)
   @Patch()
   async update(@Body() userDTO: UpdateUserDTO, @User() user: UserDocument) {
-    return  this.userService.updateUser(userDTO,user);
+    return this.userService.updateUser(userDTO, user);
   }
 }

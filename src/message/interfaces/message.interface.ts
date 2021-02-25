@@ -4,7 +4,7 @@ export interface IMessage {
   _id?: string;
 
   text: string;
-  
+
   date: Date;
 
   editing?: boolean;
@@ -12,5 +12,4 @@ export interface IMessage {
   chat: string;
 
   user: string;
-
 }

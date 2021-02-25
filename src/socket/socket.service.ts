@@ -13,8 +13,8 @@ export class SocketService {
     private readonly authService: AuthService,
     @Inject(forwardRef(() => ChatService))
     private readonly chatService: ChatService,
-    ) {}
-    
+  ) {}
+
   @WebSocketServer() server: Server;
 
   create(createSocketDto: CreateSocketDto) {
@@ -23,26 +23,26 @@ export class SocketService {
 
   private usersOnline = new Map();
 
-  private logger: Logger = new Logger('SocketService'); 
-  
+  private logger: Logger = new Logger('SocketService');
+
   async auth(client: Socket, auth: AuthDto) {
     const token = auth.token;
-    try{
-    const user = await this.authService.verifyUser(token);
-    this.usersOnline.set(user._id, client.id);
-    this.logger.log( `auth ${this.usersOnline.get(user._id)}`);
-    this.addClientToRooms(client, user._id);
+    try {
+      const user = await this.authService.verifyUser(token);
+      this.usersOnline.set(user._id, client.id);
+      this.logger.log(`auth ${this.usersOnline.get(user._id)}`);
+      this.addClientToRooms(client, user._id);
     } catch (err) {
       this.logger.error(`Invalid token: ${token}`);
-    };
+    }
     return;
   }
 
   async addClientToRooms(client: Socket, userid: string) {
     const chats: Array<IChat> = await this.chatService.getChats(userid);
-    chats.forEach(function (chat, i, arr) {
+    chats.forEach(function(chat, i, arr) {
       client.join(chat._id);
-      });
+    });
   }
 
   addUserToRoom(userid: string, chatid: string) {
@@ -59,11 +59,11 @@ export class SocketService {
     return;
   }
 
-  getClient(userid: any){
+  getClient(userid: any) {
     if (!this.usersOnline.has(userid)) {
       this.logger.log(`user with id ${userid} offline`);
       return null;
-    };
+    }
     return this.server.sockets.connected[this.usersOnline.get(userid)];
   }
 }

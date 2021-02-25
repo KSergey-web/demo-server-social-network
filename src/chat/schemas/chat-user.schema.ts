@@ -8,7 +8,6 @@ export type ChatUserDocument = ChatUser & Document;
 
 @Schema()
 export class ChatUser {
-
   @Prop({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Chat',

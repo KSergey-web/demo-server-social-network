@@ -10,7 +10,7 @@ import { ObjectIdDTO } from 'src/shared/shared.dto';
 @Controller('message')
 export class MessageController {
   constructor(private readonly messageService: MessageService) {}
-  
+
   @ApiBearerAuth()
   @Post()
   @UseGuards(JwtAuthGuard)
@@ -26,7 +26,7 @@ export class MessageController {
   @UseGuards(JwtAuthGuard)
   async getMessagesFromChat(
     @Param() params: ObjectIdDTO,
-    @User() user: UserDocument
+    @User() user: UserDocument,
   ) {
     return await this.messageService.getMessagesFromChat(params.id, user._id);
   }

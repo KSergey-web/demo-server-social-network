@@ -9,31 +9,30 @@ import { Message, MessageDocument } from './schemas/message.schema';
 
 @Injectable()
 export class MessageService {
-    constructor(
-        @InjectModel(Message.name)
-        private messageModel: Model<MessageDocument>,
-        private readonly chatService: ChatService,
-        private readonly socketGateway: SocketGateway,
-      ) {}
-    
-      async create(createMessageDTO: CreateMessageDTO, userid: any) {
-        await this.chatService.checkChatById(createMessageDTO.chat);
-        await this.chatService.chatUserLink(createMessageDTO.chat, userid);
-        const message: IMessage = {
-            ...createMessageDTO,
-            date: new Date(),
-            user: userid,
-          };
-        const createdMessage = new this.messageModel(message);
-        await createdMessage.save()
-        this.socketGateway.handleMessage(message);
-        return createdMessage;
-        
-      }
+  constructor(
+    @InjectModel(Message.name)
+    private messageModel: Model<MessageDocument>,
+    private readonly chatService: ChatService,
+    private readonly socketGateway: SocketGateway,
+  ) {}
 
-      async getMessagesFromChat(chat: any, user: any): Promise<Array<Message>> {
-        await this.chatService.checkChatById(chat);
-        await this.chatService.chatUserLink(chat, user);
-        return await this.messageModel.find({chat});
-      }
+  async create(createMessageDTO: CreateMessageDTO, userid: any) {
+    await this.chatService.checkChatById(createMessageDTO.chat);
+    await this.chatService.chatUserLink(createMessageDTO.chat, userid);
+    const message: IMessage = {
+      ...createMessageDTO,
+      date: new Date(),
+      user: userid,
+    };
+    const createdMessage = new this.messageModel(message);
+    await createdMessage.save();
+    this.socketGateway.handleMessage(message);
+    return createdMessage;
+  }
+
+  async getMessagesFromChat(chat: any, user: any): Promise<Array<Message>> {
+    await this.chatService.checkChatById(chat);
+    await this.chatService.chatUserLink(chat, user);
+    return await this.messageModel.find({ chat });
+  }
 }

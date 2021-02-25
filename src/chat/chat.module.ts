@@ -11,13 +11,13 @@ import { SocketModule } from '../socket/socket.module';
   imports: [
     MongooseModule.forFeature([
       { name: Chat.name, schema: ChatSchema },
-      { name: ChatUser.name, schema: ChatUserSchema }
+      { name: ChatUser.name, schema: ChatUserSchema },
     ]),
-    UserModule, 
-    forwardRef(() => SocketModule)
+    UserModule,
+    forwardRef(() => SocketModule),
   ],
   controllers: [ChatController],
   providers: [ChatService],
-  exports:[ChatService]
+  exports: [ChatService],
 })
 export class ChatModule {}

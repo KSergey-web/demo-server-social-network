@@ -1,3 +1,3 @@
 export enum cookiesEnum {
-  organizationId = 'organization'
+  organizationId = 'organization',
 }

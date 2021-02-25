@@ -12,4 +12,4 @@ export class CreateMessageDTO {
   chat: string;
 }
 
-export class UpdateMessageDTO  extends CreateMessageDTO {}
+export class UpdateMessageDTO extends CreateMessageDTO {}

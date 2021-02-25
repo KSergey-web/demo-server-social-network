@@ -1,4 +1,13 @@
-import { WebSocketGateway, SubscribeMessage, MessageBody, WebSocketServer, OnGatewayConnection, OnGatewayDisconnect, WsException, ConnectedSocket } from '@nestjs/websockets';
+import {
+  WebSocketGateway,
+  SubscribeMessage,
+  MessageBody,
+  WebSocketServer,
+  OnGatewayConnection,
+  OnGatewayDisconnect,
+  WsException,
+  ConnectedSocket,
+} from '@nestjs/websockets';
 import { SocketService } from './socket.service';
 import { AuthDto, CreateSocketDto } from './dto/socket.dto';
 import { Socket, Server } from 'socket.io';
@@ -11,12 +20,11 @@ import { IMessage } from 'src/message/interfaces/message.interface';
 
 @WebSocketGateway()
 export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
-  constructor(private readonly socketService: SocketService,
-    ) {}
+  constructor(private readonly socketService: SocketService) {}
 
   @WebSocketServer() server: Server;
 
-  private logger: Logger = new Logger('SocketGateway'); 
+  private logger: Logger = new Logger('SocketGateway');
 
   @SubscribeMessage('createSocket')
   create(@MessageBody() createSocketDto: CreateSocketDto) {
@@ -24,8 +32,10 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('auth')
-  auth(@MessageBody() createSocketDto: AuthDto,
-  @ConnectedSocket() client: Socket) {
+  auth(
+    @MessageBody() createSocketDto: AuthDto,
+    @ConnectedSocket() client: Socket,
+  ) {
     return this.socketService.auth(client, createSocketDto);
   }
 
@@ -35,12 +45,10 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.server.to(message.chat).emit('msgToClient', message);
   }
 
-  
   handleDisconnect(client: Socket) {
     this.logger.log(`Client disconnected: ${client.id}`);
   }
-  
-  
+
   async handleConnection(client: Socket, ...args: any[]) {
     this.logger.log(`Client connected: ${client.id}`);
   }

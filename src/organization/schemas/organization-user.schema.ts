@@ -8,8 +8,11 @@ export type OrganizationUserDocument = OrganizationUser & Document;
 
 @Schema()
 export class OrganizationUser {
-  @Prop({ default: 'worker' })
+  @Prop({ default: 'user' })
   roleUser: string;
+
+  @Prop({ default: 'worker' })
+  position: string;
 
   @Prop({
     type: mongoose.Schema.Types.ObjectId,

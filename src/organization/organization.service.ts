@@ -3,8 +3,13 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { UserDocument } from '../user/schemas/user.schema';
 import { UserService } from '../user/user.service';
-import { roleUserEnum } from '../enums/role-user.enum';
-import { CreateOrganizationDTO, UpdateOrganizationDTO } from './dto/organization.dto';
+import { roleUserEnum } from '../organization/enums/role-user.enum';
+import {
+  AssignPositionDTO,
+  CreateOrganizationDTO,
+  HireUserDTO,
+  UpdateOrganizationDTO,
+} from './dto/organization.dto';
 import {
   IOrganization,
   IOrganizationUser,
@@ -33,7 +38,7 @@ export class OrganizationService {
     const createdOrganization = new this.organizationModel(organizationDTO);
     await createdOrganization.save();
     const organizationUser: IOrganizationUser = {
-      roleUser: roleUserEnum.admin,
+      roleUser: roleUserEnum.superUser,
       organization: createdOrganization._id,
       user: userid,
     };
@@ -45,12 +50,15 @@ export class OrganizationService {
   }
 
   async organizationUserLink(
-    organization: OrganizationDocument,
-    user: UserDocument,
+    organizationid: string,
+    userid: string,
   ): Promise<OrganizationUserDocument> {
+    const obj: IOrganizationUser = {
+      user: userid,
+      organization: organizationid,
+    };
     const link = await this.organizationUserModel.findOne({
-      user: user._id,
-      organization: organization._id,
+      obj,
     });
     if (!link) {
       throw new HttpException(
@@ -64,7 +72,7 @@ export class OrganizationService {
   async checkOwnerOrganization(
     link: OrganizationUserDocument,
   ): Promise<OrganizationUserDocument> {
-    if (link.roleUser != roleUserEnum.admin) {
+    if (link.roleUser != roleUserEnum.superUser) {
       throw new HttpException(
         'You are not owner this organization',
         HttpStatus.UNAUTHORIZED,
@@ -73,9 +81,30 @@ export class OrganizationService {
     return link;
   }
 
+  async checkAccess(
+    link: OrganizationUserDocument,
+    ...roles: Array<roleUserEnum>
+  ): Promise<OrganizationUserDocument> {
+    let access: Boolean = false;
+    let rolestr: string;
+    roles.forEach(function(item, i, arr) {
+      if (item == link.roleUser) {
+        access = true;
+      }
+      rolestr += item + '/';
+    });
+    if (!access) {
+      throw new HttpException(
+        `You are not ${rolestr} this organization`,
+        HttpStatus.UNAUTHORIZED,
+      );
+    }
+    return link;
+  }
+
   async deleteOrganization(id: string, user: UserDocument) {
     const organization = await this.checkOrganizationById(id);
-    const link = await this.organizationUserLink(organization, user);
+    const link = await this.organizationUserLink(organization._id, user._id);
     await this.checkOwnerOrganization(link);
     await organization.deleteOne();
     return await this.organizationUserModel.deleteMany({
@@ -85,52 +114,61 @@ export class OrganizationService {
 
   async leaveOrganization(id: string, user: UserDocument) {
     const link = await this.organizationUserLink(
-      await this.checkOrganizationById(id),
-      user,
+      (await this.checkOrganizationById(id))._id,
+      user._id,
     );
-    if (link.roleUser == roleUserEnum.admin) {
+    if (link.roleUser == roleUserEnum.superUser) {
       return this.deleteOrganization(id, user);
     } else return await link.deleteOne();
   }
 
   async checkOrganizationAndLink(id: string, user: UserDocument) {
     const link = await this.organizationUserLink(
-      await this.checkOrganizationById(id),
-      user,
+      (await this.checkOrganizationById(id))._id,
+      user._id,
     );
-    consoleOut(link,"lll");
+    consoleOut(link, 'lll');
     return link;
   }
-  
 
-  async fireUser(id: string, admin: UserDocument, user: string) {
+  async fireUser(id: string, admin: UserDocument, userid: string) {
     const organization = await this.checkOrganizationById(id);
-    consoleOut(id,"org");
-    consoleOut(admin,"adm");
-    consoleOut(user,"user");
-    const link = await this.organizationUserModel.findOne({
+    const adminlink = await this.organizationUserModel.findOne({
       user: admin._id,
       organization: organization,
     });
-    consoleOut(await this.userService.checkUserById(user),"link")
-    await this.checkOwnerOrganization(link);
-    return await this.organizationUserModel.deleteOne({
+    const user = await this.userService.checkUserById(userid);
+    await this.checkAccess(
+      adminlink,
+      roleUserEnum.superUser,
+      roleUserEnum.admin,
+    );
+    const userlink = await this.organizationUserModel.findOne({
+      user: user,
       organization: organization,
-      user: await this.userService.checkUserById(user),
     });
+    await this.checkOwnerOrganization(userlink);
+    return await userlink.deleteOne();
   }
 
-  async hireUser(id: string, admin: UserDocument, user: string) {
-    const organization = await this.checkOrganizationById(id);
-    const link = await this.organizationUserModel.findOne({
+  async hireUser(hireUserDTO: HireUserDTO, admin: UserDocument) {
+    const organization = await this.checkOrganizationById(
+      hireUserDTO.organizationId,
+    );
+    const adminlink = await this.organizationUserModel.findOne({
       user: admin._id,
       organization: organization,
     });
-    await this.checkOwnerOrganization(link);
+    await this.checkAccess(
+      adminlink,
+      roleUserEnum.superUser,
+      roleUserEnum.admin,
+    );
     const createdOrganizationUser = new this.organizationUserModel({
+      position: hireUserDTO.position,
       organization: organization,
-      user: await this.userService.checkUserById(user)
-  });
+      user: await this.userService.checkUserById(hireUserDTO.userId),
+    });
     return await createdOrganizationUser.save();
   }
 
@@ -142,16 +180,42 @@ export class OrganizationService {
     return organization;
   }
 
-  async updateOrganization(organizationDTO: UpdateOrganizationDTO, organizationId: string, user: UserDocument): Promise<string> {
+  async updateOrganization(
+    organizationDTO: UpdateOrganizationDTO,
+    organizationId: string,
+    user: UserDocument,
+  ): Promise<string> {
     const organization = await this.checkOrganizationById(organizationId);
-    const link = await this.organizationUserLink(organization, user);
+    const link = await this.organizationUserLink(organization._id, user._id);
     await this.checkOwnerOrganization(link);
     await organization.updateOne(organizationDTO);
-    return "Organization updated";
+    return 'Organization updated';
   }
 
-  async getUsers(organizationId:any): Promise<OrganizationUserDocument[]> {
-    let links = await this.organizationUserModel.find({organization:organizationId}).populate('user');
+  async getUsers(organizationId: any): Promise<OrganizationUserDocument[]> {
+    let links = await this.organizationUserModel
+      .find({ organization: organizationId })
+      .populate('user');
     return links;
+  }
+
+  async assignPosition(
+    assignPositionDTO: AssignPositionDTO,
+    organizationid: string,
+    olderid: string,
+  ) {
+    const olderlink = await this.organizationUserLink(organizationid, olderid);
+    try {
+      const userlink = await this.organizationUserLink(
+        organizationid,
+        assignPositionDTO.userId,
+      );
+      return userlink.updateOne({ position: assignPositionDTO.position });
+    } catch (err) {
+      throw new HttpException(
+        'User not found in this organization',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
   }
 }

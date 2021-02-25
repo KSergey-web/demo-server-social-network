@@ -22,6 +22,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         false,
       );
     }
-    return done(null, user, payload.iat);//возвращаемые данные прикрепятся к request (user)
+    return done(null, user, payload.iat); //возвращаемые данные прикрепятся к request (user)
   }
 }

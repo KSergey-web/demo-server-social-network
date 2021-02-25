@@ -8,14 +8,12 @@ import { SocketModule } from 'src/socket/socket.module';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([
-      { name: Message.name, schema: MessageSchema }
-    ]),
+    MongooseModule.forFeature([{ name: Message.name, schema: MessageSchema }]),
     ChatModule,
-    SocketModule
+    SocketModule,
   ],
   controllers: [MessageController],
   providers: [MessageService],
-  exports:[MessageService]
+  exports: [MessageService],
 })
 export class MessageModule {}

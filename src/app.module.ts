@@ -16,6 +16,7 @@ import { MessageModule } from './message/message.module';
 import { ChatModule } from './chat/chat.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { GroupModule } from './group/group.module';
 
 @Module({
   imports: [
@@ -28,9 +29,10 @@ import { join } from 'path';
     //SocketModule,
     //ChatModule,
     MessageModule,
-      ServeStaticModule.forRoot({
-        rootPath: join(__dirname, '..', 'static'),
-      })
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'static'),
+    }),
+    GroupModule,
   ],
   controllers: [AppController],
   providers: [AppService],

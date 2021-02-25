@@ -28,10 +28,10 @@ describe('UserService', () => {
 
   it('should update', async () => {
     let userDto: UpdateUserDTO = {
-      login: "loginn"
-    }
-    let p: UserDocument= await service.findByPayload({login:"loginnn"});
-    let res = await service.updateUser(userDto,p);
+      login: 'loginn',
+    };
+    let p: UserDocument = await service.findByPayload({ login: 'loginnn' });
+    let res = await service.updateUser(userDto, p);
     expect(p).toBeDefined();
   });
 });

@@ -2,27 +2,21 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { User } from 'src/user/schemas/user.schema';
 import * as mongoose from 'mongoose';
-import { Chat } from 'src/chat/schemas/chat.schema';
+import { Group } from './Group.schema';
 
-export type MessageDocument = Message & Document;
+export type GroupUserLinkDocument = GroupUserLink & Document;
 
 @Schema()
-export class Message {
-  @Prop({ required: true })
-  text: string;
-
-  @Prop({ required: true })
-  date: Date;
-
-  @Prop({ default: false })
-  editing: boolean;
+export class GroupUserLink {
+  @Prop({ default: 'user' })
+  roleUser: string;
 
   @Prop({
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Chat',
+    ref: 'Group',
     required: true,
   })
-  chat: Chat;
+  group: Group;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
   user: User;
@@ -31,4 +25,4 @@ export class Message {
   __v: Number;
 }
 
-export const MessageSchema = SchemaFactory.createForClass(Message);
+export const GroupUserLinkSchema = SchemaFactory.createForClass(GroupUserLink);

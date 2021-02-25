@@ -7,11 +7,8 @@ import { ChatService } from 'src/chat/chat.service';
 import { ChatModule } from 'src/chat/chat.module';
 
 @Module({
-  imports:[
-    AuthModule,
-    forwardRef(() => ChatModule),
-  ],
+  imports: [AuthModule, forwardRef(() => ChatModule)],
   providers: [SocketGateway, SocketService],
-  exports:[SocketService, SocketGateway]
+  exports: [SocketService, SocketGateway],
 })
 export class SocketModule {}

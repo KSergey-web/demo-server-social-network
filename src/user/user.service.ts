@@ -36,7 +36,8 @@ export class UserService {
     }
   }
 
-  async findByPayload(payload: any) {//используется для получения пользователя в JWTStrategy
+  async findByPayload(payload: any) {
+    //используется для получения пользователя в JWTStrategy
     const { login } = payload;
     return this.sanitizeUser(await this.userModel.findOne({ login }));
   }
@@ -60,8 +61,11 @@ export class UserService {
     return user;
   }
 
-  async updateUser(userDTO: UpdateUserDTO, user: UserDocument): Promise<string> {
+  async updateUser(
+    userDTO: UpdateUserDTO,
+    user: UserDocument,
+  ): Promise<string> {
     await (await this.userModel.findOne(user)).updateOne(userDTO);
-    return "User updated";
+    return 'User updated';
   }
 }

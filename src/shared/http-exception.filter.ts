@@ -16,8 +16,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const status = exception.getStatus
       ? exception.getStatus()
       : HttpStatus.INTERNAL_SERVER_ERROR;
-     // consoleOut(request,"req");
-     let details: any = exception.getResponse != undefined ? exception.getResponse(): exception; 
+    // consoleOut(request,"req");
+    let details: any =
+      exception.getResponse != undefined ? exception.getResponse() : exception;
     const errorResponse = {
       code: status,
       timestamp: new Date().toLocaleDateString(),
