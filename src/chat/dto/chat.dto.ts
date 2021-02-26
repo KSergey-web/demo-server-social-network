@@ -11,7 +11,7 @@ export class CreateChatDTO {
   name: string;
 }
 
-export class UpdateMessageDTO extends PartialType(CreateChatDTO) {}
+export class UpdatChatDTO extends PartialType(CreateChatDTO) {}
 
 export class AddChatUserDTO {
   @IsMongoId()

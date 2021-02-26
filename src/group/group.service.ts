@@ -121,6 +121,6 @@ export class GroupService {
     await this.groupUserLinkModel.deleteMany({
       group: group._id,
     });
-    return 'Group updated';
+    return 'Group deleted';
   }
 }

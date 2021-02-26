@@ -17,6 +17,7 @@ import { ChatModule } from './chat/chat.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { GroupModule } from './group/group.module';
+import { PostModule } from './post/post.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { GroupModule } from './group/group.module';
       rootPath: join(__dirname, '..', 'static'),
     }),
     GroupModule,
+    PostModule,
   ],
   controllers: [AppController],
   providers: [AppService],

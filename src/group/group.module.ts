@@ -17,5 +17,6 @@ import {
   ],
   controllers: [GroupController],
   providers: [GroupService],
+  exports: [GroupService],
 })
 export class GroupModule {}
