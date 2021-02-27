@@ -18,6 +18,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { GroupModule } from './group/group.module';
 import { PostModule } from './post/post.module';
+import { TeamModule } from './team/team.module';
 
 @Module({
   imports: [
@@ -35,6 +36,7 @@ import { PostModule } from './post/post.module';
     }),
     GroupModule,
     PostModule,
+    TeamModule,
   ],
   controllers: [AppController],
   providers: [AppService],

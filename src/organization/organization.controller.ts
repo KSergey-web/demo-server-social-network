@@ -103,10 +103,10 @@ export class OrganizationController {
   @UseGuards(JwtAuthGuard)
   async setCurrentOrganization(
     @Param() params: ObjectIdDTO,
-    @User() user: UserDocument,
+    @User() { _id }: UserDocument,
     @Res({ passthrough: true }) response: Response,
   ) {
-    await this.organizationService.checkOrganizationAndLink(params.id, user);
+    await this.organizationService.checkOrganizationAndLink(params.id, _id);
     response.cookie(cookiesEnum.organizationId, params.id);
     return 'Success cookies set';
   }

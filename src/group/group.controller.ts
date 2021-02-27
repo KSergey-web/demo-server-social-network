@@ -17,7 +17,12 @@ import { OrganizationUser } from 'src/organization/schemas/organization-user.sch
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { Organization, User } from 'src/utilities/user.decorator';
-import { CreateGroupDTO, UpdateGroupDTO } from './dto/group.dto';
+import {
+  AddGroupUserLinkDTO,
+  CreateGroupDTO,
+  DeleteGroupUserLinkDTO,
+  UpdateGroupDTO,
+} from './dto/group.dto';
 import { GroupService } from './group.service';
 
 @Controller('group')
@@ -54,43 +59,43 @@ export class GroupController {
   }
 
   @ApiBearerAuth()
-  @ApiHeader({
-    name: 'Cookie',
-    description: 'set "organization=Id;"',
-  })
   @Patch(':id')
   @UseGuards(JwtAuthGuard)
   async updateGroup(
     @Body() updateGroupDTO: UpdateGroupDTO,
     @User() { _id }: UserDocument,
     @Param() params: ObjectIdDTO,
-    @Organization() organizationid: string,
   ) {
-    if (!organizationid)
-      new HttpException(
-        `You did not choose organization`,
-        HttpStatus.UNAUTHORIZED,
-      );
     return await this.groupService.updateGroup(updateGroupDTO, params.id, _id);
   }
 
   @ApiBearerAuth()
-  @ApiHeader({
-    name: 'Cookie',
-    description: 'set "organization=Id;"',
-  })
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
   async deleteGroup(
     @User() { _id }: UserDocument,
     @Param() params: ObjectIdDTO,
-    @Organization() organizationid: string,
   ) {
-    if (!organizationid)
-      new HttpException(
-        `You did not choose organization`,
-        HttpStatus.UNAUTHORIZED,
-      );
     return await this.groupService.deleteGroup(params.id, _id);
+  }
+
+  @ApiBearerAuth()
+  @Post('adduser')
+  @UseGuards(JwtAuthGuard)
+  async hireUser(
+    @Body() body: AddGroupUserLinkDTO,
+    @User() { _id }: UserDocument,
+  ) {
+    return await this.groupService.addGroupUserLink(body, _id);
+  }
+
+  @ApiBearerAuth()
+  @Delete('deleteuser/:group/:user')
+  @UseGuards(JwtAuthGuard)
+  async fireUser(
+    @Param() params: DeleteGroupUserLinkDTO,
+    @User() { _id }: UserDocument,
+  ): Promise<String> {
+    return await this.groupService.deleteGroupUserLink(params, _id);
   }
 }

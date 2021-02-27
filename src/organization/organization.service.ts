@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { UserDocument } from '../user/schemas/user.schema';
 import { UserService } from '../user/user.service';
-import { roleUserEnum } from '../organization/enums/role-user.enum';
+import { roleUserOrganizationEnum } from '../organization/enums/role-user.enum';
 import {
   AssignPositionDTO,
   CreateOrganizationDTO,
@@ -38,7 +38,7 @@ export class OrganizationService {
     const createdOrganization = new this.organizationModel(organizationDTO);
     await createdOrganization.save();
     const organizationUser: IOrganizationUser = {
-      roleUser: roleUserEnum.superUser,
+      roleUser: roleUserOrganizationEnum.superUser,
       organization: createdOrganization._id,
       user: userid,
     };
@@ -72,7 +72,7 @@ export class OrganizationService {
   async checkOwnerOrganization(
     link: OrganizationUserDocument,
   ): Promise<OrganizationUserDocument> {
-    if (link.roleUser != roleUserEnum.superUser) {
+    if (link.roleUser != roleUserOrganizationEnum.superUser) {
       throw new HttpException(
         'You are not owner this organization',
         HttpStatus.UNAUTHORIZED,
@@ -83,7 +83,7 @@ export class OrganizationService {
 
   async checkAccess(
     link: OrganizationUserDocument,
-    ...roles: Array<roleUserEnum>
+    ...roles: Array<roleUserOrganizationEnum>
   ): Promise<OrganizationUserDocument> {
     let access: Boolean = false;
     let rolestr: string;
@@ -117,17 +117,16 @@ export class OrganizationService {
       (await this.checkOrganizationById(id))._id,
       user._id,
     );
-    if (link.roleUser == roleUserEnum.superUser) {
+    if (link.roleUser == roleUserOrganizationEnum.superUser) {
       return this.deleteOrganization(id, user);
     } else return await link.deleteOne();
   }
 
-  async checkOrganizationAndLink(id: string, user: UserDocument) {
+  async checkOrganizationAndLink(id: string, userId: string) {
     const link = await this.organizationUserLink(
       (await this.checkOrganizationById(id))._id,
-      user._id,
+      userId,
     );
-    consoleOut(link, 'lll');
     return link;
   }
 
@@ -140,8 +139,8 @@ export class OrganizationService {
     const user = await this.userService.checkUserById(userid);
     await this.checkAccess(
       adminlink,
-      roleUserEnum.superUser,
-      roleUserEnum.admin,
+      roleUserOrganizationEnum.superUser,
+      roleUserOrganizationEnum.admin,
     );
     const userlink = await this.organizationUserModel.findOne({
       user: user,
@@ -161,8 +160,8 @@ export class OrganizationService {
     });
     await this.checkAccess(
       adminlink,
-      roleUserEnum.superUser,
-      roleUserEnum.admin,
+      roleUserOrganizationEnum.superUser,
+      roleUserOrganizationEnum.admin,
     );
     const createdOrganizationUser = new this.organizationUserModel({
       position: hireUserDTO.position,

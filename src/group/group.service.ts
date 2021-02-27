@@ -1,8 +1,14 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { CreateGroupDTO, UpdateGroupDTO } from './dto/group.dto';
-import { roleUserEnum } from './enums/role-user.enum';
+import { OrganizationService } from 'src/organization/organization.service';
+import {
+  AddGroupUserLinkDTO,
+  CreateGroupDTO,
+  DeleteGroupUserLinkDTO,
+  UpdateGroupDTO,
+} from './dto/group.dto';
+import { roleUserGroupEnum } from './enums/role-user.enum';
 import { IGroupUserLink } from './interfaces/group.interface';
 import {
   GroupUserLink,
@@ -17,6 +23,7 @@ export class GroupService {
     private groupModel: Model<GroupDocument>,
     @InjectModel(GroupUserLink.name)
     private groupUserLinkModel: Model<GroupUserLinkDocument>,
+    private organizationService: OrganizationService,
   ) {}
 
   async createGroup(
@@ -26,11 +33,13 @@ export class GroupService {
   ) {
     const group = new this.groupModel({
       ...createGroupDTO,
-      organization: organizationId,
+      organization: await this.organizationService.checkOrganizationById(
+        organizationId,
+      ),
     });
     await group.save();
     const groupUserLink: IGroupUserLink = {
-      roleUser: roleUserEnum.admin,
+      roleUser: roleUserGroupEnum.admin,
       group: group._id,
       user: userId,
     };
@@ -43,10 +52,12 @@ export class GroupService {
     organizationId: string,
     userId: string,
   ): Promise<Array<Group>> {
+    await this.organizationService.checkOrganizationById(organizationId);
     const groups = await this.groupUserLinkModel
-      .find({ organization: organizationId })
-      .or([{ isOpen: true }, { user: userId }])
-      .populate('group');
+      .find()
+      .populate('group')
+      .or([{ 'group.isOpen': true }, { user: userId }])
+      .find({ 'group.organization': organizationId });
     return groups.map(res => {
       return res.group;
     });
@@ -82,7 +93,7 @@ export class GroupService {
 
   async checkAccess(
     link: GroupUserLinkDocument,
-    ...roles: Array<roleUserEnum>
+    ...roles: Array<roleUserGroupEnum>
   ): Promise<GroupUserLinkDocument> {
     let access: Boolean = false;
     let rolestr: string;
@@ -105,22 +116,49 @@ export class GroupService {
     updateGroupDTO: UpdateGroupDTO,
     groupId: string,
     userId: string,
-  ): Promise<string> {
+  ) {
     const group = await this.getGroupById(groupId);
     const link = await this.groupUserLink(groupId, userId);
-    await this.checkAccess(link, roleUserEnum.admin);
-    await group.updateOne(updateGroupDTO);
-    return 'Group updated';
+    await this.checkAccess(link, roleUserGroupEnum.admin);
+    return await group.updateOne(updateGroupDTO);
   }
 
   async deleteGroup(groupId: string, userId: string): Promise<string> {
     const group = await this.getGroupById(groupId);
     const link = await this.groupUserLink(groupId, userId);
-    await this.checkAccess(link, roleUserEnum.admin);
+    await this.checkAccess(link, roleUserGroupEnum.admin);
     await group.deleteOne();
     await this.groupUserLinkModel.deleteMany({
       group: group._id,
     });
     return 'Group deleted';
+  }
+
+  async addGroupUserLink(
+    dto: AddGroupUserLinkDTO,
+    userId: string,
+  ): Promise<GroupUserLinkDocument> {
+    const group = await this.getGroupById(dto.group);
+    const link = await this.groupUserLink(dto.group, userId);
+    await this.checkAccess(link, roleUserGroupEnum.admin);
+    const newLink = new this.groupUserLinkModel(dto);
+    return await newLink.save();
+  }
+
+  async deleteGroupUserLink(
+    dto: DeleteGroupUserLinkDTO,
+    userId: string,
+  ): Promise<string> {
+    await this.getGroupById(dto.group);
+    const link = await this.groupUserLink(dto.group, userId);
+    await this.checkAccess(link, roleUserGroupEnum.admin);
+    const filter: any = dto;
+    const check = await this.groupUserLinkModel.deleteOne(filter);
+    if (check.n != 1)
+      throw new HttpException(
+        'Group member is not found',
+        HttpStatus.BAD_REQUEST,
+      );
+    return 'Group member deleted';
   }
 }
