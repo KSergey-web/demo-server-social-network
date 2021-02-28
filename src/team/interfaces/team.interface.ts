@@ -18,3 +18,11 @@ export interface ITeamUserLink {
 
   user: string;
 }
+
+export interface ITeamTaskLink {
+  status: string;
+
+  team: string;
+
+  user: string;
+}

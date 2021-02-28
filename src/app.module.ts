@@ -19,6 +19,7 @@ import { join } from 'path';
 import { GroupModule } from './group/group.module';
 import { PostModule } from './post/post.module';
 import { TeamModule } from './team/team.module';
+import { TaskModule } from './task/task.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { TeamModule } from './team/team.module';
     GroupModule,
     PostModule,
     TeamModule,
+    TaskModule,
   ],
   controllers: [AppController],
   providers: [AppService],

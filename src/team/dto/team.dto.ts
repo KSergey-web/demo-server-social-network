@@ -2,14 +2,18 @@ import {
   IsString,
   IsMongoId,
   MinLength,
-  IsBoolean,
   IsEnum,
+  isNumberString,
+  Min,
+  IsInt,
+  Max,
 } from 'class-validator';
 import {
   ApiProperty,
   ApiPropertyOptional,
   OmitType,
   PartialType,
+  PickType,
 } from '@nestjs/swagger';
 import { roleUserTeamEnum } from '../enums/role-user.enum';
 
@@ -55,3 +59,20 @@ export class DeleteTeamUserLinkDTO {
   @ApiProperty()
   team: string;
 }
+
+export class AddStatusDTO {
+  @IsString()
+  @MinLength(3)
+  @ApiProperty()
+  name: string;
+
+  @IsInt()
+  @Min(0)
+  @Max(10)
+  @ApiProperty()
+  position: number;
+}
+
+export class DeleteStatusDTO extends PickType(AddStatusDTO, [
+  'position',
+] as const) {}

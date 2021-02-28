@@ -71,12 +71,22 @@ export class TeamController {
   }
 
   @ApiBearerAuth()
-  @Delete('deleteuser/:team/:user')
+  @Delete(':team/deleteuser/:user')
   @UseGuards(JwtAuthGuard)
   async fireUser(
     @Param() params: DeleteTeamUserLinkDTO,
     @User() { _id }: UserDocument,
   ): Promise<String> {
     return await this.teamService.deleteTeamUserLink(params, _id);
+  }
+
+  @ApiBearerAuth()
+  @Delete(':id/statuse')
+  @UseGuards(JwtAuthGuard)
+  async getStatuses(
+    @Param() params: ObjectIdDTO,
+    @User() { _id }: UserDocument,
+  ) {
+    return await this.teamService.getStatuses(params.id, _id);
   }
 }

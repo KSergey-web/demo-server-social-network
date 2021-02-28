@@ -45,17 +45,17 @@ export class SocketService {
     });
   }
 
-  addUserToRoom(userid: string, chatid: string) {
+  addUserToRoom(userid: string, room: string) {
     const client = this.getClient(userid);
     if (!client) return;
-    client.join(chatid);
+    client.join(room);
     return;
   }
 
-  deleteUserFromRoom(userid: any, chatid: any) {
+  deleteUserFromRoom(userid: any, room: any) {
     const client = this.getClient(userid);
     if (!client) return;
-    client.leave(chatid);
+    client.leave(room);
     return;
   }
 
@@ -65,5 +65,26 @@ export class SocketService {
       return null;
     }
     return this.server.sockets.connected[this.usersOnline.get(userid)];
+  }
+
+  clientLeaveRoom(client: Socket, room: string) {
+    client.leave(room);
+    return;
+  }
+
+  clientEnterRoom(client: Socket, room: string) {
+    client.join(room);
+    return;
+  }
+
+  clientDisconnect(client: Socket) {
+    client.leaveAll();
+    for (var [userId, socketId] of this.usersOnline) {
+      if (socketId == client.id) {
+        this.usersOnline.delete(userId);
+        break;
+      }
+    }
+    return;
   }
 }

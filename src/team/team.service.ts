@@ -9,8 +9,10 @@ import {
 } from './dto/team.dto';
 import { roleUserTeamEnum } from './enums/role-user.enum';
 import { ITeamUserLink } from './interfaces/team.interface';
+import { Status, StatusDocument } from './schemas/status.schema';
 import { TeamUserLink, TeamUserLinkDocument } from './schemas/team-user.schema';
 import { Team, TeamDocument } from './schemas/team.schema';
+import { StatusService } from './status.service';
 
 @Injectable()
 export class TeamService {
@@ -19,6 +21,7 @@ export class TeamService {
     private teamModel: Model<TeamDocument>,
     @InjectModel(TeamUserLink.name)
     private teamUserLinkModel: Model<TeamUserLinkDocument>,
+    private readonly statusService: StatusService,
   ) {}
 
   async createTeam(createTeamDTO: CreateTeamDTO, userId: string) {
@@ -27,6 +30,7 @@ export class TeamService {
       organization: createTeamDTO.organization,
     });
     await team.save();
+    await this.statusService.initStatuses(team);
     const teamUserLink: ITeamUserLink = {
       roleUser: roleUserTeamEnum.admin,
       team: team._id,
@@ -145,5 +149,24 @@ export class TeamService {
         HttpStatus.BAD_REQUEST,
       );
     return 'Team member deleted';
+  }
+
+  async getStatuses(teamId: string, userId: string) {
+    await this.getTeamById(teamId);
+    await this.teamUserLink(teamId, userId);
+    return this.statusService.getStatuses(teamId);
+  }
+
+  async checkEnable(
+    teamId: string,
+    userId: string,
+    ...roles: Array<roleUserTeamEnum>
+  ) {
+    await this.getTeamById(teamId);
+    const link = await this.teamUserLink(teamId, userId);
+    if (roles.length != 0) {
+      await this.checkAccess(link, ...roles);
+    }
+    return;
   }
 }

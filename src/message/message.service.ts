@@ -30,9 +30,17 @@ export class MessageService {
     return createdMessage;
   }
 
-  async getMessagesFromChat(chat: any, user: any): Promise<Array<Message>> {
+  async getMessagesFromChat(
+    chat: any,
+    user: any,
+    page: number = 1,
+  ): Promise<Array<Message>> {
     await this.chatService.checkChatById(chat);
     await this.chatService.chatUserLink(chat, user);
-    return await this.messageModel.find({ chat });
+    return await this.messageModel
+      .find({ chat })
+      .sort({ date: -1 })
+      .skip((page - 1) * 20)
+      .limit(20);
   }
 }
