@@ -7,7 +7,7 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { ApiBearerAuth, ApiHeader } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiHeader, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { UserDocument } from 'src/user/schemas/user.schema';
@@ -15,6 +15,7 @@ import { User } from 'src/utilities/user.decorator';
 import { CreatePostDTO } from './dto/post.dto';
 import { PostService } from './post.service';
 
+@ApiTags('post')
 @Controller('post')
 export class PostController {
   constructor(private readonly postService: PostService) {}

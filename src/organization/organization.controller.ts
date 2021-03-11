@@ -22,11 +22,12 @@ import {
   UpdateOrganizationDTO,
 } from './dto/organization.dto';
 import { OrganizationService } from './organization.service';
-import { ApiBearerAuth, ApiHeader } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiHeader, ApiTags } from '@nestjs/swagger';
 import { Response, Request } from 'express';
 import { cookiesEnum } from 'src/enums/cookies.enum';
 import { consoleOut } from 'src/debug';
 
+@ApiTags('organization')
 @Controller('organization')
 export class OrganizationController {
   constructor(private readonly organizationService: OrganizationService) {}
@@ -108,37 +109,38 @@ export class OrganizationController {
   ) {
     await this.organizationService.checkOrganizationAndLink(params.id, _id);
     response.cookie(cookiesEnum.organizationId, params.id);
-    return 'Success cookies set';
+    return {organization: params.id};
   }
 
   @ApiBearerAuth()
-  @ApiHeader({
-    name: 'Cookie',
-    description: 'set "organization=Id;"',
-  })
-  @Get('users')
+  @Get('all')
   @UseGuards(JwtAuthGuard)
-  async getUsers(@Req() request: Request) {
-    let organizationId = request.cookies[cookiesEnum.organizationId];
-    return await this.organizationService.getUsers(organizationId);
+  async getOrganizations(
+    @User() { _id }: UserDocument
+  ) {
+    return await this.organizationService.getOrganizations( _id);
   }
 
   @ApiBearerAuth()
-  @ApiHeader({
-    name: 'Cookie',
-    description: 'set "organization=Id;"',
-  })
-  @Patch('position')
+  @Get(':id/users')
+  @UseGuards(JwtAuthGuard)
+  async getUsers(
+  @Param() params: ObjectIdDTO,
+  ) {
+    return await this.organizationService.getUsers(params.id);
+  }
+
+  @ApiBearerAuth()
+  @Patch(':id/position')
   @UseGuards(JwtAuthGuard)
   async assignPosition(
     @Body() assignPositionDTO: AssignPositionDTO,
     @User() { _id }: UserDocument,
-    @Req() request: Request,
+    @Param() params: ObjectIdDTO,
   ) {
-    let organizationId = request.cookies[cookiesEnum.organizationId];
     return await this.organizationService.assignPosition(
       assignPositionDTO,
-      organizationId,
+      params.id,
       _id,
     );
   }

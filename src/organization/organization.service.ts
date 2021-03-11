@@ -53,13 +53,15 @@ export class OrganizationService {
     organizationid: string,
     userid: string,
   ): Promise<OrganizationUserDocument> {
-    const obj: IOrganizationUser = {
+    const obj: any = {
       user: userid,
       organization: organizationid,
     };
-    const link = await this.organizationUserModel.findOne({
-      obj,
-    });
+    consoleOut(obj);
+    const link = await this.organizationUserModel.findOne(
+      obj 
+    );
+    consoleOut(link,"l")
     if (!link) {
       throw new HttpException(
         'You do not have this organization',
@@ -216,5 +218,11 @@ export class OrganizationService {
         HttpStatus.BAD_REQUEST,
       );
     }
+  }
+
+  async getOrganizations(userId: string): Promise<Array<IOrganization>>{
+    const filter: any ={user:userId}; 
+    const links = await this.organizationUserModel.find(filter).populate('organization').exec();
+    return links.map(link =>  link.organization);
   }
 }

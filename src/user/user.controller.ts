@@ -7,7 +7,7 @@ import {
   Request,
   Patch,
 } from '@nestjs/common';
-import { ApiBearerAuth } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../auth/jwt-auth.gaurd';
 import { User } from '../utilities/user.decorator';
 import { UpdateUserDTO } from './dto/user.dto';
@@ -15,6 +15,7 @@ import { IUser } from './interfaces/user.interface';
 import { UserDocument } from './schemas/user.schema';
 import { UserService } from './user.service';
 
+@ApiTags('user')
 @Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}

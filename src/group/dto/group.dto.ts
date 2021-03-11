@@ -24,7 +24,11 @@ export class CreateGroupDTO {
 
   @IsBoolean()
   @ApiProperty()
-  isOpened: Boolean;
+  isOpen: string;
+
+  @IsMongoId()
+  @ApiProperty()
+  organization: string;
 }
 
 export class UpdateGroupDTO extends PartialType(CreateGroupDTO) {}

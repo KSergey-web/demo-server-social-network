@@ -1,11 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { SwaggerModule, DocumentBuilder, SwaggerCustomOptions } from '@nestjs/swagger';
 import { ValidationPipe } from '@nestjs/common';
 import * as cookieParser from 'cookie-parser';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
+  app.setGlobalPrefix('v1/api');
   app.use(cookieParser());
   const options = new DocumentBuilder()
     .setTitle('rest API')
@@ -15,7 +16,12 @@ async function bootstrap() {
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('api', app, document);
+  const customOptions: SwaggerCustomOptions = {
+    swaggerOptions: {
+      persistAuthorization: true,
+    },
+  };
+  SwaggerModule.setup('api', app, document, customOptions);
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,

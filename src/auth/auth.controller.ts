@@ -8,11 +8,13 @@ import {
   UnprocessableEntityException,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { ApiTags } from '@nestjs/swagger';
 import { LoginDTO, RegisterDTO } from '../user/dto/user.dto';
 import { UserService } from '../user/user.service';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth.gaurd';
 
+@ApiTags('auth')
 @Controller('auth')
 export class AuthController {
   constructor(

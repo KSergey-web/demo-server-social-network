@@ -7,7 +7,7 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { ApiBearerAuth } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { UserDocument } from 'src/user/schemas/user.schema';
@@ -15,6 +15,7 @@ import { User } from 'src/utilities/user.decorator';
 import { ChatService } from './chat.service';
 import { AddChatUserDTO, CreateChatDTO } from './dto/chat.dto';
 
+@ApiTags('chat')
 @Controller('chat')
 export class ChatController {
   constructor(private readonly chatService: ChatService) {}

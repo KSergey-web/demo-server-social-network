@@ -7,7 +7,7 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { ApiBearerAuth } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { roleUserTeamEnum } from 'src/team/enums/role-user.enum';
@@ -18,6 +18,7 @@ import { User } from 'src/utilities/user.decorator';
 import { AddAnswerDTO, ChangeStatusDTO, CreateTaskDTO } from './dto/task.dto';
 import { TaskService } from './task.service';
 
+@ApiTags('task')
 @Controller('task')
 export class TaskController {
   constructor(

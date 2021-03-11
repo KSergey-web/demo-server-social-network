@@ -11,7 +11,7 @@ import {
   Req,
   UseGuards,
 } from '@nestjs/common';
-import { ApiBearerAuth, ApiHeader } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { OrganizationUser } from 'src/organization/schemas/organization-user.schema';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
@@ -25,37 +25,29 @@ import {
 } from './dto/group.dto';
 import { GroupService } from './group.service';
 
+@ApiTags('group')
 @Controller('group')
 export class GroupController {
   constructor(private readonly groupService: GroupService) {}
 
   @ApiBearerAuth()
-  @ApiHeader({
-    name: 'Cookie',
-    description: 'set "organization=Id;"',
-  })
   @Post()
   @UseGuards(JwtAuthGuard)
   async createGroup(
-    @Body() group: CreateGroupDTO,
+    @Body() dto: CreateGroupDTO,
     @User() { _id }: UserDocument,
-    @Organization() organizationid: string,
   ) {
-    return await this.groupService.createGroup(group, organizationid, _id);
+    return await this.groupService.createGroup(dto, dto.organization, _id);
   }
 
   @ApiBearerAuth()
-  @ApiHeader({
-    name: 'Cookie',
-    description: 'set "organization=Id;"',
-  })
-  @Get()
+  @Get('organization/:id')
   @UseGuards(JwtAuthGuard)
   async getGroups(
     @User() { _id }: UserDocument,
-    @Organization() organizationid: string,
+    @Param() params: ObjectIdDTO,
   ) {
-    return await this.groupService.getGroups(organizationid, _id);
+    return await this.groupService.getGroups(params.id, _id);
   }
 
   @ApiBearerAuth()

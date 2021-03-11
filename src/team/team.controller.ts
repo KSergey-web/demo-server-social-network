@@ -8,7 +8,7 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { ApiBearerAuth } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { UserDocument } from 'src/user/schemas/user.schema';
@@ -21,6 +21,7 @@ import {
 } from './dto/team.dto';
 import { TeamService } from './team.service';
 
+@ApiTags('team')
 @Controller('team')
 export class TeamController {
   constructor(private readonly teamService: TeamService) {}
