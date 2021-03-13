@@ -220,9 +220,9 @@ export class OrganizationService {
     }
   }
 
-  async getOrganizations(userId: string): Promise<Array<IOrganization>>{
+  async getOrganizations(userId: string): Promise<Array<OrganizationUserDocument>>{
     const filter: any ={user:userId}; 
-    const links = await this.organizationUserModel.find(filter).populate('organization').exec();
-    return links.map(link =>  link.organization);
+    const links = await this.organizationUserModel.find(filter).populate('organization').populate('user').exec();
+    return links;
   }
 }

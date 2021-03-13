@@ -112,13 +112,22 @@ export class OrganizationController {
     return {organization: params.id};
   }
 
+  // @ApiBearerAuth()
+  // @Get('all')
+  // @UseGuards(JwtAuthGuard)
+  // async getOrganizations(
+  //   @User() { _id }: UserDocument
+  // ) {
+  //   return (await this.organizationService.getOrganizations( _id));
+  // }
+
   @ApiBearerAuth()
-  @Get('all')
+  @Get('all/:id')
   @UseGuards(JwtAuthGuard)
-  async getOrganizations(
-    @User() { _id }: UserDocument
+  async getOrganizationsByUserId(
+    @Param() params: ObjectIdDTO,
   ) {
-    return await this.organizationService.getOrganizations( _id);
+    return (await this.organizationService.getOrganizations(params.id));
   }
 
   @ApiBearerAuth()
@@ -143,5 +152,15 @@ export class OrganizationController {
       params.id,
       _id,
     );
+  }
+
+  @ApiBearerAuth()
+  @Get(':id')
+  @UseGuards(JwtAuthGuard)
+  async getOrganization(
+    @User() { _id }: UserDocument,
+    @Param() params: ObjectIdDTO,
+  ) {
+    return await this.organizationService.checkOrganizationById(params.id);
   }
 }

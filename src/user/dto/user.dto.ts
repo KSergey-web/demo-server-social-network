@@ -88,7 +88,22 @@ export class LoginDTO {
   password: string;
 }
 
-export class RegisterDTO extends LoginDTO {}
+export class RegisterDTO extends LoginDTO {
+  @ApiProperty()
+  @IsString()
+  @IsNotEmpty()
+  readonly name: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsNotEmpty()
+  readonly surname: string;
+
+  @ApiProperty()
+  @MinLength(4)
+  @IsEmail()
+  readonly email: string;
+}
 
 export class UpdateUserDTO extends OmitType(PartialType(RegisterDTO), [
   'password',

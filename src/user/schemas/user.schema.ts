@@ -8,8 +8,8 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-  // @Prop({ required: true })
-  //email: string;
+  @Prop({ required: true })
+  email: string;
 
   @Prop({ required: true })
   password: string;
@@ -19,12 +19,15 @@ export class User {
 
   @Prop({ select: false })
   __v: Number;
-  /*@Prop({ required: true })
+  
+  
+  @Prop({ required: true })
   name: string;
 
   @Prop({ required: true })
   surname: string;
 
+  /*
   @Prop({ required: true })
   patronymic: string;
 
