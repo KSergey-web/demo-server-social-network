@@ -19,6 +19,7 @@ import {
   CreateOrganizationDTO,
   FireUserDTO,
   HireUserDTO,
+  HireWithLoginDTO,
   UpdateOrganizationDTO,
 } from './dto/organization.dto';
 import { OrganizationService } from './organization.service';
@@ -26,11 +27,14 @@ import { ApiBearerAuth, ApiHeader, ApiTags } from '@nestjs/swagger';
 import { Response, Request } from 'express';
 import { cookiesEnum } from 'src/enums/cookies.enum';
 import { consoleOut } from 'src/debug';
+import { UserService } from 'src/user/user.service';
 
 @ApiTags('organization')
 @Controller('organization')
 export class OrganizationController {
-  constructor(private readonly organizationService: OrganizationService) {}
+  constructor(private readonly organizationService: OrganizationService,
+    private readonly userService: UserService
+    ) {}
 
   @ApiBearerAuth()
   @Post()
@@ -96,7 +100,21 @@ export class OrganizationController {
   @UseGuards(JwtAuthGuard)
   async hireUser(@Body() body: HireUserDTO, @User() user: UserDocument) {
     await this.organizationService.hireUser(body, user);
-    return 'Worker is hired';
+    return {message:'Worker is hired'};
+  }
+
+  @ApiBearerAuth()
+  @Post('hirewithlogin')
+  @UseGuards(JwtAuthGuard)
+  async hireUserWithLogin(@Body() dto: HireWithLoginDTO, @User() user: UserDocument) {
+    const hireUser = await this.userService.checkByLogin(dto.login);
+    const modifyDto: HireUserDTO = {
+      userId: hireUser._id,
+      position: dto.position,
+      organizationId: dto.organizationId
+    }
+    await this.organizationService.hireUser(modifyDto, user);
+    return {message:'Worker is hired'};
   }
 
   @ApiBearerAuth()

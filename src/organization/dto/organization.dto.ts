@@ -1,4 +1,4 @@
-import { IsString, IsMongoId, MinLength } from 'class-validator';
+import { IsString, IsMongoId, MinLength, IsEmail } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional, PartialType } from '@nestjs/swagger';
 
 export class CreateOrganizationDTO {
@@ -28,6 +28,19 @@ export class FireUserDTO {
 }
 
 export class HireUserDTO extends FireUserDTO {
+  @ApiProperty()
+  @MinLength(2)
+  position: string;
+}
+
+export class HireWithLoginDTO{
+  @ApiProperty()
+  login: string;
+
+  @IsMongoId()
+  @ApiProperty()
+  organizationId: string;
+
   @ApiProperty()
   @MinLength(2)
   position: string;

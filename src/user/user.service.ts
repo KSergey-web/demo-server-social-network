@@ -68,4 +68,12 @@ export class UserService {
     await (await this.userModel.findOne(user)).updateOne(userDTO);
     return 'User updated';
   }
+
+  async checkByLogin(login:string): Promise<UserDocument>{
+    const user = await this.userModel.findOne({ login });
+    if (!user){
+      throw new HttpException('User not found', HttpStatus.NOT_FOUND);
+  }
+    return user;
+  }
 }

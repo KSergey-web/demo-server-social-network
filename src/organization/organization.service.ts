@@ -160,6 +160,17 @@ export class OrganizationService {
       user: admin._id,
       organization: organization,
     });
+    const filter:any = {
+      user: hireUserDTO.userId,
+      organization: organization._id,
+    }
+    const checkUserlink = await this.organizationUserModel.findOne(filter);
+    if (checkUserlink){
+      throw new HttpException(
+        `User ${checkUserlink._id} already in the organization`,
+        HttpStatus.CONFLICT,
+      );
+    }
     await this.checkAccess(
       adminlink,
       roleUserOrganizationEnum.superUser,
