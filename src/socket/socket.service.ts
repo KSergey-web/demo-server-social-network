@@ -15,7 +15,11 @@ export class SocketService {
     private readonly chatService: ChatService,
   ) {}
 
-  @WebSocketServer() server: Server;
+  setServer(server){
+    this.server=server;
+  }
+
+  server: Server;
 
   create(createSocketDto: CreateSocketDto) {
     return 'This action adds a new socket';

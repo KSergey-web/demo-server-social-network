@@ -27,15 +27,22 @@ export class ChatService {
     private readonly userService: UserService,
   ) {}
 
-  async create(chatDTO: CreateChatDTO, userid: string) {
+  async create(chatDTO: CreateChatDTO, userId: string) {
+    consoleOut(chatDTO,"Obj");
+    
     const createdChat = new this.chatModel(chatDTO);
     await createdChat.save();
     const chatUser: IChatUser = {
       chat: createdChat._id,
-      user: userid,
+      user: userId,
     };
     const createdChatUser = new this.chatUserModel(chatUser);
     await createdChatUser.save();
+    chatDTO.users.forEach(async (user) =>
+      {
+        await this.addUser({chat:createdChat._id, user}, userId)
+      }
+    )
     return createdChat;
   }
 

@@ -2,13 +2,14 @@ import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nes
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { consoleOut } from '../debug';
+import * as fs from 'fs';
 
 @Injectable()
 export class LoggingInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const request = context.switchToHttp().getRequest();
     const reqInfo = {
-      timestamp: new Date().toLocaleDateString(),
+      timestamp: new Date(),
       path: request.url,
       method: request.method,
       bodyreq: request.body,
@@ -16,9 +17,11 @@ export class LoggingInterceptor implements NestInterceptor {
       queryreq: request.query,
       cookiesreq: request.cookies,
     };
-    consoleOut(reqInfo,"Request info")
     return next
       .handle()
-      .pipe(tap(value => consoleOut(value, "Response body")));
+      .pipe(tap(value =>  {
+        fs.writeFile('logFile.json',' //reqinfo \n'+JSON.stringify(reqInfo) +";\n",{flag: 'a+'},(err)=>{});
+        fs.writeFile('logFile.json',' //res info \n'+JSON.stringify(value) +";\n",{flag: 'a+'},(err)=>{});
+    }));
   }
 }

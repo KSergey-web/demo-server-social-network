@@ -22,7 +22,9 @@ import { ObjectIdDTO } from 'src/shared/shared.dto';
 
 @WebSocketGateway()
 export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
-  constructor(private readonly socketService: SocketService) {}
+  constructor(private readonly socketService: SocketService) {
+    setTimeout(() => {this.socketService.setServer(this.server)},1000)
+  }
 
   @WebSocketServer() server: Server;
 
@@ -41,10 +43,10 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
     return this.socketService.auth(client, createSocketDto);
   }
 
-  @SubscribeMessage('msgToServer')
+  @SubscribeMessage('msgToChat')
   handleMessage(message: IMessage): void {
     this.logger.log(message.text);
-    this.server.to(message.chat).emit('msgToClient', message);
+    this.server.to(message.chat).emit('msgFromChat', message);
   }
 
   @SubscribeMessage('LeaveTeam')

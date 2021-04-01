@@ -9,6 +9,9 @@ export class CreateChatDTO {
   @MinLength(1)
   @ApiProperty()
   name: string;
+
+  @ApiPropertyOptional()
+  users?: Array<string>
 }
 
 export class UpdatChatDTO extends PartialType(CreateChatDTO) {}

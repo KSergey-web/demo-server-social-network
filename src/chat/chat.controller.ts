@@ -50,7 +50,7 @@ export class ChatController {
   }
 
   @ApiBearerAuth()
-  @Get()
+  @Get('all')
   @UseGuards(JwtAuthGuard)
   async getChats(@User() { _id }: UserDocument) {
     return await this.chatService.getChats(_id);
