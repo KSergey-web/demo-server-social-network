@@ -19,6 +19,8 @@ import { consoleOut } from 'src/debug';
 import { IMessage } from 'src/message/interfaces/message.interface';
 import { TaskDocument } from 'src/task/schemas/task.schema';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
+import { Message } from 'src/message/schemas/message.schema';
+import { User } from 'src/user/schemas/user.schema';
 
 @WebSocketGateway()
 export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
@@ -44,9 +46,11 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('msgToChat')
-  handleMessage(message: IMessage): void {
-    this.logger.log(message.text);
-    this.server.to(message.chat).emit('msgFromChat', message);
+  handleMessage(message: Message): void {
+    this.logger.log(`message ${message.text}`);
+    this.logger.log(`message ${message.chat}`);
+    this.logger.log(`message ${(message.user as User).login}`);
+    this.server.to((message.chat as string)).emit('msgFromChat', message);
   }
 
   @SubscribeMessage('LeaveTeam')
@@ -81,5 +85,6 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
   async handleConnection(client: Socket, ...args: any[]) {
     this.logger.log(`Client connected: ${client.id}`);
+    client.emit('connectedEvent');
   }
 }

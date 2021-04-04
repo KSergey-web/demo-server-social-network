@@ -13,12 +13,15 @@ import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { User } from 'src/utilities/user.decorator';
 import { ChatService } from './chat.service';
-import { AddChatUserDTO, CreateChatDTO } from './dto/chat.dto';
+import { AddChatUserDTO, AddUsersToChatDTO, CreateChatDTO } from './dto/chat.dto';
 
 @ApiTags('chat')
 @Controller('chat')
 export class ChatController {
-  constructor(private readonly chatService: ChatService) {}
+  constructor(
+    private readonly chatService: ChatService
+
+    ) {}
 
   @ApiBearerAuth()
   @Post()
@@ -47,6 +50,32 @@ export class ChatController {
   ) {
     await this.chatService.addUser(params, _id);
     return 'Worker is added to chat';
+  }
+
+  @ApiBearerAuth()
+  @Post('addUsers')
+  @UseGuards(JwtAuthGuard)
+  async addUsers(
+    @Body() dto: AddUsersToChatDTO,
+    @User() { _id }: UserDocument,
+  ) {
+    dto.users.forEach(async (userId) => {
+      await this.chatService.addUser({chat:dto.chat, user:userId}, _id);
+    })
+    return {message:'Workers is added to chat'};
+  }
+
+  @ApiBearerAuth()
+  @Get(':id/users')
+  @UseGuards(JwtAuthGuard)
+  async getUsers(
+    @Param() params: ObjectIdDTO,
+    @User() { _id }: UserDocument,
+  ) {
+    const links = await this.chatService.getChatUserLinksByChat(params.id,_id);
+    let users: Array<any> =[];
+    links.forEach((link)=>{users.push(link.user)})
+    return users; 
   }
 
   @ApiBearerAuth()

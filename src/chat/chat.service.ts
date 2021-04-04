@@ -8,6 +8,7 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { consoleOut } from 'src/debug';
+import { User } from 'src/user/schemas/user.schema';
 import { UserService } from 'src/user/user.service';
 import { SocketService } from '../socket/socket.service';
 import { AddChatUserDTO, CreateChatDTO } from './dto/chat.dto';
@@ -27,9 +28,7 @@ export class ChatService {
     private readonly userService: UserService,
   ) {}
 
-  async create(chatDTO: CreateChatDTO, userId: string) {
-    consoleOut(chatDTO,"Obj");
-    
+  async create(chatDTO: CreateChatDTO, userId: string) {    
     const createdChat = new this.chatModel(chatDTO);
     await createdChat.save();
     const chatUser: IChatUser = {
@@ -100,5 +99,12 @@ export class ChatService {
       chats.push(item.chat);
     });
     return chats;
+  }
+
+  async getChatUserLinksByChat(chatId:string, userId:string):Promise<Array<ChatUserDocument>>{
+    await this.checkChatById(chatId);
+    await this.chatUserLink(chatId,userId);
+    return await this.chatUserModel.find({chat:(chatId) as any}).populate('user').exec();
+
   }
 }

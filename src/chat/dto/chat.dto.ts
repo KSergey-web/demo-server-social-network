@@ -25,3 +25,12 @@ export class AddChatUserDTO {
   @ApiProperty()
   chat: string;
 }
+
+export class AddUsersToChatDTO {
+  @IsMongoId()
+  @ApiProperty()
+  chat: string;
+
+  @ApiProperty()
+  users: Array<string>
+}

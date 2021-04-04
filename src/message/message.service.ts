@@ -26,7 +26,8 @@ export class MessageService {
     };
     const createdMessage = new this.messageModel(message);
     await createdMessage.save();
-    this.socketGateway.handleMessage(message);
+    await createdMessage.populate('user').execPopulate();
+    this.socketGateway.handleMessage(createdMessage);
     return createdMessage;
   }
 
@@ -41,6 +42,6 @@ export class MessageService {
       .find({ chat })
       .sort({ date: -1 })
       .skip((page - 1) * 20)
-      .limit(20);
+      .limit(20).populate('user').exec();
   }
 }

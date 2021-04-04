@@ -22,10 +22,10 @@ export class Message {
     ref: 'Chat',
     required: true,
   })
-  chat: Chat;
+  chat: Chat | string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
-  user: User;
+  user: User | string;
 
   @Prop({ select: false })
   __v: Number;
