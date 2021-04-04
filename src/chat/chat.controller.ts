@@ -39,7 +39,7 @@ export class ChatController {
   }
 
   @ApiBearerAuth()
-  @Get('add/:chat/:user')
+  @Get(':chat/add/:user')
   @UseGuards(JwtAuthGuard)
   async addUser(
     @Param() params: AddChatUserDTO,

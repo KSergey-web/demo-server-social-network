@@ -217,6 +217,11 @@ export class OrganizationService {
     olderid: string,
   ) {
     const olderlink = await this.organizationUserLink(organizationid, olderid);
+    await this.checkAccess(
+      olderlink,
+      roleUserOrganizationEnum.superUser,
+      roleUserOrganizationEnum.admin,
+    );
     try {
       const userlink = await this.organizationUserLink(
         organizationid,

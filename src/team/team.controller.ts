@@ -34,7 +34,7 @@ export class TeamController {
   }
 
   @ApiBearerAuth()
-  @Get(':id')
+  @Get('organization/:id')
   @UseGuards(JwtAuthGuard)
   async getTeams(@User() { _id }: UserDocument, @Param() params: ObjectIdDTO) {
     return await this.teamService.getTeams(params.id, _id);
@@ -82,7 +82,7 @@ export class TeamController {
   }
 
   @ApiBearerAuth()
-  @Delete(':id/statuse')
+  @Delete(':id/statuses')
   @UseGuards(JwtAuthGuard)
   async getStatuses(
     @Param() params: ObjectIdDTO,

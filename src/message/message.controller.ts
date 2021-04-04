@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { MessageService } from './message.service';
@@ -23,12 +23,32 @@ export class MessageController {
   }
 
   @ApiBearerAuth()
-  @Get(':id')
+  @Get('all/chat/:id')
   @UseGuards(JwtAuthGuard)
   async getMessagesFromChat(
     @Param() params: ObjectIdDTO,
     @User() user: UserDocument,
   ) {
     return await this.messageService.getMessagesFromChat(params.id, user._id);
+  }
+
+  @ApiBearerAuth()
+  @Delete(':id')
+  @UseGuards(JwtAuthGuard)
+  async deleteMessage(
+    @Param() params: ObjectIdDTO,
+    @User() user: UserDocument,
+  ) {
+    //
+  }
+
+  @ApiBearerAuth()
+  @Patch(':id')
+  @UseGuards(JwtAuthGuard)
+  async updateMessage(
+    @Param() params: ObjectIdDTO,
+    @User() user: UserDocument,
+  ) {
+    //
   }
 }

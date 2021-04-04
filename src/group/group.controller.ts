@@ -82,7 +82,7 @@ export class GroupController {
   }
 
   @ApiBearerAuth()
-  @Delete('deleteuser/:group/:user')
+  @Delete(':group/deleteuser/:user')
   @UseGuards(JwtAuthGuard)
   async fireUser(
     @Param() params: DeleteGroupUserLinkDTO,

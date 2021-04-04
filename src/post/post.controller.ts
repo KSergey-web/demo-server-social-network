@@ -33,7 +33,7 @@ export class PostController {
   }
 
   @ApiBearerAuth()
-  @Delete('id')
+  @Delete(':id')
   @UseGuards(JwtAuthGuard)
   async deletePost(
     @Param() params: ObjectIdDTO,
@@ -43,7 +43,7 @@ export class PostController {
   }
 
   @ApiBearerAuth()
-  @Get('id')
+  @Get('all/group/:id')
   @UseGuards(JwtAuthGuard)
   async getPosts(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     return this.postService.getPosts(params.id, _id);
