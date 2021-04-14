@@ -30,6 +30,9 @@ export class CreateTeamDTO {
   @IsString()
   @ApiProperty()
   organization: string;
+
+  @ApiPropertyOptional()
+  users?: Array<string>
 }
 
 export class UpdateTeamDTO extends OmitType(PartialType(CreateTeamDTO), [

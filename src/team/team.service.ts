@@ -1,6 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { consoleOut } from 'src/debug';
 import {
   AddTeamUserLinkDTO,
   CreateTeamDTO,
@@ -38,18 +39,27 @@ export class TeamService {
     };
     const link = new this.teamUserLinkModel(teamUserLink);
     await link.save();
+    if (createTeamDTO.users){
+      createTeamDTO.users.forEach(async (user) =>
+        {
+          await this.addTeamUserLink({team: team._id, user}, userId)
+        }
+      )
+      }
     return team;
   }
 
   async getTeams(organizationId: string, userId: string): Promise<Array<Team>> {
-    const filter: any = { user: userId };
-    const teams = await this.teamUserLinkModel
-      .find({ filter })
-      .populate('team')
-      .find({ 'team.organization': organizationId });
-    return teams.map(res => {
-      return res.team;
+    const links = await this.teamUserLinkModel
+      .find({user:userId})
+      .populate('team').exec();
+    let teams: Array<Team> = [];
+    links.forEach(({team})=>{
+      if ((team as Team).organization == organizationId){
+        teams.push((team as Team));
+      }
     });
+    return teams;
   }
 
   async getTeamById(id: string): Promise<TeamDocument> {
@@ -68,9 +78,9 @@ export class TeamService {
       user: userId,
       team: teamId,
     };
-    const link = await this.teamUserLinkModel.findOne({
-      obj,
-    });
+    const link = await this.teamUserLinkModel.findOne(
+      obj
+    );
     if (!link) {
       throw new HttpException(
         'You do not have this team',
@@ -128,6 +138,9 @@ export class TeamService {
     userId: string,
   ): Promise<TeamUserLinkDocument> {
     const team = await this.getTeamById(dto.team);
+    consoleOut(team,'t');
+    consoleOut(dto,'dto');
+    consoleOut(userId,'userId');
     const link = await this.teamUserLink(dto.team, userId);
     await this.checkAccess(link, roleUserTeamEnum.admin);
     const newLink = new this.teamUserLinkModel(dto);

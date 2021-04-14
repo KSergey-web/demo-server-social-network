@@ -34,7 +34,7 @@ export class TeamController {
   }
 
   @ApiBearerAuth()
-  @Get('organization/:id')
+  @Get('all/organization/:id')
   @UseGuards(JwtAuthGuard)
   async getTeams(@User() { _id }: UserDocument, @Param() params: ObjectIdDTO) {
     return await this.teamService.getTeams(params.id, _id);

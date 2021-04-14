@@ -37,11 +37,13 @@ export class ChatService {
     };
     const createdChatUser = new this.chatUserModel(chatUser);
     await createdChatUser.save();
+    if (chatDTO.users){
     chatDTO.users.forEach(async (user) =>
       {
         await this.addUser({chat:createdChat._id, user}, userId)
       }
     )
+    }
     return createdChat;
   }
 

@@ -8,6 +8,9 @@ export type TeamUserLinkDocument = TeamUserLink & Document;
 
 @Schema()
 export class TeamUserLink {
+
+  _id?:string;
+
   @Prop({ default: 'user' })
   roleUser: string;
 
@@ -16,10 +19,10 @@ export class TeamUserLink {
     ref: 'Team',
     required: true,
   })
-  team: Team;
+  team: Team | string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
-  user: User;
+  user: User | string;
 
   @Prop({ select: false })
   __v: Number;

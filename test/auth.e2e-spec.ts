@@ -7,7 +7,7 @@ const app = `http://localhost:4000`;
 const database = 'mongodb://localhost:27017/nest-write';
 
 beforeAll(async () => {
-  await mongoose.connect(database);
+  await mongoose.connect(database, { useNewUrlParser: true, useUnifiedTopology:true });
   await mongoose.connection.db.dropDatabase();
 });
 
@@ -19,6 +19,9 @@ describe('AUTH', () => {
   const user: RegisterDTO = {
     login: 'username',
     password: 'password',
+    email:"s_kulaev@bku.ru",
+    name:'df',
+    surname:'p',
   };
 
   const userLogin: LoginDTO = {

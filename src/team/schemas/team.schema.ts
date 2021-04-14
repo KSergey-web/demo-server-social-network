@@ -7,6 +7,8 @@ export type TeamDocument = Team & Document;
 
 @Schema()
 export class Team {
+  id?:string;
+
   @Prop({ required: true })
   name: string;
 
@@ -18,7 +20,7 @@ export class Team {
     ref: 'Organization',
     required: true,
   })
-  organization: Organization;
+  organization: Organization | string;
 
   @Prop({ select: false })
   __v: Number;
