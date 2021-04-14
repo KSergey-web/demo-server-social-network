@@ -35,7 +35,7 @@ export class StatusService {
 
   async getStatuses(teamId: string) {
     const filter: any = { team: teamId };
-    return await this.statusModel.find(filter, { team: false });
+    return await this.statusModel.find({team: teamId, position:{$gt:0} }, { team: false });
   }
 
   async getStatusById(id: string): Promise<StatusDocument> {

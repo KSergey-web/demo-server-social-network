@@ -19,7 +19,7 @@ export class Status {
     ref: 'Team',
     required: true,
   })
-  team: Team;
+  team: Team | string;
 
   @Prop({ select: false })
   __v: Number;

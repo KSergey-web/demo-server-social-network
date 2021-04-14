@@ -1,596 +1,614 @@
- //res info 
-{"user":{"_id":"60477d7a6a667f477814fe16","login":"string","name":"sergey","surname":"kularv","email":"s_kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InN0cmluZyIsImlhdCI6MTYxNzYyNDM2MCwiZXhwIjoxNjE3NjI3OTYwfQ.xf4ONNSsoT6KOqEZuSH9hus2VsAwisn_HPMh22xnPy8"};
  //reqinfo 
-{"timestamp":"2021-04-05T12:06:00.186Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"string","password":"string"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:00.366Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:00.379Z","path":"/v1/api/user/60477d7a6a667f477814fe16","method":"GET","bodyreq":{},"paramreq":{"id":"60477d7a6a667f477814fe16"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:00.370Z","path":"/v1/api/organization/all/60477d7a6a667f477814fe16","method":"GET","bodyreq":{},"paramreq":{"id":"60477d7a6a667f477814fe16"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"60477db86a667f477814fe18","organization":{"_id":"60477db86a667f477814fe17","name":"string","description":"string","avatar":"string"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"60478483511f6b2ac0470b57","organization":{"_id":"60478483511f6b2ac0470b56","name":"string2","description":"string","avatar":"string"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f2b227b2277773029441e","organization":{"_id":"604f2b227b2277773029441d","avatar":"asfd","name":"asd","description":"asdf"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f2bef7b22777730294420","organization":{"_id":"604f2bef7b2277773029441f","avatar":"arj","name":"aj","description":"arj"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f2d197b22777730294422","organization":{"_id":"604f2d197b22777730294421","avatar":"rg","name":"awef","description":"qr"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f2ea57b22777730294424","organization":{"_id":"604f2ea57b22777730294423","avatar":"aerg","name":"earg","description":"eag"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f30c47b22777730294426","organization":{"_id":"604f30c47b22777730294425","avatar":"hjbj","name":"cccccccccc","description":"hg"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f35807b22777730294428","organization":{"_id":"604f35807b22777730294427","avatar":"ghv","name":"uyhb","description":"ugvbu"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f35b07b2277773029442a","organization":{"_id":"604f35b07b22777730294429","avatar":"ddddddddddddddd","name":"ddddddddddddddddddd","description":"dddddddddddddddddd"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:18.408Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:18.411Z","path":"/v1/api/organization/all/60477d7a6a667f477814fe16","method":"GET","bodyreq":{},"paramreq":{"id":"60477d7a6a667f477814fe16"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"60477db86a667f477814fe18","organization":{"_id":"60477db86a667f477814fe17","name":"string","description":"string","avatar":"string"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"60478483511f6b2ac0470b57","organization":{"_id":"60478483511f6b2ac0470b56","name":"string2","description":"string","avatar":"string"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f2b227b2277773029441e","organization":{"_id":"604f2b227b2277773029441d","avatar":"asfd","name":"asd","description":"asdf"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f2bef7b22777730294420","organization":{"_id":"604f2bef7b2277773029441f","avatar":"arj","name":"aj","description":"arj"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f2d197b22777730294422","organization":{"_id":"604f2d197b22777730294421","avatar":"rg","name":"awef","description":"qr"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f2ea57b22777730294424","organization":{"_id":"604f2ea57b22777730294423","avatar":"aerg","name":"earg","description":"eag"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f30c47b22777730294426","organization":{"_id":"604f30c47b22777730294425","avatar":"hjbj","name":"cccccccccc","description":"hg"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f35807b22777730294428","organization":{"_id":"604f35807b22777730294427","avatar":"ghv","name":"uyhb","description":"ugvbu"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"worker","roleUser":"superUser","_id":"604f35b07b2277773029442a","organization":{"_id":"604f35b07b22777730294429","avatar":"ddddddddddddddd","name":"ddddddddddddddddddd","description":"dddddddddddddddddd"},"user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:26.155Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:26.153Z","path":"/v1/api/organization/60477db86a667f477814fe17/users","method":"GET","bodyreq":{},"paramreq":{"id":"60477db86a667f477814fe17"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"60477db86a667f477814fe18","organization":"60477db86a667f477814fe17","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"студент","roleUser":"user","_id":"606191065a1d264f343e10d6","organization":"60477db86a667f477814fe17","user":{"_id":"604a8e1ebf41ff6f34a580e9","login":"hello","password":"$2b$10$AGljf5i/lJH4MxtOJr0uHOcC42uxeDG/JKoXKUtZzfn8Dvj1O1lfG"}},{"position":"hhh","roleUser":"user","_id":"606191fc5a1d264f343e10d7","organization":"60477db86a667f477814fe17","user":{"_id":"604a8e5bbf41ff6f34a580ea","login":"jefhjhe","password":"$2b$10$jq1rUyhixGXJcC6z9xIIO.0HCrJXesDtXolnP48bT5U63BFwHjTgW"}},{"position":"Инженер","roleUser":"user","_id":"606a34b84e0900441478dcc4","organization":"60477db86a667f477814fe17","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}}];
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:41.002Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //res info 
-[{"_id":"6061bec5add7593f6c33ef68","avatar":"string","name":"чат1"},{"_id":"6064ead3d2a3bd48d8756489","avatar":"asd","name":"чат 2"},{"_id":"6064f3ed3a36543ae0070fe4","avatar":"asd","name":"asdaasd"},{"_id":"6064f40d3067f233a45f24c8","avatar":"asd","name":"asdaasd"},{"_id":"6064f42ab4af6c4c488b8e25","avatar":"asd","name":"asdaasd"}];
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:41.004Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:45.225Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:45.229Z","path":"/v1/api/message/all/chat/6061bec5add7593f6c33ef68","method":"GET","bodyreq":{},"paramreq":{"id":"6061bec5add7593f6c33ef68"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"editing":false,"_id":"606a462f86c5853bc86bb0e4","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T23:05:19.287Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a462686c5853bc86bb0e3","text":"hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T23:05:10.953Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a43ad60e0693690792516","text":"lk","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:54:37.705Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a43a560e0693690792515","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:54:29.519Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434e60e0693690792514","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:53:02.360Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434e60e0693690792513","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:53:02.181Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434860e0693690792512","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:56.154Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434760e0693690792511","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:55.972Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433c60e0693690792510","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:44.889Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433960e069369079250f","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:41.983Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433960e069369079250e","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:41.462Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433860e069369079250d","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:40.965Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a33964e0900441478dcc2","text":"asdfagf","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:58.967Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33924e0900441478dcc1","text":"asdfa","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:54.278Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33894e0900441478dcc0","text":"wergsad","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:45.995Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33874e0900441478dcbf","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:43.497Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33864e0900441478dcbe","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:42.114Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a32cc81fb99694cb5ab2e","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:42:36.442Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a329381fb99694cb5ab2d","text":"asdf","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:41:39.508Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a30d9474bb84d34023eac","text":"egwe","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:34:17.259Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}}];
- //error info 
-{"code":401,"timestamp":"2021-4-5","path":"/v1/api/auth/login","method":"POST","message":"Invalid credentials","bodyreq":{"login":"stepa","password":"6324"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:59.831Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"shitov","password":"6324"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"user":{"_id":"606a34094e0900441478dcc3","login":"shitov","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InNoaXRvdiIsImlhdCI6MTYxNzYyNDQxOSwiZXhwIjoxNjE3NjI4MDE5fQ.4vgDFCRXWhcBBKXWLvddLgQNULaAs-Cek7LHnGj_YMU"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:59.969Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:59.972Z","path":"/v1/api/user/606a34094e0900441478dcc3","method":"GET","bodyreq":{},"paramreq":{"id":"606a34094e0900441478dcc3"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"};
- //res info 
-[{"position":"Инженер","roleUser":"user","_id":"606a34b84e0900441478dcc4","organization":{"_id":"60477db86a667f477814fe17","name":"string","description":"string","avatar":"string"},"user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}}];
- //res info 
-{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:06:59.971Z","path":"/v1/api/organization/all/606a34094e0900441478dcc3","method":"GET","bodyreq":{},"paramreq":{"id":"606a34094e0900441478dcc3"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-05T12:07:04.765Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:07:04.767Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6061bec5add7593f6c33ef68","avatar":"string","name":"чат1"}];
- //reqinfo 
-{"timestamp":"2021-04-05T12:07:06.391Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:07:06.395Z","path":"/v1/api/message/all/chat/6061bec5add7593f6c33ef68","method":"GET","bodyreq":{},"paramreq":{"id":"6061bec5add7593f6c33ef68"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"editing":false,"_id":"606a462f86c5853bc86bb0e4","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T23:05:19.287Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a462686c5853bc86bb0e3","text":"hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T23:05:10.953Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a43ad60e0693690792516","text":"lk","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:54:37.705Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a43a560e0693690792515","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:54:29.519Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434e60e0693690792514","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:53:02.360Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434e60e0693690792513","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:53:02.181Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434860e0693690792512","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:56.154Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434760e0693690792511","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:55.972Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433c60e0693690792510","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:44.889Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433960e069369079250f","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:41.983Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433960e069369079250e","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:41.462Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433860e069369079250d","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:40.965Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a33964e0900441478dcc2","text":"asdfagf","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:58.967Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33924e0900441478dcc1","text":"asdfa","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:54.278Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33894e0900441478dcc0","text":"wergsad","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:45.995Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33874e0900441478dcbf","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:43.497Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33864e0900441478dcbe","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:42.114Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a32cc81fb99694cb5ab2e","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:42:36.442Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a329381fb99694cb5ab2d","text":"asdf","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:41:39.508Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a30d9474bb84d34023eac","text":"egwe","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:34:17.259Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-05T12:07:52.539Z","path":"/v1/api/message","method":"POST","bodyreq":{"text":"privet","chat":"6061bec5add7593f6c33ef68"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"editing":false,"_id":"606afd9865f73138e4f5056a","text":"privet","chat":"6061bec5add7593f6c33ef68","date":"2021-04-05T12:07:52.542Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"},"__v":0};
- //reqinfo 
-{"timestamp":"2021-04-05T12:08:01.312Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:08:01.314Z","path":"/v1/api/chat/6061bec5add7593f6c33ef68/users","method":"GET","bodyreq":{},"paramreq":{"id":"6061bec5add7593f6c33ef68"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"},{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}];
- //reqinfo 
-{"timestamp":"2021-04-05T12:08:05.900Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:08:05.901Z","path":"/v1/api/message/all/chat/6061bec5add7593f6c33ef68","method":"GET","bodyreq":{},"paramreq":{"id":"6061bec5add7593f6c33ef68"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"editing":false,"_id":"606afd9865f73138e4f5056a","text":"privet","chat":"6061bec5add7593f6c33ef68","date":"2021-04-05T12:07:52.542Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a462f86c5853bc86bb0e4","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T23:05:19.287Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a462686c5853bc86bb0e3","text":"hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T23:05:10.953Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a43ad60e0693690792516","text":"lk","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:54:37.705Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a43a560e0693690792515","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:54:29.519Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434e60e0693690792514","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:53:02.360Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434e60e0693690792513","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:53:02.181Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434860e0693690792512","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:56.154Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434760e0693690792511","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:55.972Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433c60e0693690792510","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:44.889Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433960e069369079250f","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:41.983Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433960e069369079250e","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:41.462Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433860e069369079250d","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:40.965Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a33964e0900441478dcc2","text":"asdfagf","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:58.967Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33924e0900441478dcc1","text":"asdfa","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:54.278Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33894e0900441478dcc0","text":"wergsad","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:45.995Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33874e0900441478dcbf","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:43.497Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33864e0900441478dcbe","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:42.114Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a32cc81fb99694cb5ab2e","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:42:36.442Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a329381fb99694cb5ab2d","text":"asdf","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:41:39.508Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}}];
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:08:07.738Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-05T12:08:07.740Z","path":"/v1/api/organization/60477db86a667f477814fe17/users","method":"GET","bodyreq":{},"paramreq":{"id":"60477db86a667f477814fe17"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"60477db86a667f477814fe18","organization":"60477db86a667f477814fe17","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"position":"студент","roleUser":"user","_id":"606191065a1d264f343e10d6","organization":"60477db86a667f477814fe17","user":{"_id":"604a8e1ebf41ff6f34a580e9","login":"hello","password":"$2b$10$AGljf5i/lJH4MxtOJr0uHOcC42uxeDG/JKoXKUtZzfn8Dvj1O1lfG"}},{"position":"hhh","roleUser":"user","_id":"606191fc5a1d264f343e10d7","organization":"60477db86a667f477814fe17","user":{"_id":"604a8e5bbf41ff6f34a580ea","login":"jefhjhe","password":"$2b$10$jq1rUyhixGXJcC6z9xIIO.0HCrJXesDtXolnP48bT5U63BFwHjTgW"}},{"position":"Инженер","roleUser":"user","_id":"606a34b84e0900441478dcc4","organization":"60477db86a667f477814fe17","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-05T12:08:21.512Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-05T12:08:21.514Z","path":"/v1/api/message/all/chat/6061bec5add7593f6c33ef68","method":"GET","bodyreq":{},"paramreq":{"id":"6061bec5add7593f6c33ef68"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"editing":false,"_id":"606afd9865f73138e4f5056a","text":"privet","chat":"6061bec5add7593f6c33ef68","date":"2021-04-05T12:07:52.542Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a462f86c5853bc86bb0e4","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T23:05:19.287Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a462686c5853bc86bb0e3","text":"hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T23:05:10.953Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a43ad60e0693690792516","text":"lk","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:54:37.705Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a43a560e0693690792515","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:54:29.519Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434e60e0693690792514","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:53:02.360Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434e60e0693690792513","text":"hey hey","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:53:02.181Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434860e0693690792512","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:56.154Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a434760e0693690792511","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:55.972Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433c60e0693690792510","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:44.889Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433960e069369079250f","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:41.983Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433960e069369079250e","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:41.462Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a433860e069369079250d","text":"hey heyt","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T22:52:40.965Z","user":{"_id":"606a34094e0900441478dcc3","login":"shitov","password":"$2b$10$WGFhnexAeCBIRl8FJswluO.UUkoc1f5/kueL6v8xPSzQBCXWDXc.W","email":"s_shitov@bk.ru","name":"stepa","surname":"Shitov"}},{"editing":false,"_id":"606a33964e0900441478dcc2","text":"asdfagf","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:58.967Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33924e0900441478dcc1","text":"asdfa","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:54.278Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33894e0900441478dcc0","text":"wergsad","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:45.995Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33874e0900441478dcbf","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:43.497Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a33864e0900441478dcbe","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:45:42.114Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a32cc81fb99694cb5ab2e","text":"werg","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:42:36.442Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}},{"editing":false,"_id":"606a329381fb99694cb5ab2d","text":"asdf","chat":"6061bec5add7593f6c33ef68","date":"2021-04-04T21:41:39.508Z","user":{"_id":"60477d7a6a667f477814fe16","login":"string","password":"$2b$10$lTenNryKjA6p/cX9WmnvFOidQFzL0u8/yME3idtXmnaV.Gy/C4xwC","name":"sergey","surname":"kularv","email":"s_kulaev"}}];
- //error info 
-{"code":404,"timestamp":"2021-4-8","path":"/auth/login","method":"POST","message":"Cannot POST /auth/login","details":"Cannot POST /auth/login","bodyreq":{"login":"username","password":"password"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //error info 
-{"code":404,"timestamp":"2021-4-8","path":"/auth/register","method":"POST","message":"Cannot POST /auth/register","details":"Cannot POST /auth/register","bodyreq":{"login":"username","password":"password","email":"s_kulaev@bku.ru","name":"df","surname":"p"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //error info 
-{"code":404,"timestamp":"2021-4-8","path":"/auth/register","method":"POST","message":"Cannot POST /auth/register","details":"Cannot POST /auth/register","bodyreq":{"login":"username","password":"password","email":"s_kulaev@bku.ru","name":"df","surname":"p"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //error info 
-{"code":401,"timestamp":"2021-4-14","path":"/v1/api/auth/login","method":"POST","message":"Invalid credentials","bodyreq":{"login":"string","password":"string"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:00:32.842Z","path":"/v1/api/auth/register","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQwNTIzMywiZXhwIjoxNjE4NDkxNjMzfQ.GyY0AAroAK49XDpJuf1n83k7O-ccOb8rxIt1I1R5gns"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:00:54.666Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQwNTI1NCwiZXhwIjoxNjE4NDkxNjU0fQ.CU5qGyJypnHE1vNgy1xPG88EvTXSHjwYchzQo_KP0Dk"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:00:54.826Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:00:54.831Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //res info 
-[];
- //reqinfo 
-{"timestamp":"2021-04-14T13:00:54.837Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:01:16.823Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //res info 
-[];
- //reqinfo 
-{"timestamp":"2021-04-14T13:01:16.825Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:01:47.198Z","path":"/v1/api/organization/","method":"POST","bodyreq":{"avatar":"avatar","name":"My Organization","description":"mt description "},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description ","__v":0};
+{"timestamp":"2021-04-14T19:12:18.408Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T13:01:47.257Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:04:38.544Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:04:40.372Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:04:48.111Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:04:48.108Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:04:56.155Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:05:05.412Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:03.938Z","path":"/v1/api/auth/register","method":"POST","bodyreq":{"login":"stepa","password":"Kulaev6324ab","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov","__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InN0ZXBhIiwiaWF0IjoxNjE4NDA1NTY0LCJleHAiOjE2MTg0OTE5NjR9.MCPLVqrFflssjYkcNEioouaGGxM-qFKhU8FamjbA6Vs"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:13.729Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"stepa","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6InN0ZXBhIiwiaWF0IjoxNjE4NDA1NTczLCJleHAiOjE2MTg0OTE5NzN9.MVujaAPoDVB0Ad-uuOVj11gL6YuRJcHXDxbdTsIdMkQ"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:13.858Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[];
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:13.860Z","path":"/v1/api/user/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:13.863Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:22.985Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:22.983Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:37.929Z","path":"/v1/api/organization/hirewithlogin","method":"POST","bodyreq":{"organizationId":"6076e7bb94939b511ceeaf31","position":"инженер","login":"stepa"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"message":"Worker is hired"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:37.960Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:06:55.170Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:11.000Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:11.001Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:12.592Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:13.169Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:13.172Z","path":"/v1/api/user/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:13.171Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:14.842Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:14.843Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:15.585Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:15.588Z","path":"/v1/api/user/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:15.586Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:20.024Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:07:20.027Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:10:53.508Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:10:53.510Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:10:54.605Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:11:00.755Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:11:00.759Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:11:07.974Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:11:07.978Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:11:15.474Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:11:18.052Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:11:37.256Z","path":"/v1/api/team","method":"POST","bodyreq":{"avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31","users":["6076e8bb94939b511ceeaf33"]},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31","__v":0};
- //reqinfo 
-{"timestamp":"2021-04-14T13:22:40.220Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:22:54.186Z","path":"/v1/api/team","method":"POST","bodyreq":{"avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31","users":["6076e8bb94939b511ceeaf33"]},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31","__v":0};
- //reqinfo 
-{"timestamp":"2021-04-14T13:24:57.927Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:25:06.362Z","path":"/v1/api/team","method":"POST","bodyreq":{"avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31","users":["6076e8bb94939b511ceeaf33"]},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31","__v":0};
- //reqinfo 
-{"timestamp":"2021-04-14T13:28:02.366Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:28:08.751Z","path":"/v1/api/team","method":"POST","bodyreq":{"avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31","users":["6076e8bb94939b511ceeaf33"]},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31","__v":0};
- //reqinfo 
-{"timestamp":"2021-04-14T13:35:29.648Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:35:29.650Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:35:30.471Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:35:38.090Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:35:40.839Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:35:40.851Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:35:44.521Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:37:03.925Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:37:17.099Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:22.658Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:22.667Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:23.278Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:33.301Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:33.304Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:34.229Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:37.453Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:37.464Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:43.392Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:43.393Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:38:44.248Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:39:34.124Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:39:34.130Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:39:35.254Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:00.822Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:00.823Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:01.784Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:12.708Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:13.793Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:32.283Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:32.285Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:35.289Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:35.303Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:35.304Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //error info 
-{"code":400,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/undefined","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"undefined"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:43:39.129Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:44:06.324Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:44:06.328Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:44:08.254Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:44:08.284Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:44:08.292Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:44:11.789Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:44:11.791Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[];
- //reqinfo 
-{"timestamp":"2021-04-14T13:50:02.632Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:50:02.637Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[];
- //reqinfo 
-{"timestamp":"2021-04-14T13:57:46.237Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:57:46.241Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T13:57:49.361Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:57:49.363Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //error info 
-{"code":401,"timestamp":"2021-4-14","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","message":"You do not have this team","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T13:58:25.184Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:58:49.893Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T13:58:49.886Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-14T19:12:21.795Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T13:58:56.056Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-14T19:16:10.190Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:16:20.578Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:16:25.736Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:18:23.815Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:18:28.038Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T13:58:56.064Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-14T19:19:13.298Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:19:15.870Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //error info 
+{"code":400,"timestamp":"2021-4-15","path":"/v1/api/user/statuses","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"statuses"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:19:50.466Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:19:58.400Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:20:55.590Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:20:58.260Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //error info 
+{"code":400,"timestamp":"2021-4-15","path":"/v1/api/organization/statuses","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"statuses"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:21:19.575Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:21:21.914Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //res info 
+{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQyODI4MSwiZXhwIjoxNjE4NTE0NjgxfQ.exOB_AZTXbiau1RadQPC3KUtGD8fBxjBZOdDW0W5Gz4"};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:24:41.906Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"kgXBuamPvkVg17BFAAAJ"}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:25:14.755Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"DELETE","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{"io":"kgXBuamPvkVg17BFAAAJ"}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3},{"_id":"6076ea0994939b511ceeaf39","name":"В истории","position":-1}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:28:58.204Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"DELETE","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{"io":"kgXBuamPvkVg17BFAAAJ"}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3},{"_id":"6076ea0994939b511ceeaf39","name":"В истории","position":-1}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:30:07.972Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:30:10.076Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:32:45.600Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQyODc2NSwiZXhwIjoxNjE4NTE1MTY1fQ.5r1Nvi1UbsdikQwf8lgY89mrtiXH2F7eHPIkqyra8Ak"};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:32:45.776Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 {"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
  //reqinfo 
-{"timestamp":"2021-04-14T13:59:31.948Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-14T19:32:45.778Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T13:59:31.985Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-14T19:32:51.518Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T13:59:31.981Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-14T19:32:54.204Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:34:57.235Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:35:00.622Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:35:21.319Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:35:24.275Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //error info 
+{"code":404,"timestamp":"2021-4-15","path":"/api/v1/ko","method":"GET","message":"Cannot GET /api/v1/ko","details":"Cannot GET /api/v1/ko","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"06eVvvjsvR9zpGx9AAAA"}};
+ //error info 
+{"code":404,"timestamp":"2021-4-15","path":"/favicon.ico","method":"GET","message":"Cannot GET /favicon.ico","details":"Cannot GET /favicon.ico","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"06eVvvjsvR9zpGx9AAAA"}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:37:09.964Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:37:15.244Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //error info 
+{"code":401,"timestamp":"2021-4-15","path":"/v1/api/user","method":"GET","message":"Unauthorized","details":"Unauthorized","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"DjhbNWvAyvx5WoO5AAAC"}};
+ //error info 
+{"code":404,"timestamp":"2021-4-15","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","message":"Cannot GET /v1/api/team/6076ea0994939b511ceeaf35/statuses","details":"Cannot GET /v1/api/team/6076ea0994939b511ceeaf35/statuses","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"DjhbNWvAyvx5WoO5AAAC"}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:40:39.804Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:40:42.439Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:40:42.460Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:40:44.666Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //error info 
+{"code":404,"timestamp":"2021-4-15","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","message":"Cannot GET /v1/api/team/6076ea0994939b511ceeaf35/statuses","details":"Cannot GET /v1/api/team/6076ea0994939b511ceeaf35/statuses","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:40:46.760Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:43:51.375Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"DELETE","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{"io":"YIN91Zu2aEHcMvn-AAAD"}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3},{"_id":"6076ea0994939b511ceeaf39","name":"В истории","position":-1}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:45:48.741Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //res info 
+[];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:45:54.087Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:45:59.611Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:46:04.500Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:46:09.897Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:46:45.761Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:46:48.113Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3},{"_id":"6076ea0994939b511ceeaf39","name":"В истории","position":-1}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:46:48.107Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":404,"timestamp":"2021-4-15","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"DELETE","message":"Cannot DELETE /v1/api/team/6076ea0994939b511ceeaf35/statuses","details":"Cannot DELETE /v1/api/team/6076ea0994939b511ceeaf35/statuses","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"zF5aMkms3I1e9-AKAAAE"}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:53:15.809Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{"io":"zF5aMkms3I1e9-AKAAAE"}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:57:31.514Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQzMDI1MSwiZXhwIjoxNjE4NTE2NjUxfQ.5A4NLZkfmwdcRZjjaxgmQ2oOmw51fZbyrASmwAvsebA"};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:57:31.704Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:57:31.728Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:57:34.047Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //error info 
+{"code":400,"timestamp":"2021-4-15","path":"/v1/api/team/sssssssss/statuses","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"sssssssss"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:57:37.568Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:57:59.451Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQzMDI3OSwiZXhwIjoxNjE4NTE2Njc5fQ.JgR8BdnOHAR2_Rx0zqzsvCGFR0ErK7ef8sVCNfagxfM"};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:57:59.601Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:57:59.609Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:58:01.538Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //error info 
+{"code":400,"timestamp":"2021-4-15","path":"/v1/api/team/sssssssss/statuses","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"sssssssss"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T19:58:03.653Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:58:44.615Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:58:47.667Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:59:34.842Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T19:59:36.996Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:00:22.008Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:00:30.018Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:00:31.049Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T20:01:18.789Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:01:21.933Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:01:23.193Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:05:29.888Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:05:32.242Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //error info 
+{"code":401,"timestamp":"2021-4-15","path":"/v1/api/auth/login","method":"POST","message":"Invalid credentials","bodyreq":{"login":"kulaev","password":"string"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T20:06:35.518Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQzMDc5NSwiZXhwIjoxNjE4NTE3MTk1fQ.tQVLXUo7Twv_QuydZY2wiOS-ILQnZjfuwR2q1tSGnqs"};
+ //reqinfo 
+{"timestamp":"2021-04-14T20:06:35.692Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //res info 
+{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
+ //reqinfo 
+{"timestamp":"2021-04-14T20:06:35.700Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T20:06:47.483Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:06:49.911Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:06:51.223Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:07:30.995Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:07:35.730Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:09:20.617Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:09:39.160Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:09:43.014Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:09:44.123Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:10:44.413Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:10:46.992Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:10:49.244Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:11:13.697Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:11:17.926Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:11:18.977Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:13:08.587Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:13:12.501Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:13:14.255Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:17:35.268Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:17:37.278Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //exeption info 
+{"errors":{"avatar":{"name":"ValidatorError","message":"Path `avatar` is required.","properties":{"message":"Path `avatar` is required.","type":"required","path":"avatar","value":""},"kind":"required","path":"avatar","value":""}},"_message":"Chat validation failed","message":"Chat validation failed: avatar: Path `avatar` is required."};
+ //reqinfo 
+{"timestamp":"2021-04-14T20:18:13.832Z","path":"/v1/api/chat","method":"POST","bodyreq":{"avatar":"nbb","name":"chat","description":""},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"_id":"60774e0586022758d4913286","avatar":"nbb","name":"chat","__v":0};
+ //reqinfo 
+{"timestamp":"2021-04-14T20:18:13.893Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"60774e0586022758d4913286","avatar":"nbb","name":"chat"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:18:18.565Z","path":"/v1/api/message/all/chat/60774e0586022758d4913286","method":"GET","bodyreq":{},"paramreq":{"id":"60774e0586022758d4913286"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:24:38.218Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"60774e0586022758d4913286","avatar":"nbb","name":"chat"}];
+ //error info 
+{"code":404,"timestamp":"2021-4-15","path":"/v1/api/team/all/organization/","method":"GET","message":"Cannot GET /v1/api/team/all/organization/","details":"Cannot GET /v1/api/team/all/organization/","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T20:25:22.420Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T13:59:35.193Z","path":"/v1/api/user","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-14T20:28:41.608Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
-{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"};
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T13:59:35.194Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-14T20:28:45.905Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:28:47.950Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:31:04.936Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:31:05.582Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:31:09.658Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:31:10.841Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:32:05.725Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:32:06.292Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:32:08.149Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:32:09.504Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:32:25.813Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:32:26.690Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:32:30.061Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:32:31.252Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:33:07.373Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:33:14.995Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:33:21.521Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:33:22.930Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:36:09.989Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:36:10.161Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:36:16.364Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:36:18.022Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:36:55.967Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:36:58.831Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:37:02.716Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:37:03.711Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:44:09.784Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:44:09.839Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:44:16.121Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T20:44:18.125Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:27:14.090Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:43:35.784Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:43:51.989Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:44:02.522Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:44:05.233Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:45:54.876Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:45:58.106Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:46:02.956Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:46:04.495Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:46:23.098Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-14T21:46:24.947Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:47:21.212Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:47:26.800Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:47:32.656Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:47:34.919Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:48:40.333Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:48:43.403Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:48:47.469Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:48:48.892Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-14T21:53:12.830Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];

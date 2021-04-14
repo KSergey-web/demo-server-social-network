@@ -20,8 +20,10 @@ export class LoggingInterceptor implements NestInterceptor {
     return next
       .handle()
       .pipe(tap(value =>  {
+        if(reqInfo.path != '/v1/api/user'){
         fs.writeFile('logFile.json',' //reqinfo \n'+JSON.stringify(reqInfo) +";\n",{flag: 'a+'},(err)=>{});
         fs.writeFile('logFile.json',' //res info \n'+JSON.stringify(value) +";\n",{flag: 'a+'},(err)=>{});
+        }
     }));
   }
 }

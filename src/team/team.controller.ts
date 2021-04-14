@@ -82,7 +82,7 @@ export class TeamController {
   }
 
   @ApiBearerAuth()
-  @Delete(':id/statuses')
+  @Get(':id/statuses')
   @UseGuards(JwtAuthGuard)
   async getStatuses(
     @Param() params: ObjectIdDTO,

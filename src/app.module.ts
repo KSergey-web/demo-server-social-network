@@ -32,9 +32,9 @@ import { TaskModule } from './task/task.module';
     //SocketModule,
     //ChatModule,
     MessageModule,
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'static'),
-    }),
+    // ServeStaticModule.forRoot({
+    //   rootPath: join(__dirname, '..', 'static'),
+    // }),
     GroupModule,
     PostModule,
     TeamModule,
