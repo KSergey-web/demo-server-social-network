@@ -14,15 +14,15 @@ export class ColorMiddleware implements NestMiddleware {
     console.log('MDDDDDDDDDDDDD');
     const color = req.body.color;
     if (color == colorEnum.green) {
-      if (!req.body.date) {
-        delete req.body.date;
-        consoleOut(req.body.date, 'delete date from req');
+      if (!req.body.deadline) {
+        delete req.body.deadline;
+        consoleOut(req.body.deadline, 'delete deadline from req');
       }
     } else if (color == colorEnum.orange) {
-      if (!req.body.date) {
-        throw new HttpException(`Date is undefined`, HttpStatus.BAD_REQUEST);
+      if (!req.body.deadline) {
+        throw new HttpException(`Deadline is undefined`, HttpStatus.BAD_REQUEST);
       }
-      if (!(req.body.date > new Date())) {
+      if (!(new Date(req.body.deadline) > new Date())) {
         throw new HttpException(
           `Date should be future`,
           HttpStatus.BAD_REQUEST,

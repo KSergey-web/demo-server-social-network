@@ -1,614 +1,758 @@
  //reqinfo 
-{"timestamp":"2021-04-14T19:12:18.408Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:12:21.795Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:16:10.190Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:16:20.578Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:16:25.736Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:18:23.815Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T19:18:28.038Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:19:13.298Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:19:15.870Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //error info 
-{"code":400,"timestamp":"2021-4-15","path":"/v1/api/user/statuses","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"statuses"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T19:19:50.466Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:19:58.400Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:20:55.590Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:20:58.260Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //error info 
-{"code":400,"timestamp":"2021-4-15","path":"/v1/api/organization/statuses","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"statuses"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T19:21:19.575Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:21:21.914Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //res info 
-{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQyODI4MSwiZXhwIjoxNjE4NTE0NjgxfQ.exOB_AZTXbiau1RadQPC3KUtGD8fBxjBZOdDW0W5Gz4"};
- //reqinfo 
-{"timestamp":"2021-04-14T19:24:41.906Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"kgXBuamPvkVg17BFAAAJ"}};
- //reqinfo 
-{"timestamp":"2021-04-14T19:25:14.755Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"DELETE","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{"io":"kgXBuamPvkVg17BFAAAJ"}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3},{"_id":"6076ea0994939b511ceeaf39","name":"В истории","position":-1}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:28:58.204Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"DELETE","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{"io":"kgXBuamPvkVg17BFAAAJ"}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3},{"_id":"6076ea0994939b511ceeaf39","name":"В истории","position":-1}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:30:07.972Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:30:10.076Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:32:45.600Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQyODc2NSwiZXhwIjoxNjE4NTE1MTY1fQ.5r1Nvi1UbsdikQwf8lgY89mrtiXH2F7eHPIkqyra8Ak"};
- //reqinfo 
-{"timestamp":"2021-04-14T19:32:45.776Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T19:32:45.778Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:32:51.518Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:32:54.204Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:34:57.235Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:35:00.622Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:35:21.319Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:35:24.275Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //error info 
-{"code":404,"timestamp":"2021-4-15","path":"/api/v1/ko","method":"GET","message":"Cannot GET /api/v1/ko","details":"Cannot GET /api/v1/ko","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"06eVvvjsvR9zpGx9AAAA"}};
- //error info 
-{"code":404,"timestamp":"2021-4-15","path":"/favicon.ico","method":"GET","message":"Cannot GET /favicon.ico","details":"Cannot GET /favicon.ico","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"06eVvvjsvR9zpGx9AAAA"}};
- //reqinfo 
-{"timestamp":"2021-04-14T19:37:09.964Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:37:15.244Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //error info 
-{"code":401,"timestamp":"2021-4-15","path":"/v1/api/user","method":"GET","message":"Unauthorized","details":"Unauthorized","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"DjhbNWvAyvx5WoO5AAAC"}};
- //error info 
-{"code":404,"timestamp":"2021-4-15","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","message":"Cannot GET /v1/api/team/6076ea0994939b511ceeaf35/statuses","details":"Cannot GET /v1/api/team/6076ea0994939b511ceeaf35/statuses","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"DjhbNWvAyvx5WoO5AAAC"}};
- //reqinfo 
-{"timestamp":"2021-04-14T19:40:39.804Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:40:42.439Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:40:42.460Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T19:40:44.666Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T19:29:43.238Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //error info 
-{"code":404,"timestamp":"2021-4-15","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","message":"Cannot GET /v1/api/team/6076ea0994939b511ceeaf35/statuses","details":"Cannot GET /v1/api/team/6076ea0994939b511ceeaf35/statuses","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"code":404,"timestamp":"2021-4-16","path":"/","method":"GET","message":"Cannot GET /","details":"Cannot GET /","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"B0KYm3EnWZ86FZKEAAAM"}};
+ //error info 
+{"code":404,"timestamp":"2021-4-16","path":"/favicon.ico","method":"GET","message":"Cannot GET /favicon.ico","details":"Cannot GET /favicon.ico","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"B0KYm3EnWZ86FZKEAAAM"}};
  //reqinfo 
-{"timestamp":"2021-04-14T19:40:46.760Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T19:53:07.558Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T19:56:10.514Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T19:57:36.237Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T19:58:51.978Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T19:58:59.560Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T19:59:03.591Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T19:43:51.375Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"DELETE","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{"io":"YIN91Zu2aEHcMvn-AAAD"}};
+{"timestamp":"2021-04-15T19:59:05.630Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3},{"_id":"6076ea0994939b511ceeaf39","name":"В истории","position":-1}];
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T19:45:48.741Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T20:02:53.111Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:03:00.573Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:03:06.103Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:03:07.763Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:10:11.931Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:10:16.301Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:10:17.795Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:19:58.992Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:20:02.707Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:20:04.177Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:20:46.810Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:20:51.486Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:20:52.890Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:25:30.313Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:28:27.494Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:32:25.218Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:34:35.228Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:35:57.626Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:36:15.067Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:36:17.173Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:37:35.768Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:37:41.495Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:37:42.555Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:45:35.852Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:45:38.848Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T20:45:40.566Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:47:10.316Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:47:12.823Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:47:14.266Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:51:41.763Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:51:44.275Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:51:45.684Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:52:59.585Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:53:01.213Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:53:03.901Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:53:04.854Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:53:29.518Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:53:33.364Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:53:34.787Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:54:55.854Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:54:58.249Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:54:59.413Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:55:53.678Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T20:55:58.141Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T20:55:59.754Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:08:03.646Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:08:06.278Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T22:08:07.393Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:11:19.934Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:11:22.535Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:11:23.714Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //res info 
 [];
  //reqinfo 
-{"timestamp":"2021-04-14T19:45:54.087Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T19:45:59.611Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:46:04.500Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:46:09.897Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:46:45.761Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:46:48.113Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3},{"_id":"6076ea0994939b511ceeaf39","name":"В истории","position":-1}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:46:48.107Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:11:23.717Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //error info 
-{"code":404,"timestamp":"2021-4-15","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"DELETE","message":"Cannot DELETE /v1/api/team/6076ea0994939b511ceeaf35/statuses","details":"Cannot DELETE /v1/api/team/6076ea0994939b511ceeaf35/statuses","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{"io":"zF5aMkms3I1e9-AKAAAE"}};
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["discription must be a string","color must be a valid enum value","deadline must be a Date instance"],"bodyreq":{"color":"","name":"task 1","description":"deck","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //reqinfo 
-{"timestamp":"2021-04-14T19:53:15.809Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{"io":"zF5aMkms3I1e9-AKAAAE"}};
+{"timestamp":"2021-04-15T22:15:38.509Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:15:41.491Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:15:42.991Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T19:57:31.514Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:15:42.994Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQzMDI1MSwiZXhwIjoxNjE4NTE2NjUxfQ.5A4NLZkfmwdcRZjjaxgmQ2oOmw51fZbyrASmwAvsebA"};
- //reqinfo 
-{"timestamp":"2021-04-14T19:57:31.704Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:57:31.728Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T19:57:34.047Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+[];
  //error info 
-{"code":400,"timestamp":"2021-4-15","path":"/v1/api/team/sssssssss/statuses","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"sssssssss"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T19:57:37.568Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:57:59.451Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQzMDI3OSwiZXhwIjoxNjE4NTE2Njc5fQ.JgR8BdnOHAR2_Rx0zqzsvCGFR0ErK7ef8sVCNfagxfM"};
- //reqinfo 
-{"timestamp":"2021-04-14T19:57:59.601Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:57:59.609Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T19:58:01.538Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["color must be a valid enum value","deadline must be a Date instance"],"bodyreq":{"color":"","name":"sdas","description":"asdasd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //error info 
-{"code":400,"timestamp":"2021-4-15","path":"/v1/api/team/sssssssss/statuses","method":"GET","message":"Bad Request Exception","details":["id must be a mongodb id"],"bodyreq":{},"paramreq":{"id":"sssssssss"},"queryreq":{},"cookiesreq":{}};
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"sdas","description":"asdasd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //reqinfo 
-{"timestamp":"2021-04-14T19:58:03.653Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:58:44.615Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:23:09.613Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T19:58:47.667Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:23:15.335Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T19:59:34.842Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T19:59:36.996Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:00:22.008Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:00:30.018Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+{"timestamp":"2021-04-15T22:23:16.612Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:00:31.049Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T20:01:18.789Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:01:21.933Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:01:23.193Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:05:29.888Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:05:32.242Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //error info 
-{"code":401,"timestamp":"2021-4-15","path":"/v1/api/auth/login","method":"POST","message":"Invalid credentials","bodyreq":{"login":"kulaev","password":"string"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T20:06:35.518Z","path":"/v1/api/auth/login","method":"POST","bodyreq":{"login":"kulaev","password":"Kulaev6324ab"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
- //res info 
-{"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imt1bGFldiIsImlhdCI6MTYxODQzMDc5NSwiZXhwIjoxNjE4NTE3MTk1fQ.tQVLXUo7Twv_QuydZY2wiOS-ILQnZjfuwR2q1tSGnqs"};
- //reqinfo 
-{"timestamp":"2021-04-14T20:06:35.692Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //res info 
-{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"};
- //reqinfo 
-{"timestamp":"2021-04-14T20:06:35.700Z","path":"/v1/api/user/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T20:06:47.483Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:06:49.911Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:06:51.223Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:07:30.995Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:07:35.730Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:09:20.617Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:09:39.160Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:09:43.014Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:09:44.123Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:10:44.413Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:10:46.992Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:10:49.244Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:11:13.697Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:11:17.926Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:11:18.977Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:13:08.587Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:13:12.501Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:13:14.255Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:17:35.268Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:23:16.615Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [];
  //reqinfo 
-{"timestamp":"2021-04-14T20:17:37.278Z","path":"/v1/api/organization/6076e7bb94939b511ceeaf31/users","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:25:42.453Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}},{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":"6076e7bb94939b511ceeaf31","user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //exeption info 
-{"errors":{"avatar":{"name":"ValidatorError","message":"Path `avatar` is required.","properties":{"message":"Path `avatar` is required.","type":"required","path":"avatar","value":""},"kind":"required","path":"avatar","value":""}},"_message":"Chat validation failed","message":"Chat validation failed: avatar: Path `avatar` is required."};
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:18:13.832Z","path":"/v1/api/chat","method":"POST","bodyreq":{"avatar":"nbb","name":"chat","description":""},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:25:44.520Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
-{"_id":"60774e0586022758d4913286","avatar":"nbb","name":"chat","__v":0};
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:18:13.893Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:25:45.820Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"_id":"60774e0586022758d4913286","avatar":"nbb","name":"chat"}];
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:18:18.565Z","path":"/v1/api/message/all/chat/60774e0586022758d4913286","method":"GET","bodyreq":{},"paramreq":{"id":"60774e0586022758d4913286"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:25:45.825Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[];
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"green","name":"asdas","description":"eagekrj","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"asdas","description":"eagekrj","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"asdas","description":"eagekrj","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"green","name":"asdas","description":"eagekrj","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"asdas","description":"eagekrj","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T22:31:46.815Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:31:49.981Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:31:52.205Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [];
  //reqinfo 
-{"timestamp":"2021-04-14T20:24:38.218Z","path":"/v1/api/chat/all","method":"GET","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:31:52.207Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"_id":"60774e0586022758d4913286","avatar":"nbb","name":"chat"}];
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //error info 
-{"code":404,"timestamp":"2021-4-15","path":"/v1/api/team/all/organization/","method":"GET","message":"Cannot GET /v1/api/team/all/organization/","details":"Cannot GET /v1/api/team/all/organization/","bodyreq":{},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"qweqwef","description":"qwefq","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"qweqwef","description":"qwefq","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"green","name":"qweqwef","description":"qwefq","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"qweqwef","description":"qwefq","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //reqinfo 
-{"timestamp":"2021-04-14T20:25:22.420Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:28:41.608Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:35:39.150Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:28:45.905Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:35:51.736Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-15T22:35:56.908Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:28:47.950Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:35:58.221Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:31:04.936Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:35:58.228Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[];
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"green","name":"jh k","description":"hkg","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"khg ","description":"iu","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"khg ","description":"iu","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T22:42:19.248Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:31:05.582Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:31:09.658Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:42:23.540Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:31:10.841Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:42:26.155Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:32:05.725Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:42:26.156Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[];
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"green","name":"jhgl","description":"iub","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"jhgl","description":"iub","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":{"year":2021,"month":4,"day":29}},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T22:47:43.216Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:32:06.292Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:32:08.149Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:47:45.250Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:32:09.504Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:47:46.606Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:32:25.813Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:47:46.610Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[];
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a Date instance"],"bodyreq":{"color":"orange","name":"kj","description":"ljhu","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-05-28T22:47:58.153Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //reqinfo 
-{"timestamp":"2021-04-14T20:32:26.690Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T22:48:48.713Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"green","name":"kj","description":"ljhu","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"answer":"","users":[],"deadline":null,"_id":"6078c2d064a4cb5c543e84db","color":"green","name":"kj","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"};
+ //reqinfo 
+{"timestamp":"2021-04-15T22:49:51.347Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"orange","name":"iobiu","description":"piu","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date is undefined","bodyreq":{"color":"orange","name":"i","description":"ih","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T23:03:39.184Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:32:30.061Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:03:41.305Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:32:31.252Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:03:43.068Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:33:07.373Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:03:43.073Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date is undefined","bodyreq":{"color":"orange","name":"asdf","description":"asdf","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":null},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //reqinfo 
-{"timestamp":"2021-04-14T20:33:14.995Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:05:04.319Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"green","name":"asdf","description":"asdf","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date is undefined","bodyreq":{"color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-04-29T23:05:48.464Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date should be future","bodyreq":{"color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-04-29T23:09:28.306Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date should be future","bodyreq":{"color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-04-29T23:11:30.853Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date should be future","bodyreq":{"color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-05-21T23:12:02.490Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date should be future","bodyreq":{"color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-05-21T23:12:26.703Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date should be future","bodyreq":{"color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-05-21T23:15:39.402Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Date should be future","bodyreq":{"color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-05-21T23:16:37.537Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //reqinfo 
-{"timestamp":"2021-04-14T20:33:21.521Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:17:42.500Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35","deadline":"2021-05-21T23:17:42.455Z"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":"6076ea0994939b511ceeaf36","team":"6076ea0994939b511ceeaf35"};
+ //reqinfo 
+{"timestamp":"2021-04-15T23:18:04.241Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:33:22.930Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:18:05.667Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:36:09.989Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:18:05.669Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-15T23:20:26.066Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:36:10.161Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T20:36:16.364Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:20:29.489Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:36:18.022Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:20:30.868Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:36:55.967Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:20:30.873Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:36:58.831Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:21:10.519Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:37:02.716Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:21:12.282Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:37:03.711Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:21:13.302Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:44:09.784Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:21:13.304Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:44:09.839Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:22:55.699Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:44:16.121Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:22:58.382Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T20:44:18.125Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:23:00.136Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:27:14.090Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:23:00.138Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:43:35.784Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T21:43:51.989Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:23:45.111Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:44:02.522Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:23:47.898Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:44:05.233Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:23:49.173Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:45:54.876Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:23:49.176Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:45:58.106Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:24:22.174Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:46:02.956Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T21:46:04.495Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
- //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+{"timestamp":"2021-04-15T23:24:24.640Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:46:23.098Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
- //reqinfo 
-{"timestamp":"2021-04-14T21:46:24.947Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:24:25.625Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:47:21.212Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:24:25.627Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a ISOString"],"bodyreq":{"color":"green","name":"jhj","description":"jhg","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //error info 
+{"code":400,"timestamp":"2021-4-16","path":"/v1/api/task","method":"POST","message":"Bad Request Exception","details":["deadline must be a ISOString"],"bodyreq":{"color":"green","name":"jhj","description":"jhg","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //reqinfo 
-{"timestamp":"2021-04-14T21:47:26.800Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:37:47.449Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"green","name":"jhj","description":"jhg","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
- //reqinfo 
-{"timestamp":"2021-04-14T21:47:32.656Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:47:34.919Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:38:02.724Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T23:38:04.346Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
- //reqinfo 
-{"timestamp":"2021-04-14T21:48:40.333Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:48:43.403Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-15T23:38:04.348Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-15T23:50:43.589Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:48:47.469Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-16T00:05:35.653Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:05:42.218Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:48:48.892Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-16T00:05:43.344Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:05:43.349Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
  //res info 
 [{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
  //reqinfo 
-{"timestamp":"2021-04-14T21:53:12.830Z","path":"/v1/api/organization/all/6076e8bb94939b511ceeaf33","method":"GET","bodyreq":{},"paramreq":{"id":"6076e8bb94939b511ceeaf33"},"queryreq":{},"cookiesreq":{}};
+{"timestamp":"2021-04-16T00:07:22.193Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
  //res info 
-[{"position":"инженер","roleUser":"user","_id":"6076e8dd94939b511ceeaf34","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e8bb94939b511ceeaf33","login":"stepa","password":"$2b$10$E5F7JK7b/HLcwd2RPeyds..u.UQV12XSiPoF/o2QIXRQwFCe/SURG","email":"shitov@bk.ru","name":"Stepa","surname":"Shitov"}}];
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:07:24.683Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:07:25.880Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:07:25.881Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:08:44.538Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:08:46.702Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:08:47.583Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:08:47.588Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:19:34.235Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:19:40.943Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:19:42.276Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:19:42.278Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:21:56.349Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:21:57.036Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:22:10.524Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:22:12.086Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:22:12.091Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:25:13.072Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:25:30.615Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:25:31.742Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-16T00:25:31.744Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:17:34.165Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:17:40.326Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:17:41.606Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:17:41.614Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:18:27.129Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:18:29.730Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:18:30.961Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:18:30.959Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-16T01:20:50.090Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:21:00.348Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:21:01.485Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:21:01.490Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //reqinfo 
+{"timestamp":"2021-04-16T01:21:25.869Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"green","name":"wefqw qrgqewrg","description":"qergqe ewrgwerg","status":"6076ea0994939b511ceeaf38","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"answer":"","users":[],"deadline":null,"_id":"6078e69564a8525cf8011f41","color":"green","name":"wefqw qrgqewrg","description":"qergqe ewrgwerg","status":"6076ea0994939b511ceeaf38","team":"6076ea0994939b511ceeaf35"};
+ //reqinfo 
+{"timestamp":"2021-04-16T01:23:44.556Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:23:45.795Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:23:45.799Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078e69564a8525cf8011f41","color":"green","name":"wefqw qrgqewrg","description":"qergqe ewrgwerg","status":{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:24:46.640Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"green","name":"hgvk gvouy","description":"kjhgb hbl","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"answer":"","users":[],"deadline":null,"_id":"6078e75e1cebe316a07f52aa","color":"green","name":"hgvk gvouy","description":"kjhgb hbl","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"};
+ //reqinfo 
+{"timestamp":"2021-04-16T01:26:04.953Z","path":"/v1/api/organization/all/6076e77094939b511ceeaf30","method":"GET","bodyreq":{},"paramreq":{"id":"6076e77094939b511ceeaf30"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"position":"worker","roleUser":"superUser","_id":"6076e7bb94939b511ceeaf32","organization":{"_id":"6076e7bb94939b511ceeaf31","avatar":"avatar","name":"My Organization","description":"mt description "},"user":{"_id":"6076e77094939b511ceeaf30","login":"kulaev","password":"$2b$10$9n97/FAHFqJcxQ.Vru1ZIeBM0ZJRYgPbDUqwkTtL4MWBfkgLgW8Ja","email":"s_kulaev@bk.ru","name":"Sergey","surname":"Kulaev"}}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:26:08.761Z","path":"/v1/api/team/all/organization/6076e7bb94939b511ceeaf31","method":"GET","bodyreq":{},"paramreq":{"id":"6076e7bb94939b511ceeaf31"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ecae7114350d342fba15","avatar":"a2","name":"t2","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ed329b79e0554cd5f51a","avatar":"t3","name":"t3","organization":"6076e7bb94939b511ceeaf31"},{"_id":"6076ede8aa6ff008fc606c34","avatar":"v4","name":"t4","organization":"6076e7bb94939b511ceeaf31"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:26:10.338Z","path":"/v1/api/team/6076ea0994939b511ceeaf35/statuses","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1},{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2},{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:26:10.341Z","path":"/v1/api/task/all/team/6076ea0994939b511ceeaf35","method":"GET","bodyreq":{},"paramreq":{"id":"6076ea0994939b511ceeaf35"},"queryreq":{},"cookiesreq":{}};
+ //res info 
+[{"answer":"","users":[],"deadline":null,"_id":"6078c30fbec46b4dd055a9b2","color":"orange","name":"iobiu","description":"piu","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078c6a01800df1e94e18c3a","color":"green","name":"asdf","description":"asdf","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":"2021-05-21T23:17:42.455Z","_id":"6078c99683c65b21acc8fad1","color":"orange","name":"sergey","description":"asd","status":{"_id":"6076ea0994939b511ceeaf36","name":"Задачи","position":1,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078ce4b64a8525cf8011f40","color":"green","name":"jhj","description":"jhg","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078e69564a8525cf8011f41","color":"green","name":"wefqw qrgqewrg","description":"qergqe ewrgwerg","status":{"_id":"6076ea0994939b511ceeaf38","name":"Готово","position":3,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"},{"answer":"","users":[],"deadline":null,"_id":"6078e75e1cebe316a07f52aa","color":"green","name":"hgvk gvouy","description":"kjhgb hbl","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":"6076ea0994939b511ceeaf35"}];
+ //reqinfo 
+{"timestamp":"2021-04-16T01:26:26.574Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"green","name":"khgkm kbj","description":"hkgl","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"answer":"","users":[],"deadline":null,"_id":"6078e7c21cebe316a07f52ab","color":"green","name":"khgkm kbj","description":"hkgl","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"};
+ //reqinfo 
+{"timestamp":"2021-04-16T01:27:43.639Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"green","name":"nh bk","description":"bjh","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"answer":"","users":[],"deadline":null,"_id":"6078e80fa50fbc55dc5cc947","color":"green","name":"nh bk","description":"bjh","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"};
+ //reqinfo 
+{"timestamp":"2021-04-16T01:28:59.022Z","path":"/v1/api/task","method":"POST","bodyreq":{"color":"green","name":"kjgv","description":"uy","status":"6076ea0994939b511ceeaf37","team":"6076ea0994939b511ceeaf35"},"paramreq":{},"queryreq":{},"cookiesreq":{}};
+ //res info 
+{"answer":"","users":[],"deadline":null,"_id":"6078e85b3a79b0316c94a1d6","color":"green","name":"kjgv","description":"uy","status":{"_id":"6076ea0994939b511ceeaf37","name":"В работе","position":2,"team":"6076ea0994939b511ceeaf35"},"team":{"_id":"6076ea0994939b511ceeaf35","avatar":"my avatar","name":"my command","organization":"6076e7bb94939b511ceeaf31"},"__v":0};

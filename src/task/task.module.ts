@@ -25,6 +25,6 @@ export class TaskModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(ColorMiddleware)
-      .forRoutes({ path: '', method: RequestMethod.POST });
+      .forRoutes({ path: 'task', method: RequestMethod.POST });
   }
 }

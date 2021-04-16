@@ -19,7 +19,8 @@ export class TaskService {
 
   async createTask(dto: CreateTaskDTO) {
     const task = new this.taskModel(dto);
-    task.save();
+    await task.save();
+    await task.populate('status').populate('users').populate('team').execPopulate();
     return task;
   }
 

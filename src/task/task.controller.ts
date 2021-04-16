@@ -37,7 +37,7 @@ export class TaskController {
   }
 
   @ApiBearerAuth()
-  @Get('team/all/:id')
+  @Get('all/team/:id')
   @UseGuards(JwtAuthGuard)
   async getTasks(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     await this.teamService.checkEnable(params.id, _id);

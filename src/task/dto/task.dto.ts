@@ -6,6 +6,8 @@ import {
   IsEnum,
   IsDate,
   minLength,
+  IsDateString,
+  ValidateIf,
 } from 'class-validator';
 import {
   ApiProperty,
@@ -23,7 +25,7 @@ export class CreateTaskDTO {
 
   @IsString()
   @ApiProperty()
-  discription: string;
+  description: string;
 
   @IsEnum(colorEnum)
   @ApiProperty()
@@ -37,8 +39,9 @@ export class CreateTaskDTO {
   @ApiProperty()
   team: string;
 
-  @IsDate()
   @ApiPropertyOptional()
+  @ValidateIf(o => o.deadline != undefined)
+  @IsDateString()
   deadline?: Date;
 }
 

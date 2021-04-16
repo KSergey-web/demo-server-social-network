@@ -6,7 +6,7 @@ export interface ITeam {
 
   name: string;
 
-  discription: string;
+  description: string;
 
   color: string;
 

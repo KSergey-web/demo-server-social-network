@@ -13,7 +13,7 @@ export class Task {
   name: string;
 
   @Prop({ required: true })
-  discription: string;
+  description: string;
 
   @Prop({ required: true })
   color: string;
