@@ -5,7 +5,9 @@ import { AuthService } from 'src/auth/auth.service';
 import { ChatService } from 'src/chat/chat.service';
 import { IChat } from 'src/chat/interfaces/chat.interface';
 import { Chat } from 'src/chat/schemas/chat.schema';
+import { consoleOut } from 'src/debug';
 import { AuthDto, CreateSocketDto } from './dto/socket.dto';
+import { MapNotStrict } from './mapnotstrict.class';
 
 @Injectable()
 export class SocketService {
@@ -25,7 +27,7 @@ export class SocketService {
     return 'This action adds a new socket';
   }
 
-  private usersOnline = new Map();
+  private usersOnline = new MapNotStrict();
 
   private logger: Logger = new Logger('SocketService');
 
@@ -34,7 +36,7 @@ export class SocketService {
     try {
       const user = await this.authService.verifyUser(token);
       this.usersOnline.set(user._id, client.id);
-      this.logger.log(`auth ${this.usersOnline.get(user._id)}`);
+      consoleOut(this.usersOnline,'users online after auth');
       this.addClientToRooms(client, user._id);
     } catch (err) {
       this.logger.error(`Invalid token: ${token}`);
@@ -53,6 +55,7 @@ export class SocketService {
     const client = this.getClient(userid);
     if (!client) return;
     client.join(room);
+    consoleOut(client.rooms,`rooms of user ${userid}`)
     return;
   }
 
@@ -68,7 +71,7 @@ export class SocketService {
       this.logger.log(`user with id ${userid} offline`);
       return null;
     }
-    return this.server.sockets.connected[this.usersOnline.get(userid)];
+    return this.server.sockets.connected[this.usersOnline.get(userid).value];
   }
 
   clientLeaveRoom(client: Socket, room: string) {
@@ -83,12 +86,7 @@ export class SocketService {
 
   clientDisconnect(client: Socket) {
     client.leaveAll();
-    for (var [userId, socketId] of this.usersOnline) {
-      if (socketId == client.id) {
-        this.usersOnline.delete(userId);
-        break;
-      }
-    }
+    this.usersOnline.deleteByValue(client.id);
     return;
   }
 }

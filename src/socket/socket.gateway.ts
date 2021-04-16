@@ -47,9 +47,6 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
   @SubscribeMessage('msgToChat')
   handleMessage(message: Message): void {
-    this.logger.log(`message ${message.text}`);
-    this.logger.log(`message ${message.chat}`);
-    this.logger.log(`message ${(message.user as User).login}`);
     this.server.to((message.chat as string)).emit('msgFromChat', message);
   }
 

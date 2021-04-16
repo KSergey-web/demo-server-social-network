@@ -107,6 +107,5 @@ export class ChatService {
     await this.checkChatById(chatId);
     await this.chatUserLink(chatId,userId);
     return await this.chatUserModel.find({chat:(chatId) as any}).populate('user').exec();
-
   }
 }
