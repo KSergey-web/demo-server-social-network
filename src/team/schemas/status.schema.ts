@@ -8,6 +8,8 @@ export type StatusDocument = Status & Document;
 
 @Schema()
 export class Status {
+  _id?:string;
+
   @Prop({ required: true })
   name: string;
 

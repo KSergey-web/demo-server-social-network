@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
+import { consoleOut } from 'src/debug';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { roleUserTeamEnum } from 'src/team/enums/role-user.enum';
 import { StatusService } from 'src/team/status.service';
@@ -51,9 +52,10 @@ export class TaskController {
     @Body() dto: ChangeStatusDTO,
     @User() { _id }: UserDocument,
   ) {
-    await this.teamService.checkEnable(dto.team, _id, roleUserTeamEnum.admin);
-    await this.statusService.getStatusById(dto.status);
-    return await this.taskService.changeStatus(dto);
+    const status = await this.statusService.getStatusById(dto.status);
+    await this.teamService.checkEnable(status.team as string, _id, roleUserTeamEnum.admin);
+    consoleOut(status,'Status');
+    return await this.taskService.changeStatus(dto, status.team as string);
   }
 
   @ApiBearerAuth()
@@ -89,5 +91,19 @@ export class TaskController {
   @UseGuards(JwtAuthGuard)
   async getTask(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     return await this.taskService.getTask(params.id, _id);
+  }
+
+  @ApiBearerAuth()
+  @Patch('status/complete')
+  @UseGuards(JwtAuthGuard)
+  async completeTask(@Body() body: ObjectIdDTO, @User() { _id }: UserDocument) {
+    return await this.taskService.completeTask(body.id, _id);
+  }
+
+  @ApiBearerAuth()
+  @Get('history/team/:id')
+  @UseGuards(JwtAuthGuard)
+  async historyTasks(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
+    return await this.taskService.getHistory(params.id, _id);
   }
 }

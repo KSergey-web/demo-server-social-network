@@ -9,6 +9,8 @@ export type TaskDocument = Task & Document;
 
 @Schema()
 export class Task {
+  _id?:string;
+  
   @Prop({ required: true })
   name: string;
 

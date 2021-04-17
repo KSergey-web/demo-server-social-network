@@ -45,4 +45,12 @@ export class StatusService {
     }
     return status;
   }
+
+  async getStatusHistory(teamId: string): Promise<Status>{
+    const status = await this.statusModel.findOne({team: teamId, position: -1});
+    if (!status) {
+      throw new HttpException('Status not found', HttpStatus.BAD_REQUEST);
+    }
+    return status;
+  }
 }

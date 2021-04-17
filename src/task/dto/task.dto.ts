@@ -56,9 +56,6 @@ export class UpdateTaskDTO extends OmitType(PartialType(CreateTaskDTO), [
 }
 
 export class ChangeStatusDTO {
-  @IsMongoId()
-  @ApiProperty()
-  team: string;
 
   @IsMongoId()
   @ApiProperty()

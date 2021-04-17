@@ -1,6 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { consoleOut } from 'src/debug';
 import { SocketGateway } from 'src/socket/socket.gateway';
 import { roleUserTeamEnum } from 'src/team/enums/role-user.enum';
 import { StatusDocument } from 'src/team/schemas/status.schema';
@@ -16,6 +17,7 @@ export class TaskService {
     private taskModel: Model<TaskDocument>,
     private readonly teamService: TeamService,
     private readonly socketGateway: SocketGateway,
+    private readonly statusService: StatusService
   ) {}
 
   async createTask(dto: CreateTaskDTO) {
@@ -32,8 +34,11 @@ export class TaskService {
     return await this.taskModel.find(filter).populate('status').populate('users').exec();
   }
 
-  async changeStatus(dto: ChangeStatusDTO): Promise<TaskDocument> {
+  async changeStatus(dto: ChangeStatusDTO, teamId: string): Promise<TaskDocument> {
     const task = await this.taskModel.findById(dto.task);
+    if (task.team.toString() != teamId){
+        throw new HttpException('This Task is not belong this team', HttpStatus.BAD_REQUEST);
+    }
     await task.updateOne({ status: dto.status });
     task.populate('status');
     this.socketGateway.changedTask(task);
@@ -116,5 +121,19 @@ export class TaskService {
     await task.save();
     this.socketGateway.changedTask(task);
     return task;;
+  }
+
+  async completeTask(taskId: string, userId: string ): Promise<Task>{
+    const task = await this.getTaskById(taskId);
+    await this.teamService.checkEnable(task.team as string, userId, roleUserTeamEnum.admin);
+    const status = await this.statusService.getStatusHistory(task.team as string);
+    await task.updateOne({status: status._id });
+    return task;
+  }
+
+  async getHistory(teamId: string, userId: string): Promise<Array<Task>> {
+    await this.teamService.checkEnable(teamId, userId);
+    const status = await this.statusService.getStatusHistory(teamId);
+    return await this.taskModel.find({status:status}).populate('users').exec();
   }
 }
