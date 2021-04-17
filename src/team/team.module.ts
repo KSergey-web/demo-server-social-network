@@ -6,9 +6,11 @@ import { Team, TeamSchema } from './schemas/team.schema';
 import { TeamUserLink, TeamUserLinkSchema } from './schemas/team-user.schema';
 import { Status, StatusSchema } from './schemas/status.schema';
 import { StatusService } from './status.service';
+import { OrganizationModule } from 'src/organization/organization.module';
 
 @Module({
   imports: [
+    OrganizationModule,
     MongooseModule.forFeature([
       { name: Team.name, schema: TeamSchema },
       { name: TeamUserLink.name, schema: TeamUserLinkSchema },

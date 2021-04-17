@@ -45,7 +45,15 @@ export class CreateTaskDTO {
   deadline?: Date;
 }
 
-export class UpdateTaskDTO extends PartialType(CreateTaskDTO) {}
+export class UpdateTaskDTO extends OmitType(PartialType(CreateTaskDTO), [
+  'team',
+] as const) {
+  
+  @ApiPropertyOptional()
+  @ValidateIf(o => o.answer != undefined)
+  @IsString()
+  answer?: string;
+}
 
 export class ChangeStatusDTO {
   @IsMongoId()
@@ -67,7 +75,16 @@ export class AddAnswerDTO {
   task: string;
 
   @IsString()
-  @MinLength(2)
   @ApiProperty()
   answer: string;
+}
+
+export class AddUserToTaskDTO{
+  @IsMongoId()
+  @ApiProperty()
+  task: string;
+
+  @IsMongoId()
+  @ApiProperty()
+  user: string;
 }

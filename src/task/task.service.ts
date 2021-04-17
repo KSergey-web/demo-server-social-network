@@ -2,10 +2,11 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { SocketGateway } from 'src/socket/socket.gateway';
+import { roleUserTeamEnum } from 'src/team/enums/role-user.enum';
 import { StatusDocument } from 'src/team/schemas/status.schema';
 import { StatusService } from 'src/team/status.service';
 import { TeamService } from 'src/team/team.service';
-import { AddAnswerDTO, ChangeStatusDTO, CreateTaskDTO } from './dto/task.dto';
+import { AddAnswerDTO, AddUserToTaskDTO, ChangeStatusDTO, CreateTaskDTO, UpdateTaskDTO } from './dto/task.dto';
 import { Task, TaskDocument } from './schemas/task.schema';
 
 @Injectable()
@@ -18,15 +19,17 @@ export class TaskService {
   ) {}
 
   async createTask(dto: CreateTaskDTO) {
+
     const task = new this.taskModel(dto);
     await task.save();
     await task.populate('status').populate('users').populate('team').execPopulate();
     return task;
+
   }
 
   async getTasks(teamId: string): Promise<Array<TaskDocument>> {
     const filter: any = { team: teamId };
-    return await this.taskModel.find(filter).populate('status');
+    return await this.taskModel.find(filter).populate('status').populate('users').exec();
   }
 
   async changeStatus(dto: ChangeStatusDTO): Promise<TaskDocument> {
@@ -84,5 +87,34 @@ export class TaskService {
     const task = await this.getTaskById(taskId);
     await this.teamService.checkEnable(task.team.toString(), userId);
     return task;
+  }
+
+  async updateTask(
+    taskId:string,
+    dto: UpdateTaskDTO,
+    userId: string,
+  ): Promise<Task> {
+    const task = await this.getTaskById(taskId);
+    this.teamService.checkEnable(task.team as string,userId,roleUserTeamEnum.admin);
+     await task.updateOne(dto);
+     return await task.populate('status').execPopulate();
+  }
+
+  async addUserToTask(dto:AddUserToTaskDTO, userId: string){
+    const task = await this.getTaskById(dto.task);
+    await this.teamService.checkEnable(task.team.toString(), userId,roleUserTeamEnum.admin);
+    await this.teamService.checkEnable(task.team.toString(), dto.user);
+    const filter: any = dto.user;
+    console.log(task.users.find((user)=> user == filter));
+    if (task.users.find((user)=> user == filter)) {
+      throw new HttpException(
+        'The user already has this task',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+    task.users.push(filter);
+    await task.save();
+    this.socketGateway.changedTask(task);
+    return task;;
   }
 }

@@ -33,7 +33,7 @@ export class Task {
     ref: 'Team',
     required: true,
   })
-  team: Team;
+  team: Team | string;
 
   @Prop({
     type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],

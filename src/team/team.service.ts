@@ -2,6 +2,8 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { consoleOut } from 'src/debug';
+import { OrganizationService } from 'src/organization/organization.service';
+import { User } from 'src/user/schemas/user.schema';
 import {
   AddTeamUserLinkDTO,
   CreateTeamDTO,
@@ -23,6 +25,7 @@ export class TeamService {
     @InjectModel(TeamUserLink.name)
     private teamUserLinkModel: Model<TeamUserLinkDocument>,
     private readonly statusService: StatusService,
+    private readonly organizationService: OrganizationService,
   ) {}
 
   async createTeam(createTeamDTO: CreateTeamDTO, userId: string) {
@@ -94,7 +97,7 @@ export class TeamService {
     link: TeamUserLinkDocument,
     ...roles: Array<roleUserTeamEnum>
   ): Promise<TeamUserLinkDocument> {
-    let access: Boolean = false;
+    let access: boolean = false;
     let rolestr: string;
     roles.forEach(function(item, i, arr) {
       if (item == link.roleUser) {
@@ -136,15 +139,15 @@ export class TeamService {
   async addTeamUserLink(
     dto: AddTeamUserLinkDTO,
     userId: string,
-  ): Promise<TeamUserLinkDocument> {
+  ): Promise<User> {
     const team = await this.getTeamById(dto.team);
-    consoleOut(team,'t');
-    consoleOut(dto,'dto');
-    consoleOut(userId,'userId');
+    await this.organizationService.organizationUserLink(team.organization as string, userId);
     const link = await this.teamUserLink(dto.team, userId);
     await this.checkAccess(link, roleUserTeamEnum.admin);
     const newLink = new this.teamUserLinkModel(dto);
-    return await newLink.save();
+    await newLink.save();
+    await newLink.populate('user').execPopulate(); 
+    return newLink.user as User;
   }
 
   async deleteTeamUserLink(
@@ -181,5 +184,11 @@ export class TeamService {
       await this.checkAccess(link, ...roles);
     }
     return;
+  }
+
+  async getUsers(teamId: string, userId: string): Promise<Array<User>>{
+    await this.checkEnable(teamId,userId);
+    let links = await this.teamUserLinkModel.find({team: teamId}).populate('user').exec();
+    return links.map((item) : User => (item.user as User))
   }
 }

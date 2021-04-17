@@ -7,6 +7,7 @@ import {
   Min,
   IsInt,
   Max,
+  ValidateIf,
 } from 'class-validator';
 import {
   ApiProperty,
@@ -48,6 +49,7 @@ export class AddTeamUserLinkDTO {
   @ApiProperty()
   user: string;
 
+  @ValidateIf(o => o.roleUser != undefined)
   @IsEnum(roleUserTeamEnum)
   @ApiPropertyOptional()
   roleUser?: string;

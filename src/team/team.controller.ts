@@ -90,4 +90,14 @@ export class TeamController {
   ) {
     return await this.teamService.getStatuses(params.id, _id);
   }
+
+  @ApiBearerAuth()
+  @Get(':id/users')
+  @UseGuards(JwtAuthGuard)
+  async getUsers(
+    @Param() params: ObjectIdDTO,
+    @User() { _id }: UserDocument,
+  ) {
+    return await this.teamService.getUsers(params.id, _id);
+  }
 }

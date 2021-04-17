@@ -15,7 +15,7 @@ import { StatusService } from 'src/team/status.service';
 import { TeamService } from 'src/team/team.service';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { User } from 'src/utilities/user.decorator';
-import { AddAnswerDTO, ChangeStatusDTO, CreateTaskDTO } from './dto/task.dto';
+import { AddAnswerDTO, AddUserToTaskDTO, ChangeStatusDTO, CreateTaskDTO, UpdateTaskDTO } from './dto/task.dto';
 import { TaskService } from './task.service';
 
 @ApiTags('task')
@@ -57,10 +57,17 @@ export class TaskController {
   }
 
   @ApiBearerAuth()
-  @Patch(':id')
+  @Patch(':id/take')
   @UseGuards(JwtAuthGuard)
   async takeTask(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     return await this.taskService.takeTask(params.id, _id);
+  }
+
+  @ApiBearerAuth()
+  @Patch('addUser')
+  @UseGuards(JwtAuthGuard)
+  async addUserToTask(@Body() dto: AddUserToTaskDTO, @User() { _id }: UserDocument) {
+    return await this.taskService.addUserToTask(dto, _id);
   }
 
   @ApiBearerAuth()
@@ -68,6 +75,13 @@ export class TaskController {
   @UseGuards(JwtAuthGuard)
   async addAnswer(@Body() dto: AddAnswerDTO, @User() { _id }: UserDocument) {
     return await this.taskService.addAnswer(dto, _id);
+  }
+
+  @ApiBearerAuth()
+  @Patch(':id')
+  @UseGuards(JwtAuthGuard)
+  async updateTask(@Param() params: ObjectIdDTO, @Body() dto: UpdateTaskDTO, @User() { _id }: UserDocument) {
+    return await this.taskService.updateTask(params.id,dto, _id);
   }
 
   @ApiBearerAuth()
