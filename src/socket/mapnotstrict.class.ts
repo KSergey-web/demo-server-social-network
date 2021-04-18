@@ -12,6 +12,8 @@ export interface Item{
     }
 
     set(key: string, value:string): Item{
+        key = key.toString();
+        value = value.toString();
         const ind = this.items.findIndex(
             (item)=>{
                 return item.key == key;
@@ -28,6 +30,7 @@ export interface Item{
     }
 
     delete(key: string){
+        key = key.toString();
         const ind = this.items.findIndex(
             (item)=>{
                 return item.key == key;
@@ -41,6 +44,7 @@ export interface Item{
     }
 
     has(key: string){
+        key = key.toString();
         const ind = this.items.findIndex(
             (item)=>{
                 return item.key == key;
@@ -54,6 +58,7 @@ export interface Item{
     }
 
     get(key: string) : Item | undefined{
+        key = key.toString();
         const item = this.items.find(
             (item)=>{
                 return item.key == key;
@@ -63,6 +68,7 @@ export interface Item{
     }
 
     deleteByValue(value:string): boolean {
+        value = value.toString();
         const ind = this.items.findIndex(
             (item)=>{
                 return item.value == value;

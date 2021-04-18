@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { UserDocument } from '../user/schemas/user.schema';
+import { User, UserDocument } from '../user/schemas/user.schema';
 import { UserService } from '../user/user.service';
 import { roleUserOrganizationEnum } from '../organization/enums/role-user.enum';
 import {
@@ -23,6 +23,8 @@ import {
   OrganizationDocument,
 } from './schemas/organization.schema';
 import { consoleOut } from 'src/debug';
+import { SocketService } from 'src/socket/socket.service';
+import { userStatusEnum } from 'src/socket/enums/socket.enum';
 
 @Injectable()
 export class OrganizationService {
@@ -32,6 +34,7 @@ export class OrganizationService {
     @InjectModel(OrganizationUser.name)
     private organizationUserModel: Model<OrganizationUserDocument>,
     private readonly userService: UserService,
+    private readonly socketService: SocketService,
   ) {}
 
   async create(organizationDTO: CreateOrganizationDTO, userid: string) {
@@ -240,5 +243,20 @@ export class OrganizationService {
     const filter: any ={user:userId}; 
     const links = await this.organizationUserModel.find(filter).populate('organization').populate('user').exec();
     return links;
+  }
+
+  setStatusUser(user: User){
+    if (this.socketService.getClient(user._id)){
+      user.status = userStatusEnum.online;
+    }
+    else user.status = userStatusEnum.offline;
+    return user;
+  }
+
+  getStatusUser(userId: string): string{
+    if (this.socketService.getClient(userId)){
+      return userStatusEnum.online;
+    }
+    else return userStatusEnum.offline;
   }
 }

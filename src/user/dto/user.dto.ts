@@ -103,6 +103,21 @@ export class RegisterDTO extends LoginDTO {
   @MinLength(4)
   @IsEmail()
   readonly email: string;
+
+  @IsOptional()
+  @ApiPropertyOptional()
+  @IsPhoneNumber('RU')
+  readonly telephone: string;
+
+  @ApiProperty()
+  @IsDate()
+  @IsNotEmpty()
+  readonly birthdate: Date;
+
+  @ApiProperty()
+  @IsString()
+  @IsNotEmpty()
+  readonly patronymic: string;
 }
 
 export class UpdateUserDTO extends OmitType(PartialType(RegisterDTO), [

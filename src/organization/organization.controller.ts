@@ -29,11 +29,12 @@ import { cookiesEnum } from 'src/enums/cookies.enum';
 import { consoleOut } from 'src/debug';
 import { UserService } from 'src/user/user.service';
 
+
 @ApiTags('organization')
 @Controller('organization')
 export class OrganizationController {
   constructor(private readonly organizationService: OrganizationService,
-    private readonly userService: UserService
+    private readonly userService: UserService,
     ) {}
 
   @ApiBearerAuth()
@@ -154,7 +155,16 @@ export class OrganizationController {
   async getUsers(
   @Param() params: ObjectIdDTO,
   ) {
-    return await this.organizationService.getUsers(params.id);
+    let links:any  = await this.organizationService.getUsers(params.id);
+    let newArray = [];
+    links.map((link)=>{
+      let obj = link.toObject();
+      obj.user.status = this.organizationService.getStatusUser(link.user._id);
+      newArray.push(obj);
+      return obj;
+    }) 
+    consoleOut(newArray);
+    return newArray;
   }
 
   @ApiBearerAuth()
@@ -180,5 +190,15 @@ export class OrganizationController {
     @Param() params: ObjectIdDTO,
   ) {
     return await this.organizationService.checkOrganizationById(params.id);
+  }
+
+  @ApiBearerAuth()
+  @Get('user/:id')
+  @UseGuards(JwtAuthGuard)
+  async checkUserOnline(
+    @User() { _id }: UserDocument,
+    @Param() params: ObjectIdDTO,
+  ) {
+    return{status: await this.organizationService.getStatusUser(params.id)};
   }
 }

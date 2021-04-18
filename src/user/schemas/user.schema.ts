@@ -3,11 +3,17 @@ import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
 import { genderEnum } from '../enums/gender.enum';
 import * as bcrypt from 'bcrypt';
+import { userStatusEnum } from 'src/socket/enums/socket.enum';
 
 export type UserDocument = User & Document;
 
 @Schema()
 export class User {
+
+  _id?: string;
+
+  status?: string;
+
   @Prop({ required: true })
   email: string;
 
@@ -27,21 +33,24 @@ export class User {
   @Prop({ required: true })
   surname: string;
 
-  /*
+  
   @Prop({ required: true })
   patronymic: string;
 
-  @Prop({ required: true, enum: Object.values(genderEnum) })
-  gender: string;
+  
 
   @Prop({ required: true })
   birthdate: Date;
 
-  @Prop({ default: null })
+  /*@Prop({ default: null })
   avatar: string;
 
+  @Prop({ required: true, enum: Object.values(genderEnum) })
+  gender: string;
+  */
+
   @Prop({ default: null })
-  telephone: string;*/
+  telephone: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
