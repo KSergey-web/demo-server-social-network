@@ -71,7 +71,6 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   changedTask(task: TaskDocument): void {
-    this.logger.log(task._id);
     this.server.to(task.team.toString()).emit('ChangedTask', task);
   }
 

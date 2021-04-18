@@ -123,6 +123,24 @@ export class TaskService {
     return task;;
   }
 
+  async deleteUserFromTask(dto:AddUserToTaskDTO, userId: string){
+    const task = await this.getTaskById(dto.task);
+    await this.teamService.checkEnable(task.team.toString(), userId,roleUserTeamEnum.admin);
+    await this.teamService.checkEnable(task.team.toString(), dto.user);
+    const filter: any = dto.user;
+    console.log(task.users.find((user)=> user == filter));
+    const ind = task.users.findIndex((user)=> user == filter)
+    if (ind == -1) {
+      throw new HttpException(
+        'The user dont has this task',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+    await task.updateOne({ $pull: {  users: dto.user } });
+    this.socketGateway.changedTask(task);
+    return task;
+  }
+
   async completeTask(taskId: string, userId: string ): Promise<Task>{
     const task = await this.getTaskById(taskId);
     await this.teamService.checkEnable(task.team as string, userId, roleUserTeamEnum.admin);

@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Param,
   Patch,
@@ -66,10 +67,17 @@ export class TaskController {
   }
 
   @ApiBearerAuth()
-  @Patch('addUser')
+  @Patch('adduser')
   @UseGuards(JwtAuthGuard)
   async addUserToTask(@Body() dto: AddUserToTaskDTO, @User() { _id }: UserDocument) {
     return await this.taskService.addUserToTask(dto, _id);
+  }
+
+  @ApiBearerAuth()
+  @Patch('deleteuser')
+  @UseGuards(JwtAuthGuard)
+  async deleteUserFromTask(@Body() dto: AddUserToTaskDTO, @User() { _id }: UserDocument) {
+    return await this.taskService.deleteUserFromTask(dto, _id);
   }
 
   @ApiBearerAuth()
