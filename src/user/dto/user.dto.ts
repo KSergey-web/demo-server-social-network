@@ -9,6 +9,7 @@ import {
   IsDate,
   MinLength,
   MaxLength,
+  IsDateString,
 } from 'class-validator';
 import {
   ApiProperty,
@@ -110,7 +111,7 @@ export class RegisterDTO extends LoginDTO {
   readonly telephone: string;
 
   @ApiProperty()
-  @IsDate()
+  @IsDateString()
   @IsNotEmpty()
   readonly birthdate: Date;
 

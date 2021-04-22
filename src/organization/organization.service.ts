@@ -60,11 +60,9 @@ export class OrganizationService {
       user: userid,
       organization: organizationid,
     };
-    consoleOut(obj);
     const link = await this.organizationUserModel.findOne(
       obj 
     );
-    consoleOut(link,"l")
     if (!link) {
       throw new HttpException(
         'You do not have this organization',

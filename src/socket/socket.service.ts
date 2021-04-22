@@ -67,6 +67,7 @@ export class SocketService {
   }
 
   getClient(userid: any):Socket|null {
+    consoleOut(this.usersOnline);
     if (!this.usersOnline.has(userid)) {
       this.logger.log(`user with id ${userid} offline`);
       return null;

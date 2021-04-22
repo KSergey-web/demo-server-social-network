@@ -163,7 +163,6 @@ export class OrganizationController {
       newArray.push(obj);
       return obj;
     }) 
-    consoleOut(newArray);
     return newArray;
   }
 

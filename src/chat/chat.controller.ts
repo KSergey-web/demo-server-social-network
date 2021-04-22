@@ -2,13 +2,17 @@ import {
   Body,
   Controller,
   Delete,
+  forwardRef,
   Get,
+  Inject,
   Param,
   Post,
   UseGuards,
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
+import { consoleOut } from 'src/debug';
+import { MessageService } from 'src/message/message.service';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { User } from 'src/utilities/user.decorator';
@@ -19,7 +23,9 @@ import { AddChatUserDTO, AddUsersToChatDTO, CreateChatDTO } from './dto/chat.dto
 @Controller('chat')
 export class ChatController {
   constructor(
-    private readonly chatService: ChatService
+    private readonly chatService: ChatService,
+    @Inject(forwardRef(() => MessageService))
+    private readonly messageService:MessageService
 
     ) {}
 
@@ -82,6 +88,16 @@ export class ChatController {
   @Get('all')
   @UseGuards(JwtAuthGuard)
   async getChats(@User() { _id }: UserDocument) {
-    return await this.chatService.getChats(_id);
+    let chats:any = await this.chatService.getChats(_id);
+    let newArray = [];
+    for(let i=0;i<chats.length;++i){
+      newArray.push({
+        ...chats[i].toObject(),
+        message: await this.messageService.lastFromChat(chats[i]._id),
+      }
+      );
+    }
+    consoleOut(newArray);
+    return newArray;
   }
 }

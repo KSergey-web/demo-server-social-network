@@ -1,4 +1,4 @@
-import { IsString, IsMongoId, MinLength, IsEmail } from 'class-validator';
+import { IsString, IsMongoId, MinLength, IsEmail, IsOptional } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional, PartialType } from '@nestjs/swagger';
 
 export class CreateOrganizationDTO {
@@ -6,8 +6,9 @@ export class CreateOrganizationDTO {
   @ApiProperty()
   name: string;
 
+  @IsOptional()
   @IsString()
-  @ApiProperty()
+  @ApiPropertyOptional()
   description: string;
 
   @IsString()

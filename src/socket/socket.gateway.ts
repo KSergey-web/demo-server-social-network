@@ -7,11 +7,12 @@ import {
   OnGatewayDisconnect,
   WsException,
   ConnectedSocket,
+  OnGatewayInit,
 } from '@nestjs/websockets';
 import { SocketService } from './socket.service';
 import { AuthDto, CreateSocketDto } from './dto/socket.dto';
 import { Socket, Server } from 'socket.io';
-import { Logger, UseFilters } from '@nestjs/common';
+import { forwardRef, Inject, Logger, UseFilters } from '@nestjs/common';
 import { UserService } from 'src/user/user.service';
 import { AuthService } from 'src/auth/auth.service';
 import { BaseWsExceptionFilter } from '@nestjs/websockets';
@@ -23,9 +24,10 @@ import { Message } from 'src/message/schemas/message.schema';
 import { User } from 'src/user/schemas/user.schema';
 
 @WebSocketGateway()
-export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
-  constructor(private readonly socketService: SocketService) {
-    setTimeout(() => {this.socketService.setServer(this.server)},1000)
+export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit {
+  constructor(
+    @Inject(forwardRef(() => SocketService))
+    private readonly socketService: SocketService) {
   }
 
   @WebSocketServer() server: Server;
@@ -82,5 +84,9 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
   async handleConnection(client: Socket, ...args: any[]) {
     this.logger.log(`Client connected: ${client.id}`);
     client.emit('connectedEvent');
+  }
+
+  afterInit(server: Server){
+    this.socketService.setServer(server);
   }
 }

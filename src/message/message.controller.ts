@@ -42,6 +42,7 @@ export class MessageController {
     //
   }
 
+
   @ApiBearerAuth()
   @Patch(':id')
   @UseGuards(JwtAuthGuard)

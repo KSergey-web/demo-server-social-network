@@ -8,6 +8,7 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { consoleOut } from 'src/debug';
+import { MessageService } from 'src/message/message.service';
 import { User } from 'src/user/schemas/user.schema';
 import { UserService } from 'src/user/user.service';
 import { SocketService } from '../socket/socket.service';
@@ -90,13 +91,13 @@ export class ChatService {
     return;
   }
 
-  async getChats(userid: any): Promise<Array<IChat>> {
+  async getChats(userid: any): Promise<Array<Chat>> {
     const links = await this.chatUserModel
       .find({
         user: userid,
       })
       .populate('chat');
-    let chats: Array<IChat> = [];
+    let chats: Array<Chat> = [];
     links.forEach(function(item, i, arr) {
       chats.push(item.chat);
     });
