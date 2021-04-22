@@ -12,12 +12,13 @@ import { MapNotStrict } from './mapnotstrict.class';
 @Injectable()
 export class SocketService {
   constructor(
+    @Inject(forwardRef(()=>AuthService))
     private readonly authService: AuthService,
     @Inject(forwardRef(() => ChatService))
     private readonly chatService: ChatService,
   ) {}
 
-  setServer(server){
+  setServer(server:Server){
     this.server=server;
   }
 

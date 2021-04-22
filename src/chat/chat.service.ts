@@ -26,6 +26,7 @@ export class ChatService {
     private chatUserModel: Model<ChatUserDocument>,
     @Inject(forwardRef(() => SocketService))
     private readonly socketService: SocketService,
+    @Inject(forwardRef(()=>UserService))
     private readonly userService: UserService,
   ) {}
 

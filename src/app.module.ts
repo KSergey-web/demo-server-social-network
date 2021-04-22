@@ -5,15 +5,10 @@ import { AppService } from './app.service';
 import { configModule } from './configure.root';
 
 import { MongooseModule } from '@nestjs/mongoose';
-import { UserController } from './user/user.controller';
-import { UserModule } from './user/user.module';
-import { AuthController } from './auth/auth.controller';
-import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { OrganizationModule } from './organization/organization.module';
 import { SocketModule } from './socket/socket.module';
 import { MessageModule } from './message/message.module';
-import { ChatModule } from './chat/chat.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { GroupModule } from './group/group.module';
@@ -29,7 +24,7 @@ import { TaskModule } from './task/task.module';
     //AuthModule,
     SharedModule,
     OrganizationModule,
-    //SocketModule,
+    SocketModule,
     //ChatModule,
     MessageModule,
     // ServeStaticModule.forRoot({

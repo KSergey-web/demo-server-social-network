@@ -14,7 +14,7 @@ import { MessageModule } from 'src/message/message.module';
       { name: Chat.name, schema: ChatSchema },
       { name: ChatUser.name, schema: ChatUserSchema },
     ]),
-    UserModule,
+    forwardRef(()=>UserModule),
     forwardRef(() =>MessageModule),
     forwardRef(() => SocketModule),
   ],

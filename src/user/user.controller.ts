@@ -20,7 +20,9 @@ import { UserService } from './user.service';
 @ApiTags('user')
 @Controller('user')
 export class UserController {
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    ) {}
 
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard)
@@ -41,5 +43,15 @@ export class UserController {
   @Get(':id')
   getUser(@Param() params:ObjectIdDTO) {
     return this.userService.checkUserById(params.id);
+  }
+
+  @ApiBearerAuth()
+  @Get(':id/status')
+  @UseGuards(JwtAuthGuard)
+  async checkUserOnline(
+    @User() { _id }: UserDocument,
+    @Param() params: ObjectIdDTO,
+  ) {
+    return{status: this.userService.getStatusUser(params.id)};
   }
 }

@@ -23,8 +23,6 @@ import {
   OrganizationDocument,
 } from './schemas/organization.schema';
 import { consoleOut } from 'src/debug';
-import { SocketService } from 'src/socket/socket.service';
-import { userStatusEnum } from 'src/socket/enums/socket.enum';
 
 @Injectable()
 export class OrganizationService {
@@ -34,7 +32,6 @@ export class OrganizationService {
     @InjectModel(OrganizationUser.name)
     private organizationUserModel: Model<OrganizationUserDocument>,
     private readonly userService: UserService,
-    private readonly socketService: SocketService,
   ) {}
 
   async create(organizationDTO: CreateOrganizationDTO, userid: string) {
@@ -243,18 +240,4 @@ export class OrganizationService {
     return links;
   }
 
-  setStatusUser(user: User){
-    if (this.socketService.getClient(user._id)){
-      user.status = userStatusEnum.online;
-    }
-    else user.status = userStatusEnum.offline;
-    return user;
-  }
-
-  getStatusUser(userId: string): string{
-    if (this.socketService.getClient(userId)){
-      return userStatusEnum.online;
-    }
-    else return userStatusEnum.offline;
-  }
 }

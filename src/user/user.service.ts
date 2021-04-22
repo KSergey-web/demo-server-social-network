@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { forwardRef, HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { User, UserDocument } from './schemas/user.schema';
 import { InjectModel } from '@nestjs/mongoose';
@@ -6,10 +6,14 @@ import { IUser } from './interfaces/user.interface';
 import { LoginDTO, RegisterDTO, UpdateUserDTO } from './dto/user.dto';
 import * as bcrypt from 'bcrypt';
 import { consoleOut } from '../debug';
+import { SocketService } from 'src/socket/socket.service';
+import { userStatusEnum } from 'src/socket/enums/socket.enum';
 
 @Injectable()
 export class UserService {
-  constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
+  constructor(@InjectModel(User.name) private userModel: Model<UserDocument>,
+  @Inject(forwardRef(()=>SocketService))
+  private socketService: SocketService) {}
 
   async create(userDTO: RegisterDTO) {
     const { login } = userDTO;
@@ -75,5 +79,13 @@ export class UserService {
       throw new HttpException('User not found', HttpStatus.NOT_FOUND);
   }
     return user;
+  }
+
+  
+  getStatusUser(userId: string): string{
+    if (this.socketService.getClient(userId)){
+      return userStatusEnum.online;
+    }
+    else return userStatusEnum.offline;
   }
 }

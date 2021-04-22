@@ -159,7 +159,7 @@ export class OrganizationController {
     let newArray = [];
     links.map((link)=>{
       let obj = link.toObject();
-      obj.user.status = this.organizationService.getStatusUser(link.user._id);
+      obj.user.status = this.userService.getStatusUser(link.user._id);
       newArray.push(obj);
       return obj;
     }) 
@@ -189,15 +189,5 @@ export class OrganizationController {
     @Param() params: ObjectIdDTO,
   ) {
     return await this.organizationService.checkOrganizationById(params.id);
-  }
-
-  @ApiBearerAuth()
-  @Get('user/:id')
-  @UseGuards(JwtAuthGuard)
-  async checkUserOnline(
-    @User() { _id }: UserDocument,
-    @Param() params: ObjectIdDTO,
-  ) {
-    return{status: await this.organizationService.getStatusUser(params.id)};
   }
 }
