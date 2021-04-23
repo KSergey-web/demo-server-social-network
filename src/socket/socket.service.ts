@@ -78,11 +78,13 @@ export class SocketService {
 
   clientLeaveRoom(client: Socket, room: string) {
     client.leave(room);
+    setTimeout( ()=> consoleOut(client.rooms,`leave ${room}. rooms of client ${client.id}`),1)
     return;
   }
 
   clientEnterRoom(client: Socket, room: string) {
     client.join(room);
+    setTimeout( ()=>consoleOut(client.rooms,`enter ${room}. rooms of user ${client.id}`),1)
     return;
   }
 

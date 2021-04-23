@@ -55,7 +55,6 @@ export class TaskController {
   ) {
     const status = await this.statusService.getStatusById(dto.status);
     await this.teamService.checkEnable(status.team as string, _id, roleUserTeamEnum.admin);
-    consoleOut(status,'Status');
     return await this.taskService.changeStatus(dto, status.team as string);
   }
 

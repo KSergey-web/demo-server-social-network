@@ -52,13 +52,13 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, 
     this.server.to((message.chat as string)).emit('msgFromChat', message);
   }
 
-  @SubscribeMessage('LeaveTeam')
+  @SubscribeMessage('leaveTeam')
   exitTeam(@MessageBody() dto: ObjectIdDTO, @ConnectedSocket() client: Socket) {
     this.logger.log(dto.id);
     this.socketService.clientLeaveRoom(client, dto.id);
   }
 
-  @SubscribeMessage('EnterTeam')
+  @SubscribeMessage('enterTeam')
   enterTeam(
     @MessageBody() dto: ObjectIdDTO,
     @ConnectedSocket() client: Socket,
@@ -69,11 +69,15 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, 
 
   newTask(task: TaskDocument): void {
     this.logger.log(task._id);
-    this.server.to(task.team.toString()).emit('AddedTask', task);
+    this.server.to(task.team.toString()).emit('addedTask', task);
   }
 
   changedTask(task: TaskDocument): void {
-    this.server.to(task.team.toString()).emit('ChangedTask', task);
+    this.server.to(task.team.toString()).emit('changedTask', task);
+  }
+
+  taskChangedStatus(task: TaskDocument): void {
+    this.server.to(task.team.toString()).emit('taskChangedStatus', task);
   }
 
   handleDisconnect(client: Socket) {
