@@ -41,7 +41,7 @@ export class GroupController {
   }
 
   @ApiBearerAuth()
-  @Get('organization/:id')
+  @Get('all/organization/:id')
   @UseGuards(JwtAuthGuard)
   async getGroups(
     @User() { _id }: UserDocument,

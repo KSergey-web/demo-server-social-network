@@ -22,6 +22,7 @@ import { TaskDocument } from 'src/task/schemas/task.schema';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { Message } from 'src/message/schemas/message.schema';
 import { User } from 'src/user/schemas/user.schema';
+import { Team } from 'src/team/schemas/team.schema';
 
 @WebSocketGateway()
 export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit {
@@ -67,9 +68,8 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, 
     this.socketService.clientEnterRoom(client, dto.id);
   }
 
-  newTask(task: TaskDocument): void {
-    this.logger.log(task._id);
-    this.server.to(task.team.toString()).emit('addedTask', task);
+  createdTask(task: TaskDocument): void {
+    this.server.to((task.team as Team)._id.toString()).emit('createdTask', task);
   }
 
   changedTask(task: TaskDocument): void {

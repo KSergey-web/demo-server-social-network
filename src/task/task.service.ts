@@ -25,6 +25,7 @@ export class TaskService {
     const task = new this.taskModel(dto);
     await task.save();
     await task.populate('status').populate('users').populate('team').execPopulate();
+    this.socketGateway.createdTask(task);
     return task;
 
   }

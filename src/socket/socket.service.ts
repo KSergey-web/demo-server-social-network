@@ -40,6 +40,7 @@ export class SocketService {
       consoleOut(this.usersOnline,'users online after auth');
       this.addClientToRooms(client, user._id);
     } catch (err) {
+      client.emit('errorAuth',{message: token})
       this.logger.error(`Invalid token: ${token}`);
     }
     return;
@@ -48,7 +49,7 @@ export class SocketService {
   async addClientToRooms(client: Socket, userid: string) {
     const chats: Array<IChat> = await this.chatService.getChats(userid);
     chats.forEach(function(chat, i, arr) {
-      client.join(chat._id);
+      client.join(chat._id.toString());
     });
   }
 

@@ -53,14 +53,14 @@ export class GroupService {
     userId: string,
   ): Promise<Array<Group>> {
     await this.organizationService.checkOrganizationById(organizationId);
-    const groups = await this.groupUserLinkModel
-      .find()
-      .populate('group')
-      .or([{ 'group.isOpen': true }, { user: userId }])
-      .find({ 'group.organization': organizationId });
-    return groups.map(res => {
-      return res.group;
-    });
+    const links = await this.groupUserLinkModel.find({user:userId})
+    const groups = await this.groupModel.find({organization:organizationId});
+    groups.filter(group=>{
+      if (group.isOpen)
+        return true;
+      return links.find(link => {return ((link.user.toString() == userId) && (link.group ==  group._id))})
+    })
+    return groups;
   }
 
   async getGroupById(id: string): Promise<GroupDocument> {

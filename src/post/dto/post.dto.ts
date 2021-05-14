@@ -1,4 +1,4 @@
-import { IsString, IsMongoId, MinLength } from 'class-validator';
+import { IsString, IsMongoId, MinLength, IsOptional } from 'class-validator';
 import {
   ApiProperty,
   ApiPropertyOptional,
@@ -12,8 +12,9 @@ export class CreatePostDTO {
   text: string;
 
   @IsString()
-  @ApiProperty()
-  image: string;
+  @ApiPropertyOptional()
+  @IsOptional()
+  image?: string;
 
   @IsString()
   @IsMongoId()

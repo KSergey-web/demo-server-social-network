@@ -16,10 +16,10 @@ export class GroupUserLink {
     ref: 'Group',
     required: true,
   })
-  group: Group;
+  group: Group | string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
-  user: User;
+  user: User| string;
 
   @Prop({ select: false })
   __v: Number;

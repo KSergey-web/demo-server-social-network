@@ -97,7 +97,6 @@ export class ChatController {
       }
       );
     }
-    consoleOut(newArray);
     return newArray;
   }
 }

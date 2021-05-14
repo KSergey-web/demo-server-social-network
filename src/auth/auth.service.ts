@@ -1,6 +1,7 @@
 import { forwardRef, Inject, Injectable } from '@nestjs/common';
 import { UserService } from '../user/user.service';
 import { JwtService } from '@nestjs/jwt';
+import { consoleOut } from 'src/debug';
 
 @Injectable()
 export class AuthService {
@@ -22,6 +23,7 @@ export class AuthService {
 
   async verifyUser(token: any) {
     const payload = this.jwtService.verify(token);
+    //consoleOut(payload, 'Payload');
     const user = await this.userService.findByPayload(payload);
     return user;
   }

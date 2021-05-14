@@ -5,7 +5,6 @@ import { roleUserGroupEnum } from 'src/group/enums/role-user.enum';
 import { GroupService } from 'src/group/group.service';
 import { OrganizationService } from 'src/organization/organization.service';
 import { CreatePostDTO } from './dto/post.dto';
-import { IPost } from './interfaces/post.interface';
 import { Post, PostDocument } from './schemas/post.schema';
 
 @Injectable()
@@ -25,13 +24,14 @@ export class PostService {
     if (!group.isOpen) {
       await this.groupService.groupUserLink(createPostDTO.group, userId);
     }
-    const postObj: IPost = {
+    const postObj = {
       ...createPostDTO,
       date: new Date(),
       user: userId,
     };
     const post = new this.postModel(postObj);
     await post.save();
+    await post.populate('user').execPopulate();
     return post;
   }
 
@@ -57,7 +57,7 @@ export class PostService {
       await this.groupService.groupUserLink(groupId, userId);
     }
     const filter: any = { group: groupId };
-    const posts = await this.postModel.find(filter);
+    const posts = await this.postModel.find(filter).populate('user').exec();
     return posts;
   }
 }
