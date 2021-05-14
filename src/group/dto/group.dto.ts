@@ -4,6 +4,7 @@ import {
   MinLength,
   IsBoolean,
   IsEnum,
+  IsOptional,
 } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional, PartialType } from '@nestjs/swagger';
 import { roleUserGroupEnum } from '../enums/role-user.enum';
@@ -44,6 +45,7 @@ export class AddGroupUserLinkDTO {
 
   @IsEnum(roleUserGroupEnum)
   @ApiPropertyOptional()
+  @IsOptional()
   roleUser?: string;
 }
 

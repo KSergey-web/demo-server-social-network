@@ -1,6 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { consoleOut } from 'src/debug';
 import { OrganizationService } from 'src/organization/organization.service';
 import {
   AddGroupUserLinkDTO,
@@ -63,6 +64,16 @@ export class GroupService {
     return groups;
   }
 
+  async getUsers(
+    groupId: string,
+    userId: string,
+  ): Promise<Array<GroupUserLink>> {
+    await this.getGroupById(groupId);
+    await this.groupUserLink(groupId, userId);
+    const links = await this.groupUserLinkModel.find({group:groupId}).populate('user').exec();
+    return links;
+  }
+
   async getGroupById(id: string): Promise<GroupDocument> {
     const group = await this.groupModel.findById(id);
     if (!group) {
@@ -79,9 +90,10 @@ export class GroupService {
       user: userid,
       group: groupid,
     };
-    const link = await this.groupUserLinkModel.findOne({
+   
+    const link = await this.groupUserLinkModel.findOne(
       obj,
-    });
+    );
     if (!link) {
       throw new HttpException(
         'You do not have this group',

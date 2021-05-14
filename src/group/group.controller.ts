@@ -51,6 +51,16 @@ export class GroupController {
   }
 
   @ApiBearerAuth()
+  @Get(':id/users')
+  @UseGuards(JwtAuthGuard)
+  async getUsers(
+    @User() { _id }: UserDocument,
+    @Param() params: ObjectIdDTO,
+  ) {
+    return await this.groupService.getUsers(params.id, _id);
+  }
+
+  @ApiBearerAuth()
   @Patch(':id')
   @UseGuards(JwtAuthGuard)
   async updateGroup(
