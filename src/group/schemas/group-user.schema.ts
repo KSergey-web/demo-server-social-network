@@ -19,7 +19,7 @@ export class GroupUserLink {
   group: Group | string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
-  user: User| string;
+  user: User | string;
 
   @Prop({ select: false })
   __v: Number;

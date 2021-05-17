@@ -1,18 +1,14 @@
-import { MapNotStrict } from "./mapnotstrict.class";
+import { MapNotStrict } from './mapnotstrict.class';
 
 describe('usersOnline', () => {
-
-  beforeEach(async () => {
-
-
-  });
+  beforeEach(async () => {});
 
   it('should set if key not exist', () => {
     let usersOnline: MapNotStrict = new MapNotStrict();
     let user = {
       id: 'id',
-      soc: 'soc'
-    }
+      soc: 'soc',
+    };
     expect(usersOnline.set(user.id, user.soc)).toEqual({
       key: user.id,
       value: user.soc,
@@ -23,8 +19,8 @@ describe('usersOnline', () => {
     let usersOnline: MapNotStrict = new MapNotStrict();
     let user = {
       id: 'id',
-      soc: 'soc'
-    }
+      soc: 'soc',
+    };
     expect(usersOnline.set(user.id, user.soc)).toEqual({
       key: user.id,
       value: user.soc,
@@ -41,8 +37,8 @@ describe('usersOnline', () => {
     let usersOnline: MapNotStrict = new MapNotStrict();
     let user = {
       id: 'id',
-      soc: 'soc'
-    }
+      soc: 'soc',
+    };
     expect(usersOnline.set(user.id, user.soc)).toEqual({
       key: user.id,
       value: user.soc,
@@ -60,8 +56,8 @@ describe('usersOnline', () => {
       let usersOnline: MapNotStrict = new MapNotStrict();
       let user = {
         id: 'id',
-        soc: 'soc'
-      }
+        soc: 'soc',
+      };
       expect(usersOnline.set(user.id, user.soc)).toEqual({
         key: user.id,
         value: user.soc,
@@ -69,15 +65,15 @@ describe('usersOnline', () => {
       expect(usersOnline.has(user.id)).toEqual(true);
       expect(usersOnline.has('af')).toEqual(false);
     });
-  })
+  });
 
   describe('delete', () => {
     it('should delete', () => {
       let usersOnline: MapNotStrict = new MapNotStrict();
       let user = {
         id: 'id',
-        soc: 'soc'
-      }
+        soc: 'soc',
+      };
       expect(usersOnline.set(user.id, user.soc)).toEqual({
         key: user.id,
         value: user.soc,
@@ -88,15 +84,15 @@ describe('usersOnline', () => {
       expect(usersOnline.delete(user.id)).toEqual(false);
       expect(usersOnline.lenght()).toBe(0);
     });
-  })
+  });
 
   describe('delete by value', () => {
     it('should delete', () => {
       let usersOnline: MapNotStrict = new MapNotStrict();
       let user = {
         id: 'id',
-        soc: 'soc'
-      }
+        soc: 'soc',
+      };
       expect(usersOnline.set(user.id, user.soc)).toEqual({
         key: user.id,
         value: user.soc,
@@ -107,5 +103,5 @@ describe('usersOnline', () => {
       expect(usersOnline.delete(user.id)).toEqual(false);
       expect(usersOnline.lenght()).toBe(0);
     });
-  })
+  });
 });

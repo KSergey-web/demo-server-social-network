@@ -9,8 +9,8 @@ import { SocketModule } from 'src/socket/socket.module';
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: Message.name, schema: MessageSchema }]),
-    forwardRef(() =>ChatModule),
-    forwardRef(() =>SocketModule),
+    forwardRef(() => ChatModule),
+    forwardRef(() => SocketModule),
   ],
   controllers: [MessageController],
   providers: [MessageService],

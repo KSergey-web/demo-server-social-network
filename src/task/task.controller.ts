@@ -17,7 +17,13 @@ import { StatusService } from 'src/team/status.service';
 import { TeamService } from 'src/team/team.service';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { User } from 'src/utilities/user.decorator';
-import { AddAnswerDTO, AddUserToTaskDTO, ChangeStatusDTO, CreateTaskDTO, UpdateTaskDTO } from './dto/task.dto';
+import {
+  AddAnswerDTO,
+  AddUserToTaskDTO,
+  ChangeStatusDTO,
+  CreateTaskDTO,
+  UpdateTaskDTO,
+} from './dto/task.dto';
 import { TaskService } from './task.service';
 
 @ApiTags('task')
@@ -54,7 +60,11 @@ export class TaskController {
     @User() { _id }: UserDocument,
   ) {
     const status = await this.statusService.getStatusById(dto.status);
-    await this.teamService.checkEnable(status.team as string, _id, roleUserTeamEnum.admin);
+    await this.teamService.checkEnable(
+      status.team as string,
+      _id,
+      roleUserTeamEnum.admin,
+    );
     return await this.taskService.changeStatus(dto, status.team as string);
   }
 
@@ -68,14 +78,20 @@ export class TaskController {
   @ApiBearerAuth()
   @Patch('adduser')
   @UseGuards(JwtAuthGuard)
-  async addUserToTask(@Body() dto: AddUserToTaskDTO, @User() { _id }: UserDocument) {
+  async addUserToTask(
+    @Body() dto: AddUserToTaskDTO,
+    @User() { _id }: UserDocument,
+  ) {
     return await this.taskService.addUserToTask(dto, _id);
   }
 
   @ApiBearerAuth()
   @Patch('deleteuser')
   @UseGuards(JwtAuthGuard)
-  async deleteUserFromTask(@Body() dto: AddUserToTaskDTO, @User() { _id }: UserDocument) {
+  async deleteUserFromTask(
+    @Body() dto: AddUserToTaskDTO,
+    @User() { _id }: UserDocument,
+  ) {
     return await this.taskService.deleteUserFromTask(dto, _id);
   }
 
@@ -89,8 +105,12 @@ export class TaskController {
   @ApiBearerAuth()
   @Patch(':id')
   @UseGuards(JwtAuthGuard)
-  async updateTask(@Param() params: ObjectIdDTO, @Body() dto: UpdateTaskDTO, @User() { _id }: UserDocument) {
-    return await this.taskService.updateTask(params.id,dto, _id);
+  async updateTask(
+    @Param() params: ObjectIdDTO,
+    @Body() dto: UpdateTaskDTO,
+    @User() { _id }: UserDocument,
+  ) {
+    return await this.taskService.updateTask(params.id, dto, _id);
   }
 
   @ApiBearerAuth()
@@ -110,7 +130,10 @@ export class TaskController {
   @ApiBearerAuth()
   @Get('history/team/:id')
   @UseGuards(JwtAuthGuard)
-  async historyTasks(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
+  async historyTasks(
+    @Param() params: ObjectIdDTO,
+    @User() { _id }: UserDocument,
+  ) {
     return await this.taskService.getHistory(params.id, _id);
   }
 }

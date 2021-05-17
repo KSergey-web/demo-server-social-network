@@ -57,9 +57,7 @@ export class OrganizationService {
       user: userid,
       organization: organizationid,
     };
-    const link = await this.organizationUserModel.findOne(
-      obj 
-    );
+    const link = await this.organizationUserModel.findOne(obj);
     if (!link) {
       throw new HttpException(
         'You do not have this organization',
@@ -158,12 +156,12 @@ export class OrganizationService {
       user: admin._id,
       organization: organization,
     });
-    const filter:any = {
+    const filter: any = {
       user: hireUserDTO.userId,
       organization: organization._id,
-    }
+    };
     const checkUserlink = await this.organizationUserModel.findOne(filter);
-    if (checkUserlink){
+    if (checkUserlink) {
       throw new HttpException(
         `User ${checkUserlink._id} already in the organization`,
         HttpStatus.CONFLICT,
@@ -234,10 +232,15 @@ export class OrganizationService {
     }
   }
 
-  async getOrganizations(userId: string): Promise<Array<OrganizationUserDocument>>{
-    const filter: any ={user:userId}; 
-    const links = await this.organizationUserModel.find(filter).populate('organization').populate('user').exec();
+  async getOrganizations(
+    userId: string,
+  ): Promise<Array<OrganizationUserDocument>> {
+    const filter: any = { user: userId };
+    const links = await this.organizationUserModel
+      .find(filter)
+      .populate('organization')
+      .populate('user')
+      .exec();
     return links;
   }
-
 }

@@ -42,24 +42,23 @@ export class TeamService {
     };
     const link = new this.teamUserLinkModel(teamUserLink);
     await link.save();
-    if (createTeamDTO.users){
-      createTeamDTO.users.forEach(async (user) =>
-        {
-          await this.addTeamUserLink({team: team._id, user}, userId)
-        }
-      )
-      }
+    if (createTeamDTO.users) {
+      createTeamDTO.users.forEach(async user => {
+        await this.addTeamUserLink({ team: team._id, user }, userId);
+      });
+    }
     return team;
   }
 
   async getTeams(organizationId: string, userId: string): Promise<Array<Team>> {
     const links = await this.teamUserLinkModel
-      .find({user:userId})
-      .populate('team').exec();
+      .find({ user: userId })
+      .populate('team')
+      .exec();
     let teams: Array<Team> = [];
-    links.forEach(({team})=>{
-      if ((team as Team).organization == organizationId){
-        teams.push((team as Team));
+    links.forEach(({ team }) => {
+      if ((team as Team).organization == organizationId) {
+        teams.push(team as Team);
       }
     });
     return teams;
@@ -81,9 +80,7 @@ export class TeamService {
       user: userId,
       team: teamId,
     };
-    const link = await this.teamUserLinkModel.findOne(
-      obj
-    );
+    const link = await this.teamUserLinkModel.findOne(obj);
     if (!link) {
       throw new HttpException(
         'You do not have this team',
@@ -141,12 +138,15 @@ export class TeamService {
     userId: string,
   ): Promise<User> {
     const team = await this.getTeamById(dto.team);
-    await this.organizationService.organizationUserLink(team.organization as string, userId);
+    await this.organizationService.organizationUserLink(
+      team.organization as string,
+      userId,
+    );
     const link = await this.teamUserLink(dto.team, userId);
     await this.checkAccess(link, roleUserTeamEnum.admin);
     const newLink = new this.teamUserLinkModel(dto);
     await newLink.save();
-    await newLink.populate('user').execPopulate(); 
+    await newLink.populate('user').execPopulate();
     return newLink.user as User;
   }
 
@@ -186,9 +186,12 @@ export class TeamService {
     return;
   }
 
-  async getUsers(teamId: string, userId: string): Promise<Array<User>>{
-    await this.checkEnable(teamId,userId);
-    let links = await this.teamUserLinkModel.find({team: teamId}).populate('user').exec();
-    return links.map((item) : User => (item.user as User))
+  async getUsers(teamId: string, userId: string): Promise<Array<User>> {
+    await this.checkEnable(teamId, userId);
+    let links = await this.teamUserLinkModel
+      .find({ team: teamId })
+      .populate('user')
+      .exec();
+    return links.map((item): User => item.user as User);
   }
 }

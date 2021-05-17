@@ -1,23 +1,22 @@
-import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
 import { Document } from 'mongoose';
-import { enumToArray } from "src/utilities/user.decorator";
-import { Organization } from "../../organization/schemas/organization.schema";
-import { Task } from "../../task/schemas/task.schema";
-import { Team } from "../../team/schemas/team.schema";
-import { phaseEnum } from "../enums/phase.enum";
+import { enumToArray } from 'src/utilities/user.decorator';
+import { Organization } from '../../organization/schemas/organization.schema';
+import { Task } from '../../task/schemas/task.schema';
+import { Team } from '../../team/schemas/team.schema';
+import { phaseEnum } from '../enums/phase.enum';
 
 export type NotificationDocument = Notification & Document;
 
 @Schema()
 export class Notification {
-
-    _id?:string;
+  _id?: string;
 
   @Prop({ required: true })
   date: Date;
 
-  @Prop({enum:enumToArray(phaseEnum), required: true})
+  @Prop({ enum: enumToArray(phaseEnum), required: true })
   phase: phaseEnum;
 
   @Prop({

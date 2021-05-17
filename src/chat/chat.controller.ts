@@ -17,7 +17,11 @@ import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { User } from 'src/utilities/user.decorator';
 import { ChatService } from './chat.service';
-import { AddChatUserDTO, AddUsersToChatDTO, CreateChatDTO } from './dto/chat.dto';
+import {
+  AddChatUserDTO,
+  AddUsersToChatDTO,
+  CreateChatDTO,
+} from './dto/chat.dto';
 
 @ApiTags('chat')
 @Controller('chat')
@@ -25,9 +29,8 @@ export class ChatController {
   constructor(
     private readonly chatService: ChatService,
     @Inject(forwardRef(() => MessageService))
-    private readonly messageService:MessageService
-
-    ) {}
+    private readonly messageService: MessageService,
+  ) {}
 
   @ApiBearerAuth()
   @Post()
@@ -65,37 +68,35 @@ export class ChatController {
     @Body() dto: AddUsersToChatDTO,
     @User() { _id }: UserDocument,
   ) {
-    dto.users.forEach(async (userId) => {
-      await this.chatService.addUser({chat:dto.chat, user:userId}, _id);
-    })
-    return {message:'Workers is added to chat'};
+    dto.users.forEach(async userId => {
+      await this.chatService.addUser({ chat: dto.chat, user: userId }, _id);
+    });
+    return { message: 'Workers is added to chat' };
   }
 
   @ApiBearerAuth()
   @Get(':id/users')
   @UseGuards(JwtAuthGuard)
-  async getUsers(
-    @Param() params: ObjectIdDTO,
-    @User() { _id }: UserDocument,
-  ) {
-    const links = await this.chatService.getChatUserLinksByChat(params.id,_id);
-    let users: Array<any> =[];
-    links.forEach((link)=>{users.push(link.user)})
-    return users; 
+  async getUsers(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
+    const links = await this.chatService.getChatUserLinksByChat(params.id, _id);
+    let users: Array<any> = [];
+    links.forEach(link => {
+      users.push(link.user);
+    });
+    return users;
   }
 
   @ApiBearerAuth()
   @Get('all')
   @UseGuards(JwtAuthGuard)
   async getChats(@User() { _id }: UserDocument) {
-    let chats:any = await this.chatService.getChats(_id);
+    let chats: any = await this.chatService.getChats(_id);
     let newArray = [];
-    for(let i=0;i<chats.length;++i){
+    for (let i = 0; i < chats.length; ++i) {
       newArray.push({
         ...chats[i].toObject(),
         message: await this.messageService.lastFromChat(chats[i]._id),
-      }
-      );
+      });
     }
     return newArray;
   }

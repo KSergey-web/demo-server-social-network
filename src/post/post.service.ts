@@ -57,7 +57,10 @@ export class PostService {
       await this.groupService.groupUserLink(groupId, userId);
     }
     const filter: any = { group: groupId };
-    const posts = await this.postModel.find(filter).populate('user').exec();
+    const posts = await this.postModel
+      .find(filter)
+      .populate('user')
+      .exec();
     return posts;
   }
 }

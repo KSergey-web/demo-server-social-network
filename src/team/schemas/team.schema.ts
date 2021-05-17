@@ -7,7 +7,7 @@ export type TeamDocument = Team & Document;
 
 @Schema()
 export class Team {
-  _id?:string;
+  _id?: string;
 
   @Prop({ required: true })
   name: string;

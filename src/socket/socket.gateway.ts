@@ -25,11 +25,12 @@ import { User } from 'src/user/schemas/user.schema';
 import { Team } from 'src/team/schemas/team.schema';
 
 @WebSocketGateway()
-export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit {
+export class SocketGateway
+  implements OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit {
   constructor(
     @Inject(forwardRef(() => SocketService))
-    private readonly socketService: SocketService) {
-  }
+    private readonly socketService: SocketService,
+  ) {}
 
   @WebSocketServer() server: Server;
 
@@ -50,7 +51,7 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, 
 
   @SubscribeMessage('msgToChat')
   handleMessage(message: Message): void {
-    this.server.to((message.chat as string)).emit('msgFromChat', message);
+    this.server.to(message.chat as string).emit('msgFromChat', message);
   }
 
   @SubscribeMessage('leaveTeam')
@@ -69,7 +70,9 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, 
   }
 
   createdTask(task: TaskDocument): void {
-    this.server.to((task.team as Team)._id.toString()).emit('createdTask', task);
+    this.server
+      .to((task.team as Team)._id.toString())
+      .emit('createdTask', task);
   }
 
   changedTask(task: TaskDocument): void {
@@ -90,7 +93,7 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect, 
     client.emit('connectedEvent');
   }
 
-  afterInit(server: Server){
+  afterInit(server: Server) {
     this.socketService.setServer(server);
   }
 }

@@ -48,7 +48,6 @@ export class CreateTaskDTO {
 export class UpdateTaskDTO extends OmitType(PartialType(CreateTaskDTO), [
   'team',
 ] as const) {
-  
   @ApiPropertyOptional()
   @ValidateIf(o => o.answer != undefined)
   @IsString()
@@ -56,7 +55,6 @@ export class UpdateTaskDTO extends OmitType(PartialType(CreateTaskDTO), [
 }
 
 export class ChangeStatusDTO {
-
   @IsMongoId()
   @ApiProperty()
   status: string;
@@ -76,7 +74,7 @@ export class AddAnswerDTO {
   answer: string;
 }
 
-export class AddUserToTaskDTO{
+export class AddUserToTaskDTO {
   @IsMongoId()
   @ApiProperty()
   task: string;

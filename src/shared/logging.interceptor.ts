@@ -1,4 +1,9 @@
-import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';
+import {
+  Injectable,
+  NestInterceptor,
+  ExecutionContext,
+  CallHandler,
+} from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { consoleOut } from '../debug';
@@ -17,13 +22,23 @@ export class LoggingInterceptor implements NestInterceptor {
       queryreq: request.query,
       cookiesreq: request.cookies,
     };
-    return next
-      .handle()
-      .pipe(tap(value =>  {
-        if(reqInfo.path != '/v1/api/user'){
-        fs.writeFile('logFile.json',' //reqinfo \n'+JSON.stringify(reqInfo) +";\n",{flag: 'a+'},(err)=>{});
-        fs.writeFile('logFile.json',' //res info \n'+JSON.stringify(value) +";\n",{flag: 'a+'},(err)=>{});
+    return next.handle().pipe(
+      tap(value => {
+        if (reqInfo.path != '/v1/api/user') {
+          fs.writeFile(
+            'logFile.json',
+            ' //reqinfo \n' + JSON.stringify(reqInfo) + ';\n',
+            { flag: 'a+' },
+            err => {},
+          );
+          fs.writeFile(
+            'logFile.json',
+            ' //res info \n' + JSON.stringify(value) + ';\n',
+            { flag: 'a+' },
+            err => {},
+          );
         }
-    }));
+      }),
+    );
   }
 }

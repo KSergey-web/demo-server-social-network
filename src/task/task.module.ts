@@ -19,11 +19,11 @@ import { NotificationModule } from 'src/notification/notification.module';
     MongooseModule.forFeature([{ name: Task.name, schema: TaskSchema }]),
     TeamModule,
     SocketModule,
-    forwardRef(()=>NotificationModule)
+    forwardRef(() => NotificationModule),
   ],
   controllers: [TaskController],
   providers: [TaskService],
-  exports:[TaskService],
+  exports: [TaskService],
 })
 export class TaskModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {

@@ -9,7 +9,6 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-
   _id?: string;
 
   status?: string;
@@ -25,19 +24,15 @@ export class User {
 
   @Prop({ select: false })
   __v: Number;
-  
-  
+
   @Prop({ required: true })
   name: string;
 
   @Prop({ required: true })
   surname: string;
 
-  
   @Prop({ required: true })
   patronymic: string;
-
-  
 
   @Prop({ required: true })
   birthdate: Date;

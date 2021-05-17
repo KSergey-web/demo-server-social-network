@@ -43,20 +43,14 @@ export class GroupController {
   @ApiBearerAuth()
   @Get('all/organization/:id')
   @UseGuards(JwtAuthGuard)
-  async getGroups(
-    @User() { _id }: UserDocument,
-    @Param() params: ObjectIdDTO,
-  ) {
+  async getGroups(@User() { _id }: UserDocument, @Param() params: ObjectIdDTO) {
     return await this.groupService.getGroups(params.id, _id);
   }
 
   @ApiBearerAuth()
   @Get(':id/users')
   @UseGuards(JwtAuthGuard)
-  async getUsers(
-    @User() { _id }: UserDocument,
-    @Param() params: ObjectIdDTO,
-  ) {
+  async getUsers(@User() { _id }: UserDocument, @Param() params: ObjectIdDTO) {
     return await this.groupService.getUsers(params.id, _id);
   }
 

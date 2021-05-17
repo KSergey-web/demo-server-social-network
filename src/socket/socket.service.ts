@@ -12,14 +12,14 @@ import { MapNotStrict } from './mapnotstrict.class';
 @Injectable()
 export class SocketService {
   constructor(
-    @Inject(forwardRef(()=>AuthService))
+    @Inject(forwardRef(() => AuthService))
     private readonly authService: AuthService,
     @Inject(forwardRef(() => ChatService))
     private readonly chatService: ChatService,
   ) {}
 
-  setServer(server:Server){
-    this.server=server;
+  setServer(server: Server) {
+    this.server = server;
   }
 
   server: Server;
@@ -37,10 +37,10 @@ export class SocketService {
     try {
       const user = await this.authService.verifyUser(token);
       this.usersOnline.set(user._id, client.id);
-      consoleOut(this.usersOnline,'users online after auth');
+      consoleOut(this.usersOnline, 'users online after auth');
       this.addClientToRooms(client, user._id);
     } catch (err) {
-      client.emit('errorAuth',{message: token})
+      client.emit('errorAuth', { message: token });
       this.logger.error(`Invalid token: ${token}`);
     }
     return;
@@ -57,7 +57,7 @@ export class SocketService {
     const client = this.getClient(userid);
     if (!client) return;
     client.join(room);
-    consoleOut(client.rooms,`rooms of user ${userid}`)
+    consoleOut(client.rooms, `rooms of user ${userid}`);
     return;
   }
 
@@ -68,7 +68,7 @@ export class SocketService {
     return;
   }
 
-  getClient(userid: any):Socket|null {
+  getClient(userid: any): Socket | null {
     if (!this.usersOnline.has(userid)) {
       this.logger.log(`user with id ${userid} offline`);
       return null;
@@ -78,13 +78,21 @@ export class SocketService {
 
   clientLeaveRoom(client: Socket, room: string) {
     client.leave(room);
-    setTimeout( ()=> consoleOut(client.rooms,`leave ${room}. rooms of client ${client.id}`),1)
+    setTimeout(
+      () =>
+        consoleOut(client.rooms, `leave ${room}. rooms of client ${client.id}`),
+      1,
+    );
     return;
   }
 
   clientEnterRoom(client: Socket, room: string) {
     client.join(room);
-    setTimeout( ()=>consoleOut(client.rooms,`enter ${room}. rooms of user ${client.id}`),1)
+    setTimeout(
+      () =>
+        consoleOut(client.rooms, `enter ${room}. rooms of user ${client.id}`),
+      1,
+    );
     return;
   }
 
@@ -94,8 +102,7 @@ export class SocketService {
     return;
   }
 
-
-  newNotificationEvent(userId:string){
+  newNotificationEvent(userId: string) {
     const client = this.getClient(userId);
     if (!client) return;
     client.emit('newNotification');

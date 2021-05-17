@@ -2,8 +2,14 @@ import { forwardRef, Module } from '@nestjs/common';
 import { NotificationService } from './notification.service';
 import { NotificationController } from './notification.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { NotificationSchema, Notification } from './schemas/notification.schema';
-import { NotificationUserLink, NotificationUserLinkSchema } from './schemas/notification-user.schema';
+import {
+  NotificationSchema,
+  Notification,
+} from './schemas/notification.schema';
+import {
+  NotificationUserLink,
+  NotificationUserLinkSchema,
+} from './schemas/notification-user.schema';
 import { TaskModule } from 'src/task/task.module';
 import { OrganizationModule } from 'src/organization/organization.module';
 import { TeamModule } from 'src/team/team.module';
@@ -16,12 +22,12 @@ import { SocketModule } from 'src/socket/socket.module';
       { name: NotificationUserLink.name, schema: NotificationUserLinkSchema },
     ]),
     OrganizationModule,
-    forwardRef(()=>TaskModule),
+    forwardRef(() => TaskModule),
     TeamModule,
-    SocketModule
+    SocketModule,
   ],
   controllers: [NotificationController],
   providers: [NotificationService],
-  exports:[NotificationService]
+  exports: [NotificationService],
 })
 export class NotificationModule {}

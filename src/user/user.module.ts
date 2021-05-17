@@ -7,7 +7,7 @@ import { UserService } from './user.service';
 
 @Module({
   imports: [
-    forwardRef(()=>SocketModule),
+    forwardRef(() => SocketModule),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
   ],
   controllers: [UserController],

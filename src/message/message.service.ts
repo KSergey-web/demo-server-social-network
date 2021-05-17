@@ -44,16 +44,18 @@ export class MessageService {
       .find({ chat })
       .sort({ date: 1 })
       .skip((page - 1) * 20)
-      .limit(20).populate('user').exec();
+      .limit(20)
+      .populate('user')
+      .exec();
   }
 
-  async lastFromChat(
-    chat:any
-  ): Promise<Message> {
-    const mes = (await this.messageModel
-      .find({ chat:chat })
+  async lastFromChat(chat: any): Promise<Message> {
+    const mes = await this.messageModel
+      .find({ chat: chat })
       .sort({ date: -1 })
-      .limit(1).populate('user').exec());
+      .limit(1)
+      .populate('user')
+      .exec();
     return mes.pop();
   }
 }

@@ -1,4 +1,10 @@
-import { forwardRef, HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
+import {
+  forwardRef,
+  HttpException,
+  HttpStatus,
+  Inject,
+  Injectable,
+} from '@nestjs/common';
 import { Model } from 'mongoose';
 import { User, UserDocument } from './schemas/user.schema';
 import { InjectModel } from '@nestjs/mongoose';
@@ -11,9 +17,11 @@ import { userStatusEnum } from 'src/socket/enums/socket.enum';
 
 @Injectable()
 export class UserService {
-  constructor(@InjectModel(User.name) private userModel: Model<UserDocument>,
-  @Inject(forwardRef(()=>SocketService))
-  private socketService: SocketService) {}
+  constructor(
+    @InjectModel(User.name) private userModel: Model<UserDocument>,
+    @Inject(forwardRef(() => SocketService))
+    private socketService: SocketService,
+  ) {}
 
   async create(userDTO: RegisterDTO) {
     const { login } = userDTO;
@@ -73,19 +81,17 @@ export class UserService {
     return 'User updated';
   }
 
-  async checkByLogin(login:string): Promise<UserDocument>{
+  async checkByLogin(login: string): Promise<UserDocument> {
     const user = await this.userModel.findOne({ login });
-    if (!user){
+    if (!user) {
       throw new HttpException('User not found', HttpStatus.NOT_FOUND);
-  }
+    }
     return user;
   }
 
-  
-  getStatusUser(userId: string): string{
-    if (this.socketService.getClient(userId)){
+  getStatusUser(userId: string): string {
+    if (this.socketService.getClient(userId)) {
       return userStatusEnum.online;
-    }
-    else return userStatusEnum.offline;
+    } else return userStatusEnum.offline;
   }
 }

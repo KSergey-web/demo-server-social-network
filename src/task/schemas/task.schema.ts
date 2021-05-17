@@ -9,12 +9,12 @@ export type TaskDocument = Task & Document;
 
 @Schema()
 export class Task {
-  _id?:string;
-  
+  _id?: string;
+
   @Prop({ required: true })
   name: string;
 
-  @Prop({ default:'' })
+  @Prop({ default: '' })
   description: string;
 
   @Prop({ required: true })
@@ -23,7 +23,7 @@ export class Task {
   @Prop({ default: null })
   deadline: Date;
 
-  @Prop({ required:true, default: new Date() })
+  @Prop({ required: true, default: new Date() })
   date: Date;
 
   @Prop({

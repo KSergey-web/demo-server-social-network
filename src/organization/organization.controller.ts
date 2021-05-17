@@ -29,13 +29,13 @@ import { cookiesEnum } from 'src/enums/cookies.enum';
 import { consoleOut } from 'src/debug';
 import { UserService } from 'src/user/user.service';
 
-
 @ApiTags('organization')
 @Controller('organization')
 export class OrganizationController {
-  constructor(private readonly organizationService: OrganizationService,
+  constructor(
+    private readonly organizationService: OrganizationService,
     private readonly userService: UserService,
-    ) {}
+  ) {}
 
   @ApiBearerAuth()
   @Post()
@@ -101,21 +101,24 @@ export class OrganizationController {
   @UseGuards(JwtAuthGuard)
   async hireUser(@Body() body: HireUserDTO, @User() user: UserDocument) {
     await this.organizationService.hireUser(body, user);
-    return {message:'Worker is hired'};
+    return { message: 'Worker is hired' };
   }
 
   @ApiBearerAuth()
   @Post('hirewithlogin')
   @UseGuards(JwtAuthGuard)
-  async hireUserWithLogin(@Body() dto: HireWithLoginDTO, @User() user: UserDocument) {
+  async hireUserWithLogin(
+    @Body() dto: HireWithLoginDTO,
+    @User() user: UserDocument,
+  ) {
     const hireUser = await this.userService.checkByLogin(dto.login);
     const modifyDto: HireUserDTO = {
       userId: hireUser._id,
       position: dto.position,
-      organizationId: dto.organizationId
-    }
+      organizationId: dto.organizationId,
+    };
     await this.organizationService.hireUser(modifyDto, user);
-    return {message:'Worker is hired'};
+    return { message: 'Worker is hired' };
   }
 
   @ApiBearerAuth()
@@ -128,7 +131,7 @@ export class OrganizationController {
   ) {
     await this.organizationService.checkOrganizationAndLink(params.id, _id);
     response.cookie(cookiesEnum.organizationId, params.id);
-    return {organization: params.id};
+    return { organization: params.id };
   }
 
   // @ApiBearerAuth()
@@ -143,26 +146,22 @@ export class OrganizationController {
   @ApiBearerAuth()
   @Get('all/:id')
   @UseGuards(JwtAuthGuard)
-  async getOrganizationsByUserId(
-    @Param() params: ObjectIdDTO,
-  ) {
-    return (await this.organizationService.getOrganizations(params.id));
+  async getOrganizationsByUserId(@Param() params: ObjectIdDTO) {
+    return await this.organizationService.getOrganizations(params.id);
   }
 
   @ApiBearerAuth()
   @Get(':id/users')
   @UseGuards(JwtAuthGuard)
-  async getUsers(
-  @Param() params: ObjectIdDTO,
-  ) {
-    let links:any  = await this.organizationService.getUsers(params.id);
+  async getUsers(@Param() params: ObjectIdDTO) {
+    let links: any = await this.organizationService.getUsers(params.id);
     let newArray = [];
-    links.map((link)=>{
+    links.map(link => {
       let obj = link.toObject();
       obj.user.status = this.userService.getStatusUser(link.user._id);
       newArray.push(obj);
       return obj;
-    }) 
+    });
     return newArray;
   }
 

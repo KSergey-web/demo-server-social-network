@@ -24,7 +24,7 @@ export class Group {
     ref: 'Organization',
     required: true,
   })
-  organization: Organization| string;
+  organization: Organization | string;
 
   @Prop({ select: false })
   __v: Number;

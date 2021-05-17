@@ -8,9 +8,7 @@ export type NotificationUserLinkDocument = NotificationUserLink & Document;
 
 @Schema()
 export class NotificationUserLink {
-
-  _id?:string;
-
+  _id?: string;
 
   @Prop({ default: false })
   isReaded?: boolean;
@@ -29,4 +27,6 @@ export class NotificationUserLink {
   __v?: Number;
 }
 
-export const NotificationUserLinkSchema = SchemaFactory.createForClass(NotificationUserLink);
+export const NotificationUserLinkSchema = SchemaFactory.createForClass(
+  NotificationUserLink,
+);

@@ -33,7 +33,7 @@ export class CreateTeamDTO {
   organization: string;
 
   @ApiPropertyOptional()
-  users?: Array<string>
+  users?: Array<string>;
 }
 
 export class UpdateTeamDTO extends OmitType(PartialType(CreateTeamDTO), [

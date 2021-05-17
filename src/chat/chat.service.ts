@@ -26,11 +26,11 @@ export class ChatService {
     private chatUserModel: Model<ChatUserDocument>,
     @Inject(forwardRef(() => SocketService))
     private readonly socketService: SocketService,
-    @Inject(forwardRef(()=>UserService))
+    @Inject(forwardRef(() => UserService))
     private readonly userService: UserService,
   ) {}
 
-  async create(chatDTO: CreateChatDTO, userId: string) {    
+  async create(chatDTO: CreateChatDTO, userId: string) {
     const createdChat = new this.chatModel(chatDTO);
     await createdChat.save();
     const chatUser: IChatUser = {
@@ -39,12 +39,10 @@ export class ChatService {
     };
     const createdChatUser = new this.chatUserModel(chatUser);
     await createdChatUser.save();
-    if (chatDTO.users){
-    chatDTO.users.forEach(async (user) =>
-      {
-        await this.addUser({chat:createdChat._id, user}, userId)
-      }
-    )
+    if (chatDTO.users) {
+      chatDTO.users.forEach(async user => {
+        await this.addUser({ chat: createdChat._id, user }, userId);
+      });
     }
     return createdChat;
   }
@@ -105,9 +103,15 @@ export class ChatService {
     return chats;
   }
 
-  async getChatUserLinksByChat(chatId:string, userId:string):Promise<Array<ChatUserDocument>>{
+  async getChatUserLinksByChat(
+    chatId: string,
+    userId: string,
+  ): Promise<Array<ChatUserDocument>> {
     await this.checkChatById(chatId);
-    await this.chatUserLink(chatId,userId);
-    return await this.chatUserModel.find({chat:(chatId) as any}).populate('user').exec();
+    await this.chatUserLink(chatId, userId);
+    return await this.chatUserModel
+      .find({ chat: chatId as any })
+      .populate('user')
+      .exec();
   }
 }

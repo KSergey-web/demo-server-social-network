@@ -8,8 +8,7 @@ export type TeamUserLinkDocument = TeamUserLink & Document;
 
 @Schema()
 export class TeamUserLink {
-
-  _id?:string;
+  _id?: string;
 
   @Prop({ default: 'user' })
   roleUser: string;

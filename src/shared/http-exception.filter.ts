@@ -34,11 +34,20 @@ export class HttpExceptionFilter implements ExceptionFilter {
       queryreq: request.query,
       cookiesreq: request.cookies,
     };
-    if (status == 500){
-      fs.writeFile('logFile.json',' //exeption info \n'+JSON.stringify(exception) +";\n",{flag: 'a+'},(err)=>{});
-    }
-    else {
-    fs.writeFile('logFile.json',' //error info \n'+JSON.stringify(errorResponse) +";\n",{flag: 'a+'},(err)=>{});
+    if (status == 500) {
+      fs.writeFile(
+        'logFile.json',
+        ' //exeption info \n' + JSON.stringify(exception) + ';\n',
+        { flag: 'a+' },
+        err => {},
+      );
+    } else {
+      fs.writeFile(
+        'logFile.json',
+        ' //error info \n' + JSON.stringify(errorResponse) + ';\n',
+        { flag: 'a+' },
+        err => {},
+      );
     }
     response.status(status).json(errorResponse);
   }

@@ -8,28 +8,26 @@ import { NotificationService } from './notification.service';
 
 @Controller('notification')
 export class NotificationController {
-  constructor(private readonly notificationService: NotificationService) {
-    
-  }
+  constructor(private readonly notificationService: NotificationService) {}
 
   @ApiBearerAuth()
   @Get('all')
   @UseGuards(JwtAuthGuard)
-  async getTask( @User() { _id }: UserDocument) {
-    return await this.notificationService.getNotification( _id);
+  async getTask(@User() { _id }: UserDocument) {
+    return await this.notificationService.getNotification(_id);
   }
 
   @ApiBearerAuth()
   @Get('all/markreaded')
   @UseGuards(JwtAuthGuard)
-  async markAllAsReaded( @User() { _id }: UserDocument) {
-    return await this.notificationService.markAllAsReaded( _id);
+  async markAllAsReaded(@User() { _id }: UserDocument) {
+    return await this.notificationService.markAllAsReaded(_id);
   }
 
   @ApiBearerAuth()
   @Get('quantity/notReaded')
   @UseGuards(JwtAuthGuard)
-  async getNotReaded( @User() { _id }: UserDocument) {
-    return {quantity: await this.notificationService.getNotReaded( _id)};
+  async getNotReaded(@User() { _id }: UserDocument) {
+    return { quantity: await this.notificationService.getNotReaded(_id) };
   }
 }

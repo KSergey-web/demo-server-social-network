@@ -6,7 +6,7 @@ import { consoleOut } from 'src/debug';
 @Injectable()
 export class AuthService {
   constructor(
-    @Inject(forwardRef(()=>UserService))
+    @Inject(forwardRef(() => UserService))
     private readonly userService: UserService,
     private readonly jwtService: JwtService,
   ) {}

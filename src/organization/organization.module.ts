@@ -14,7 +14,7 @@ import { UserModule } from '../user/user.module';
 
 @Module({
   imports: [
-    forwardRef(()=>UserModule),
+    forwardRef(() => UserModule),
     MongooseModule.forFeature([
       { name: Organization.name, schema: OrganizationSchema },
       { name: OrganizationUser.name, schema: OrganizationUserSchema },

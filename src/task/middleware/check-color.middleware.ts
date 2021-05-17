@@ -20,7 +20,10 @@ export class ColorMiddleware implements NestMiddleware {
       }
     } else if (color == colorEnum.orange) {
       if (!req.body.deadline) {
-        throw new HttpException(`Deadline is undefined`, HttpStatus.BAD_REQUEST);
+        throw new HttpException(
+          `Deadline is undefined`,
+          HttpStatus.BAD_REQUEST,
+        );
       }
       if (!(new Date(req.body.deadline) > new Date())) {
         throw new HttpException(

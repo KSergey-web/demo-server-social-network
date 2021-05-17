@@ -11,7 +11,7 @@ export class CreateChatDTO {
   name: string;
 
   @ApiPropertyOptional()
-  users?: Array<string>
+  users?: Array<string>;
 }
 
 export class UpdatChatDTO extends PartialType(CreateChatDTO) {}
@@ -32,5 +32,5 @@ export class AddUsersToChatDTO {
   chat: string;
 
   @ApiProperty()
-  users: Array<string>
+  users: Array<string>;
 }

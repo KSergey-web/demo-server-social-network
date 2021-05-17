@@ -35,7 +35,10 @@ export class StatusService {
 
   async getStatuses(teamId: string) {
     const filter: any = { team: teamId };
-    return await this.statusModel.find({team: teamId, position:{$gt:0} }, { team: false });
+    return await this.statusModel.find(
+      { team: teamId, position: { $gt: 0 } },
+      { team: false },
+    );
   }
 
   async getStatusById(id: string): Promise<StatusDocument> {
@@ -46,8 +49,11 @@ export class StatusService {
     return status;
   }
 
-  async getStatusHistory(teamId: string): Promise<Status>{
-    const status = await this.statusModel.findOne({team: teamId, position: -1});
+  async getStatusHistory(teamId: string): Promise<Status> {
+    const status = await this.statusModel.findOne({
+      team: teamId,
+      position: -1,
+    });
     if (!status) {
       throw new HttpException('Status not found', HttpStatus.BAD_REQUEST);
     }

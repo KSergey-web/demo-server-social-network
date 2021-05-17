@@ -54,13 +54,14 @@ export class GroupService {
     userId: string,
   ): Promise<Array<Group>> {
     await this.organizationService.checkOrganizationById(organizationId);
-    const links = await this.groupUserLinkModel.find({user:userId})
-    const groups = await this.groupModel.find({organization:organizationId});
-    groups.filter(group=>{
-      if (group.isOpen)
-        return true;
-      return links.find(link => {return ((link.user.toString() == userId) && (link.group ==  group._id))})
-    })
+    const links = await this.groupUserLinkModel.find({ user: userId });
+    const groups = await this.groupModel.find({ organization: organizationId });
+    groups.filter(group => {
+      if (group.isOpen) return true;
+      return links.find(link => {
+        return link.user.toString() == userId && link.group == group._id;
+      });
+    });
     return groups;
   }
 
@@ -70,7 +71,10 @@ export class GroupService {
   ): Promise<Array<GroupUserLink>> {
     await this.getGroupById(groupId);
     await this.groupUserLink(groupId, userId);
-    const links = await this.groupUserLinkModel.find({group:groupId}).populate('user').exec();
+    const links = await this.groupUserLinkModel
+      .find({ group: groupId })
+      .populate('user')
+      .exec();
     return links;
   }
 
@@ -90,10 +94,8 @@ export class GroupService {
       user: userid,
       group: groupid,
     };
-   
-    const link = await this.groupUserLinkModel.findOne(
-      obj,
-    );
+
+    const link = await this.groupUserLinkModel.findOne(obj);
     if (!link) {
       throw new HttpException(
         'You do not have this group',
