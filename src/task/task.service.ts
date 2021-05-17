@@ -1,13 +1,16 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { forwardRef, HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { consoleOut } from 'src/debug';
+import { phaseEnum } from 'src/notification/enums/phase.enum';
+import { NotificationService } from 'src/notification/notification.service';
 import { SocketGateway } from 'src/socket/socket.gateway';
 import { roleUserTeamEnum } from 'src/team/enums/role-user.enum';
 import { StatusDocument } from 'src/team/schemas/status.schema';
 import { StatusService } from 'src/team/status.service';
 import { TeamService } from 'src/team/team.service';
 import { AddAnswerDTO, AddUserToTaskDTO, ChangeStatusDTO, CreateTaskDTO, UpdateTaskDTO } from './dto/task.dto';
+import { colorEnum } from './enums/color.enum';
 import { Task, TaskDocument } from './schemas/task.schema';
 
 @Injectable()
@@ -17,12 +20,14 @@ export class TaskService {
     private taskModel: Model<TaskDocument>,
     private readonly teamService: TeamService,
     private readonly socketGateway: SocketGateway,
-    private readonly statusService: StatusService
+    private readonly statusService: StatusService,
+    @Inject(forwardRef(()=>NotificationService))
+    private readonly notificationService: NotificationService,
   ) {}
 
   async createTask(dto: CreateTaskDTO) {
 
-    const task = new this.taskModel(dto);
+    const task = new this.taskModel({...dto, date: new Date()});
     await task.save();
     await task.populate('status').populate('users').populate('team').execPopulate();
     this.socketGateway.createdTask(task);
@@ -102,8 +107,16 @@ export class TaskService {
   ): Promise<Task> {
     const task = await this.getTaskById(taskId);
     this.teamService.checkEnable(task.team as string,userId,roleUserTeamEnum.admin);
+    this.compareDeadline(task,dto);
      await task.updateOne(dto);
+     this.socketGateway.changedTask(task);
      return await task.populate('status').execPopulate();
+  }
+
+  compareDeadline(task: Task, dto: UpdateTaskDTO){
+    if (task.deadline != dto.deadline) {
+      this.notificationService.delete(task._id);
+    }
   }
 
   async addUserToTask(dto:AddUserToTaskDTO, userId: string){
@@ -111,7 +124,6 @@ export class TaskService {
     await this.teamService.checkEnable(task.team.toString(), userId,roleUserTeamEnum.admin);
     await this.teamService.checkEnable(task.team.toString(), dto.user);
     const filter: any = dto.user;
-    console.log(task.users.find((user)=> user == filter));
     if (task.users.find((user)=> user == filter)) {
       throw new HttpException(
         'The user already has this task',
@@ -154,5 +166,44 @@ export class TaskService {
     await this.teamService.checkEnable(teamId, userId);
     const status = await this.statusService.getStatusHistory(teamId);
     return await this.taskModel.find({status:status}).populate('users').exec();
+  }
+
+
+
+  taskIsExpired(task:Task): boolean{
+    if(task.deadline < new Date()) return true;
+    else return false;
+  }
+
+  taskIsleft10(task:Task): boolean{
+    const interval:number = task.deadline.getTime() - task.date.getTime();
+    const per10= interval * 10 / 100;
+    if((task.deadline.getTime() - (new Date()).getTime()) < per10) return true;
+    else return false;
+  }
+
+  async checkPhaseForTasks(){
+    const tasks = await this.taskModel.find({color:colorEnum.orange}).populate('team').exec();
+    for (let i=0;i < tasks.length; ++i){
+      if(this.taskIsExpired(tasks[i])){
+        this.notificationService.create(tasks[i],phaseEnum.expired);
+        await tasks[i].updateOne({color:colorEnum.red});
+        this.socketGateway.changedTask(tasks[i]);
+      }
+      else if(this.taskIsleft10(tasks[i])){
+        this.notificationService.create(tasks[i],phaseEnum.left10);
+      }
+    }
+  }
+
+  onApplicationBootstrap(){
+    this.initTimerForTask();
+  }
+
+  initTimerForTask() {
+    let timerId = setInterval(() => {
+      this.checkPhaseForTasks();
+    }, 60000);
+    return timerId;
   }
 }

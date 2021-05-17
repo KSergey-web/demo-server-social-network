@@ -23,6 +23,9 @@ export class Task {
   @Prop({ default: null })
   deadline: Date;
 
+  @Prop({ required:true, default: new Date() })
+  date: Date;
+
   @Prop({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Status',

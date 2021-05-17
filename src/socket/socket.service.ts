@@ -69,7 +69,6 @@ export class SocketService {
   }
 
   getClient(userid: any):Socket|null {
-    consoleOut(this.usersOnline);
     if (!this.usersOnline.has(userid)) {
       this.logger.log(`user with id ${userid} offline`);
       return null;
@@ -93,5 +92,12 @@ export class SocketService {
     client.leaveAll();
     this.usersOnline.deleteByValue(client.id);
     return;
+  }
+
+
+  newNotificationEvent(userId:string){
+    const client = this.getClient(userId);
+    if (!client) return;
+    client.emit('newNotification');
   }
 }

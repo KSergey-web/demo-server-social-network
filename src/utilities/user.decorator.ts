@@ -17,3 +17,13 @@ export const Organization = createParamDecorator(
     return request.cookies[cookiesEnum.organizationId];
   },
 );
+
+// Helper
+const StringIsNumber = value => isNaN(Number(value)) === false;
+
+// Turn enum into array
+export function enumToArray(enumme) {
+    return Object.keys(enumme)
+        .filter(StringIsNumber)
+        .map(key => enumme[key]);
+}

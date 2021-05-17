@@ -15,6 +15,7 @@ import { GroupModule } from './group/group.module';
 import { PostModule } from './post/post.module';
 import { TeamModule } from './team/team.module';
 import { TaskModule } from './task/task.module';
+import { NotificationModule } from './notification/notification.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { TaskModule } from './task/task.module';
     PostModule,
     TeamModule,
     TaskModule,
+    NotificationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
