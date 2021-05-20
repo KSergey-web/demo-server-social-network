@@ -12,7 +12,7 @@ import { phaseEnum } from 'src/notification/enums/phase.enum';
 import { NotificationService } from 'src/notification/notification.service';
 import { SocketGateway } from 'src/socket/socket.gateway';
 import { roleUserTeamEnum } from 'src/team/enums/role-user.enum';
-import { StatusDocument } from 'src/team/schemas/status.schema';
+import { Status, StatusDocument } from 'src/team/schemas/status.schema';
 import { StatusService } from 'src/team/status.service';
 import { TeamService } from 'src/team/team.service';
 import {
@@ -30,8 +30,10 @@ export class TaskService {
   constructor(
     @InjectModel(Task.name)
     private taskModel: Model<TaskDocument>,
+    @Inject(forwardRef(() => TeamService))
     private readonly teamService: TeamService,
     private readonly socketGateway: SocketGateway,
+    @Inject(forwardRef(() => StatusService))
     private readonly statusService: StatusService,
     @Inject(forwardRef(() => NotificationService))
     private readonly notificationService: NotificationService,
@@ -47,6 +49,10 @@ export class TaskService {
       .execPopulate();
     this.socketGateway.createdTask(task);
     return task;
+  }
+
+  async deleteTasksFromStatus(status: Status) {
+    const tasks = await this.taskModel.deleteMany({status});
   }
 
   async getTasks(teamId: string): Promise<Array<TaskDocument>> {
@@ -226,10 +232,12 @@ export class TaskService {
   }
 
   async checkPhaseForTasks() {
-    const tasks = await this.taskModel
+    let tasks = await this.taskModel
       .find({ color: colorEnum.orange })
       .populate('team')
+      .populate('status')
       .exec();
+    tasks.filter(task => (task.status as Status).position != -1) 
     for (let i = 0; i < tasks.length; ++i) {
       if (this.taskIsExpired(tasks[i])) {
         this.notificationService.create(tasks[i], phaseEnum.expired);

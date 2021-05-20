@@ -17,7 +17,7 @@ import { NotificationModule } from 'src/notification/notification.module';
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: Task.name, schema: TaskSchema }]),
-    TeamModule,
+    forwardRef(() => TeamModule),
     SocketModule,
     forwardRef(() => NotificationModule),
   ],

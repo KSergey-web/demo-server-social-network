@@ -5,8 +5,10 @@ import { consoleOut } from 'src/debug';
 import { OrganizationService } from 'src/organization/organization.service';
 import { User } from 'src/user/schemas/user.schema';
 import {
+  AddStatusDTO,
   AddTeamUserLinkDTO,
   CreateTeamDTO,
+  DeleteStatusDTO,
   DeleteTeamUserLinkDTO,
   UpdateTeamDTO,
 } from './dto/team.dto';
@@ -193,5 +195,15 @@ export class TeamService {
       .populate('user')
       .exec();
     return links.map((item): User => item.user as User);
+  }
+
+  async addStatus(dto: AddStatusDTO, userId: string): Promise<Status>{
+    await this.checkEnable(dto.team, userId, roleUserTeamEnum.admin);
+    return await this.statusService.addStatus(dto);
+  }
+
+  async deleteStatus(dto: DeleteStatusDTO, userId: string) {
+    await this.checkEnable(dto.team, userId, roleUserTeamEnum.admin);
+    return await this.statusService.deleteStatus(dto.status);
   }
 }

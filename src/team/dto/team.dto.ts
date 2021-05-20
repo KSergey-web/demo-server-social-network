@@ -16,7 +16,7 @@ import {
   PartialType,
   PickType,
 } from '@nestjs/swagger';
-import { roleUserTeamEnum } from '../enums/role-user.enum';
+import { directionEnum, roleUserTeamEnum } from '../enums/role-user.enum';
 
 export class CreateTeamDTO {
   @IsString()
@@ -75,9 +75,23 @@ export class AddStatusDTO {
   @Min(0)
   @Max(10)
   @ApiProperty()
-  position: number;
+  currentPosition: number;
+
+  @IsEnum(directionEnum)
+  @ApiProperty()
+  direction: directionEnum;
+
+  @IsMongoId()
+  @ApiProperty()
+  team: string;
 }
 
-export class DeleteStatusDTO extends PickType(AddStatusDTO, [
-  'position',
-] as const) {}
+export class DeleteStatusDTO {
+  @IsMongoId()
+  @ApiProperty()
+  team: string;
+
+  @IsMongoId()
+  @ApiProperty()
+  status: string;
+}

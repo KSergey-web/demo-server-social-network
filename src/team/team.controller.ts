@@ -10,12 +10,15 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
+import { consoleOut } from 'src/debug';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { User } from 'src/utilities/user.decorator';
 import {
+  AddStatusDTO,
   AddTeamUserLinkDTO,
   CreateTeamDTO,
+  DeleteStatusDTO,
   DeleteTeamUserLinkDTO,
   UpdateTeamDTO,
 } from './dto/team.dto';
@@ -96,5 +99,19 @@ export class TeamController {
   @UseGuards(JwtAuthGuard)
   async getUsers(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     return await this.teamService.getUsers(params.id, _id);
+  }
+
+  @ApiBearerAuth()
+  @Post('addstatus')
+  @UseGuards(JwtAuthGuard)
+  async addStatus(@Body() dto: AddStatusDTO, @User() { _id }: UserDocument) {
+    return await this.teamService.addStatus(dto, _id);
+  }
+
+  @ApiBearerAuth()
+  @Delete(':team/status/:status')
+  @UseGuards(JwtAuthGuard)
+  async deleteStatus(@Param() params: DeleteStatusDTO, @User() { _id }: UserDocument) {
+    return await this.teamService.deleteStatus(params, _id);
   }
 }

@@ -23,6 +23,7 @@ import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { Message } from 'src/message/schemas/message.schema';
 import { User } from 'src/user/schemas/user.schema';
 import { Team } from 'src/team/schemas/team.schema';
+import { StatusDocument } from 'src/team/schemas/status.schema';
 
 @WebSocketGateway()
 export class SocketGateway
@@ -81,6 +82,15 @@ export class SocketGateway
 
   taskChangedStatus(task: TaskDocument): void {
     this.server.to(task.team.toString()).emit('taskChangedStatus', task);
+  }
+
+  addedStatus(status: StatusDocument): void {
+    this.server.to(status.team.toString()).emit('addedStatus', status);
+  }
+
+  deletedStatus(team:string ,status: string): void {
+    console.warn(status)
+    this.server.to(team.toString()).emit('deletedStatus', {status});
   }
 
   handleDisconnect(client: Socket) {

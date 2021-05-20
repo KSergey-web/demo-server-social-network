@@ -28,6 +28,7 @@ export class NotificationService {
     private readonly organizationService: OrganizationService,
     @Inject(forwardRef(() => TaskService))
     private readonly taskService: TaskService,
+    @Inject(forwardRef(() => TeamService))
     private readonly teamService: TeamService,
     private readonly socketService: SocketService,
   ) {}
