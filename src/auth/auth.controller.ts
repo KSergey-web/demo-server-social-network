@@ -6,9 +6,14 @@ import {
   UseGuards,
   Request,
   UnprocessableEntityException,
+  UseInterceptors,
+  UploadedFile,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiTags } from '@nestjs/swagger';
+import { consoleOut } from 'src/debug';
+import { createCopyImages } from 'src/shared/work-with-file';
 import { LoginDTO, RegisterDTO } from '../user/dto/user.dto';
 import { UserService } from '../user/user.service';
 import { AuthService } from './auth.service';
@@ -33,7 +38,14 @@ export class AuthController {
   }
 
   @Post('register')
-  async register(@Body() userDTO: RegisterDTO) {
+  @UseInterceptors(FileInterceptor('file'))
+  async register(@Body() userDTO: RegisterDTO, @UploadedFile() file: Express.Multer.File) {
+    if (!file){
+      userDTO.avatar = 'default';
+    }
+    else {
+      userDTO.avatar = await createCopyImages(file);
+    }
     const user = await this.userService.create(userDTO);
     const payload = {
       login: user.login,

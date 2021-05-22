@@ -37,9 +37,10 @@ export class User {
   @Prop({ required: true })
   birthdate: Date;
 
-  /*@Prop({ default: null })
+  @Prop({ default: null })
   avatar: string;
 
+  /*
   @Prop({ required: true, enum: Object.values(genderEnum) })
   gender: string;
   */
