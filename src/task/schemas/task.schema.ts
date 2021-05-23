@@ -4,6 +4,7 @@ import * as mongoose from 'mongoose';
 import { User } from 'src/user/schemas/user.schema';
 import { Team } from 'src/team/schemas/team.schema';
 import { Status } from 'src/team/schemas/status.schema';
+import { FileResource } from 'src/file-resource/schemas/group.schema';
 
 export type TaskDocument = Task & Document;
 
@@ -45,6 +46,12 @@ export class Task {
     default: [],
   })
   users: User[];
+
+  @Prop({
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'FileResource' }],
+    default: [],
+  })
+  files: FileResource[];
 
   @Prop({ default: '' })
   answer: string;

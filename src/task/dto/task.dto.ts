@@ -64,6 +64,16 @@ export class ChangeStatusDTO {
   task: string;
 }
 
+export class DeleteFileFromTaskDTO {
+  @IsMongoId()
+  @ApiProperty()
+  fileid: string;
+
+  @IsMongoId()
+  @ApiProperty()
+  taskid: string;
+}
+
 export class AddAnswerDTO {
   @IsMongoId()
   @ApiProperty()

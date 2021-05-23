@@ -61,6 +61,7 @@ export class TaskService {
       .find(filter)
       .populate('status')
       .populate('users')
+      .populate('files')
       .exec();
   }
 
@@ -107,6 +108,7 @@ export class TaskService {
 
   checkUserInTask(task: TaskDocument, userId: string) {
     const filter: any = userId;
+    try{
     if (!task.users.find(filter)) {
       throw new HttpException(
         'The user do not has this task',
@@ -114,7 +116,14 @@ export class TaskService {
       );
     }
     return;
+  }catch (err) {
+    this.teamService.checkEnable(
+      task.team.toString(),
+      userId,
+      roleUserTeamEnum.admin,
+    );
   }
+}
 
   async addAnswer(dto: AddAnswerDTO, userId: string) {
     const task = await this.getTaskById(dto.task);
@@ -171,6 +180,30 @@ export class TaskService {
     task.users.push(filter);
     await task.save();
     this.socketGateway.changedTask(task);
+    return task;
+  }
+
+  async addFileToTask(taskId: string, fileId: any, userId:string) {
+    const task = await this.getTaskById(taskId);
+    await this.teamService.checkEnable(
+      task.team.toString(),
+      userId
+    );
+    task.files.push(fileId);
+    await task.save();
+    await task.populate('files').execPopulate();
+    return task;
+  }
+
+  async deleteFileFromTask(taskId: string, fileId: any, userId:string) {
+    let task = await this.getTaskById(taskId);
+    await this.teamService.checkEnable(
+      task.team.toString(),
+      userId
+    );
+    await task.updateOne({ $pull: { files: fileId } });
+    task = await this.getTaskById(taskId);
+    await task.populate('files').execPopulate();
     return task;
   }
 

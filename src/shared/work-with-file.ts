@@ -12,7 +12,7 @@ interface FileMult{
 }
 
 export const createCopyImages = async (file:FileMult): Promise<string> => {
-    const newName=(new Date().toJSON().slice(0,19) + path.parse(file.originalname).ext).replace(/\s/g, '').replace(/[:]/g, "");;
+    const newName=(new Date().toJSON().slice(0,19) + path.parse(file.originalname).ext).replace(/\s/g, '').replace(/[:]/g, "");
     try {
     fs.writeFile(
       `./assets/originals/${newName}`,

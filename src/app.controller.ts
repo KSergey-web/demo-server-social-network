@@ -4,6 +4,7 @@ import {
   Get,
   Param,
   Post,
+  Res,
   UploadedFile,
   UseInterceptors,
 } from '@nestjs/common';
@@ -21,8 +22,19 @@ export class AppController {
 
   @Post('file')
   getAvatar(@Body() params: AvatarTypeDTO){
-    consoleOut(params);
     return { avatar:getAvatar(params.fileName, params.avatartype) };
+  }
+
+  @Get('filetest')
+  getFile(@Res({ passthrough: true }) res){
+    const bitmap = fs.readFileSync(`./assets/average/default.png`);    
+var filename = 'default.png';
+var mimetype = 'image/png';
+res.setHeader('Content-Type', mimetype);
+res.setHeader('Content-disposition','attachment; filename='+filename);
+res.send( bitmap );
+//     const bitmap = fs.readFileSync(`./assets/average/default.png`);    
+//     return bitmap;
   }
 
   @Post('upload')

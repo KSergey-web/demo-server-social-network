@@ -16,6 +16,7 @@ import { PostModule } from './post/post.module';
 import { TeamModule } from './team/team.module';
 import { TaskModule } from './task/task.module';
 import { NotificationModule } from './notification/notification.module';
+import { FileResourceModule } from './file-resource/file-resource.module';
 
 @Module({
   imports: [
@@ -36,6 +37,7 @@ import { NotificationModule } from './notification/notification.module';
     TeamModule,
     TaskModule,
     NotificationModule,
+    FileResourceModule,
   ],
   controllers: [AppController],
   providers: [AppService],

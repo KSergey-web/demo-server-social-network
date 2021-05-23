@@ -6,11 +6,15 @@ import {
   Param,
   Patch,
   Post,
+  UploadedFile,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { consoleOut } from 'src/debug';
+import { FileResourceService } from 'src/file-resource/file-resource.service';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
 import { roleUserTeamEnum } from 'src/team/enums/role-user.enum';
 import { StatusService } from 'src/team/status.service';
@@ -22,6 +26,7 @@ import {
   AddUserToTaskDTO,
   ChangeStatusDTO,
   CreateTaskDTO,
+  DeleteFileFromTaskDTO,
   UpdateTaskDTO,
 } from './dto/task.dto';
 import { TaskService } from './task.service';
@@ -33,6 +38,7 @@ export class TaskController {
     private readonly taskService: TaskService,
     private readonly teamService: TeamService,
     private readonly statusService: StatusService,
+    private readonly fileResourceService: FileResourceService
   ) {}
 
   @ApiBearerAuth()
@@ -50,6 +56,24 @@ export class TaskController {
   async getTasks(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     await this.teamService.checkEnable(params.id, _id);
     return await this.taskService.getTasks(params.id);
+  }
+
+  @ApiBearerAuth()
+  @Post(':id/addfile')
+  @UseInterceptors(FileInterceptor('file'))
+  @UseGuards(JwtAuthGuard)
+  async addFile(@UploadedFile() file: Express.Multer.File, @Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
+    const resFile = await this.fileResourceService.saveFile(file);
+    return await this.taskService.addFileToTask(params.id,resFile._id, _id);
+  }
+
+  @ApiBearerAuth()
+  @Delete(':taskid/file/:fileid')
+  @UseGuards(JwtAuthGuard)
+  async deleteFile( @Param() params: DeleteFileFromTaskDTO, @User() { _id }: UserDocument) {
+    const task = await this.taskService.deleteFileFromTask(params.taskid,params.fileid, _id);
+    await this.fileResourceService.deleteFile(params.fileid);
+    return task;
   }
 
   @ApiBearerAuth()

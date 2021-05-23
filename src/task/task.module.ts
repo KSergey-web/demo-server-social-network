@@ -13,6 +13,7 @@ import { ColorMiddleware } from './middleware/check-color.middleware';
 import { TeamModule } from 'src/team/team.module';
 import { SocketModule } from 'src/socket/socket.module';
 import { NotificationModule } from 'src/notification/notification.module';
+import { FileResourceModule } from 'src/file-resource/file-resource.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { NotificationModule } from 'src/notification/notification.module';
     forwardRef(() => TeamModule),
     SocketModule,
     forwardRef(() => NotificationModule),
+    FileResourceModule
   ],
   controllers: [TaskController],
   providers: [TaskService],
