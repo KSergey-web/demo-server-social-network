@@ -17,6 +17,9 @@ export class FileResource {
   @Prop({ required: true })
   name: string;
 
+  @Prop({ required: false })
+  buffer?: string;
+
   @Prop({ select: false })
   __v?: Number;
 }

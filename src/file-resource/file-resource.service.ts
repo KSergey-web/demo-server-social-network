@@ -28,6 +28,39 @@ export class FileResourceService {
             return createdFile;
       }
 
+      async saveFiles(files:  Array<Express.Multer.File>){
+        let createdFiles: Array<FileResource> =[];
+        for(let i = 0; i < files.length; ++i){
+          try{
+          createdFiles.push(await this.saveFile(files[i]));
+         } catch(e){
+           consoleOut(e,'not saved');
+         }
+        }
+        return createdFiles;
+      }
+
+
+      async getFileIfImage(resFile: FileResource){
+        const allowed_types = ['image/png', 'image/jpeg'];
+        if (allowed_types.indexOf(resFile.mimetype) != -1) {
+          try{
+          resFile.buffer = (await this.getFile(resFile._id)).buffer.toString('base64');
+          } catch(e){
+            consoleOut(e,'file not found')
+          }
+        }
+        return resFile;
+      }
+
+      async getFilesIfImage(resFiles: Array<FileResource>){
+      for (let i = 0; i < resFiles.length; ++i){
+        await this.getFileIfImage(resFiles[i]);  
+      }
+      return resFiles;
+      }
+
+
       async getFile(fileId: string): Promise<{buffer:Buffer, fileRes:FileResource}>{
           const fileRes = await this.fileResourceModel.findById(fileId);
           const buffer = await fs.promises.readFile(`./assets/originals/${fileRes.name}`);
@@ -39,7 +72,6 @@ export class FileResourceService {
         const fileRes = await this.fileResourceModel.findById(fileId);
         await fs.promises.unlink(`./assets/originals/${fileRes.name}`);
         await fileRes.deleteOne();
-        consoleOut(fileRes);
         return fileRes;
     }
 

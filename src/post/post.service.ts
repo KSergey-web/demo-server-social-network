@@ -28,10 +28,11 @@ export class PostService {
       ...createPostDTO,
       date: new Date(),
       user: userId,
+      files: createPostDTO.files
     };
     const post = new this.postModel(postObj);
     await post.save();
-    await post.populate('user').execPopulate();
+    await post.populate('user').populate('files').execPopulate();
     return post;
   }
 
@@ -60,6 +61,7 @@ export class PostService {
     const posts = await this.postModel
       .find(filter)
       .populate('user')
+      .populate('files')
       .exec();
     return posts;
   }

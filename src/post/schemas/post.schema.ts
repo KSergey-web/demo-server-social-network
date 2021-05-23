@@ -3,6 +3,7 @@ import { Document } from 'mongoose';
 import { Group } from 'src/group/schemas/Group.schema';
 import { User } from 'src/user/schemas/user.schema';
 import * as mongoose from 'mongoose';
+import { FileResource } from 'src/file-resource/schemas/group.schema';
 
 export type PostDocument = Post & Document;
 
@@ -13,10 +14,7 @@ export class Post {
 
   @Prop({ required: true })
   date: Date;
-
-  @Prop({ required: false })
-  image: string;
-
+ 
   @Prop({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -30,6 +28,12 @@ export class Post {
     required: true,
   })
   group: Group;
+
+  @Prop({
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'FileResource' }],
+    default: [],
+  })
+  files: FileResource[];
 
   @Prop({ select: false })
   __v: Number;

@@ -12,14 +12,13 @@ export class CreatePostDTO {
   text: string;
 
   @IsString()
-  @ApiPropertyOptional()
-  @IsOptional()
-  image?: string;
-
-  @IsString()
   @IsMongoId()
   @ApiProperty()
   group: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  files: any;
 }
 
 export class UpdatePostDTO extends OmitType(PartialType(CreatePostDTO), [
