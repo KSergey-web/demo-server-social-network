@@ -134,6 +134,7 @@ export class TaskController {
     @Body() dto: UpdateTaskDTO,
     @User() { _id }: UserDocument,
   ) {
+    consoleOut(dto);
     return await this.taskService.updateTask(params.id, dto, _id);
   }
 

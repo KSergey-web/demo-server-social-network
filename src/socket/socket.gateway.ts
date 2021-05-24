@@ -77,6 +77,7 @@ export class SocketGateway
   }
 
   changedTask(task: TaskDocument): void {
+    //consoleOut(task,'check');
     this.server.to(task.team.toString()).emit('changedTask', task);
   }
 

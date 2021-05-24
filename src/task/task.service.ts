@@ -275,6 +275,7 @@ export class TaskService {
       if (this.taskIsExpired(tasks[i])) {
         this.notificationService.create(tasks[i], phaseEnum.expired);
         await tasks[i].updateOne({ color: colorEnum.red });
+        tasks[i].color =  colorEnum.red;
         this.socketGateway.changedTask(tasks[i]);
       } else if (this.taskIsleft10(tasks[i])) {
         this.notificationService.create(tasks[i], phaseEnum.left10);

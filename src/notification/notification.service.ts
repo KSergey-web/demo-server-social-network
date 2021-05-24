@@ -73,8 +73,7 @@ export class NotificationService {
   }
 
   async create(task: TaskDocument, phase: phaseEnum) {
-    consoleOut(task, 'noti');
-    consoleOut(phase, 'ph');
+    consoleOut({name:task.name,phase}, 'noti');
     const check = await this.notificationModel
       .findOne({ task: task._id, phase })
       .exec();
