@@ -60,6 +60,7 @@ export class PostService {
     const filter: any = { group: groupId };
     const posts = await this.postModel
       .find(filter)
+      .sort({ date: -1 })
       .populate('user')
       .populate('files')
       .exec();
