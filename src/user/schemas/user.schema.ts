@@ -4,6 +4,7 @@ import * as mongoose from 'mongoose';
 import { genderEnum } from '../enums/gender.enum';
 import * as bcrypt from 'bcrypt';
 import { userStatusEnum } from 'src/socket/enums/socket.enum';
+import { FileResource } from 'src/file-resource/schemas/group.schema';
 
 export type UserDocument = User & Document;
 
@@ -37,8 +38,12 @@ export class User {
   @Prop({ required: true })
   birthdate: Date;
 
-  @Prop({ default: null })
-  avatar: string;
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'FileResource',
+    required: true,
+  })
+  avatar: FileResource;
 
   /*
   @Prop({ required: true, enum: Object.values(genderEnum) })

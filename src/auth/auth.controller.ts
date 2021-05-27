@@ -40,13 +40,7 @@ export class AuthController {
   @Post('register')
   @UseInterceptors(FileInterceptor('file'))
   async register(@Body() userDTO: RegisterDTO, @UploadedFile() file: Express.Multer.File) {
-    if (!file){
-      userDTO.avatar = 'default';
-    }
-    else {
-      userDTO.avatar = await createCopyImages(file);
-    }
-    const user = await this.userService.create(userDTO);
+    const user = await this.userService.create(userDTO, file);
     const payload = {
       login: user.login,
     };

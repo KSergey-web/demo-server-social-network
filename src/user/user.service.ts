@@ -14,6 +14,8 @@ import * as bcrypt from 'bcrypt';
 import { consoleOut } from '../debug';
 import { SocketService } from 'src/socket/socket.service';
 import { userStatusEnum } from 'src/socket/enums/socket.enum';
+import { FileResourceService } from 'src/file-resource/file-resource.service';
+import { FileResource, FileResourceDocument } from 'src/file-resource/schemas/group.schema';
 
 @Injectable()
 export class UserService {
@@ -21,18 +23,22 @@ export class UserService {
     @InjectModel(User.name) private userModel: Model<UserDocument>,
     @Inject(forwardRef(() => SocketService))
     private socketService: SocketService,
+    private readonly fileResourceService: FileResourceService,
   ) {}
 
-  async create(userDTO: RegisterDTO) {
+  async create(userDTO: RegisterDTO, file: Express.Multer.File) {
     const { login } = userDTO;
     const user = await this.userModel.findOne({ login });
     if (user) {
       throw new HttpException('User already exists', HttpStatus.BAD_REQUEST);
     }
-    const createdUser = new this.userModel(userDTO);
+    const avatar = await this.fileResourceService.saveAvatarForUser(file);
+    const createdUser = new this.userModel({ avatar, ...userDTO});
     await createdUser.save();
     return this.sanitizeUser(createdUser);
   }
+
+
 
   async findByLogin(userDTO: LoginDTO) {
     const { login, password } = userDTO;

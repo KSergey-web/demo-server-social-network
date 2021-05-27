@@ -43,8 +43,10 @@ export class PostController {
     createPostDTO.files = resFiles.map(((resFile): string => resFile!._id))
     const post = await  this.postService.createPost(createPostDTO, _id);
     post.files.map((file:any) => file.toObject())
-    await this.fileResourceService.getFilesIfImage(post.files);
-    return post;
+    const filesAndBuffers = await this.fileResourceService.getFilesIfImage(post.files);
+    const res = post.toObject();
+    res.files = filesAndBuffers;
+    return res;
   }
 
   @ApiBearerAuth()
@@ -62,9 +64,13 @@ export class PostController {
   @UseGuards(JwtAuthGuard)
   async getPosts(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     const posts = await this.postService.getPosts(params.id, _id);
+    let res = [];
+    let filesAndBuffers;
     for (let i = 0; i < posts.length; ++i){
-    await this.fileResourceService.getFilesIfImage(posts[i].files);
+      filesAndBuffers = await this.fileResourceService.getFilesIfImage(posts[i].files);
+      res.push(posts[i].toObject());
+      res[i].files = filesAndBuffers;
     }
-    return posts
+    return res;
   }
 }

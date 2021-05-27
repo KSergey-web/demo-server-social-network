@@ -119,12 +119,6 @@ export class RegisterDTO extends LoginDTO {
   @IsString()
   @IsNotEmpty()
   readonly patronymic: string;
-
-  @ApiPropertyOptional()
-  @IsOptional()
-  readonly file: any;
-
-  avatar?:string;
 }
 
 export class UpdateUserDTO extends OmitType(PartialType(RegisterDTO), [

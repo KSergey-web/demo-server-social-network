@@ -34,7 +34,22 @@ export class HttpExceptionFilter implements ExceptionFilter {
       queryreq: request.query,
       cookiesreq: request.cookies,
     };
+    const reqInfo = {
+      timestamp: new Date(),
+      path: request.url,
+      method: request.method,
+      bodyreq: request.body,
+      paramreq: request.params,
+      queryreq: request.query,
+      cookiesreq: request.cookies,
+    };
     if (status == 500) {
+      fs.writeFile(
+        'logFile.json',
+        ' //reqinfo \n' + JSON.stringify(reqInfo) + ';\n',
+        { flag: 'a+' },
+        err => {},
+      );
       fs.writeFile(
         'logFile.json',
         ' //exeption info \n' + JSON.stringify(exception) + ';\n',

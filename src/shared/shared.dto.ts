@@ -7,20 +7,5 @@ export class ObjectIdDTO {
   id: string;
 }
 
-export enum avatarTypeEnum{
-  mini = 'mini',
-  average = 'average',
-  original = 'original',
-}
 
-export class AvatarTypeDTO {
-  @ApiPropertyOptional()
-  @IsEnum(avatarTypeEnum)
-  @IsOptional()
-  avatartype: avatarTypeEnum;
 
-  @ApiProperty()
-  @IsString()
-  @MinLength(2)
-  fileName: string;
-}

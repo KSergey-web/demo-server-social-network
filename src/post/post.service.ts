@@ -19,7 +19,7 @@ export class PostService {
   async createPost(
     createPostDTO: CreatePostDTO,
     userId: string,
-  ): Promise<Post> {
+  ): Promise<PostDocument> {
     const group = await this.groupService.getGroupById(createPostDTO.group);
     if (!group.isOpen) {
       await this.groupService.groupUserLink(createPostDTO.group, userId);
@@ -47,7 +47,7 @@ export class PostService {
     return 'Post deleted';
   }
 
-  async getPosts(groupId: string, userId: string): Promise<Array<Post>> {
+  async getPosts(groupId: string, userId: string): Promise<Array<PostDocument>> {
     const group = await this.groupService.getGroupById(groupId);
     if (group.isOpen) {
       await this.organizationService.checkOrganizationAndLink(

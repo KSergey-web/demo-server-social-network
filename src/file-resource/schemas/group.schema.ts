@@ -4,6 +4,12 @@ import * as mongoose from 'mongoose';
 
 export type FileResourceDocument = FileResource & Document;
 
+export interface FileResAndBuffer
+{
+  fileRes:FileResource;
+
+  buffer?:any;
+}
 @Schema()
 export class FileResource {
   _id?:string;
@@ -16,9 +22,6 @@ export class FileResource {
 
   @Prop({ required: true })
   name: string;
-
-  @Prop({ required: false })
-  buffer?: string;
 
   @Prop({ select: false })
   __v?: Number;
