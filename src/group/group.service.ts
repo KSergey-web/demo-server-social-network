@@ -2,6 +2,7 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { consoleOut } from 'src/debug';
+import { FileResourceService } from 'src/file-resource/file-resource.service';
 import { OrganizationService } from 'src/organization/organization.service';
 import {
   AddGroupUserLinkDTO,
@@ -25,6 +26,7 @@ export class GroupService {
     @InjectModel(GroupUserLink.name)
     private groupUserLinkModel: Model<GroupUserLinkDocument>,
     private organizationService: OrganizationService,
+    private readonly fileResourceService: FileResourceService,
   ) {}
 
   async createGroup(
@@ -32,6 +34,7 @@ export class GroupService {
     organizationId: string,
     userId: string,
   ) {
+    createGroupDTO.avatar = await this.fileResourceService.saveAvatar(createGroupDTO.avatar);
     const group = new this.groupModel({
       ...createGroupDTO,
       organization: await this.organizationService.checkOrganizationById(

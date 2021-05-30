@@ -17,9 +17,7 @@ export class CreateOrganizationDTO {
   @ApiPropertyOptional()
   description: string;
 
-  @IsString()
-  @ApiProperty()
-  avatar: string;
+  avatar?: any;
 }
 
 export class UpdateOrganizationDTO extends PartialType(CreateOrganizationDTO) {}

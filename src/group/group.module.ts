@@ -9,10 +9,12 @@ import {
 } from './schemas/group-user.schema';
 import { Organization } from 'src/utilities/user.decorator';
 import { OrganizationModule } from 'src/organization/organization.module';
+import { FileResourceModule } from 'src/file-resource/file-resource.module';
 
 @Module({
   imports: [
     OrganizationModule,
+    FileResourceModule,
     MongooseModule.forFeature([
       { name: Group.name, schema: GroupSchema },
       { name: GroupUserLink.name, schema: GroupUserLinkSchema },

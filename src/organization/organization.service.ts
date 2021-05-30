@@ -23,6 +23,7 @@ import {
   OrganizationDocument,
 } from './schemas/organization.schema';
 import { consoleOut } from 'src/debug';
+import { FileResourceService } from 'src/file-resource/file-resource.service';
 
 @Injectable()
 export class OrganizationService {
@@ -32,9 +33,11 @@ export class OrganizationService {
     @InjectModel(OrganizationUser.name)
     private organizationUserModel: Model<OrganizationUserDocument>,
     private readonly userService: UserService,
+    private readonly fileResourceService: FileResourceService,
   ) {}
 
   async create(organizationDTO: CreateOrganizationDTO, userid: string) {
+    organizationDTO.avatar = await this.fileResourceService.saveAvatar(organizationDTO.avatar);
     const createdOrganization = new this.organizationModel(organizationDTO);
     await createdOrganization.save();
     const organizationUser: IOrganizationUser = {

@@ -7,8 +7,11 @@ import {
   Inject,
   Param,
   Post,
+  UploadedFile,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { consoleOut } from 'src/debug';
@@ -35,10 +38,13 @@ export class ChatController {
   @ApiBearerAuth()
   @Post()
   @UseGuards(JwtAuthGuard)
+  @UseInterceptors(FileInterceptor('avatar'))
   async createChat(
     @Body() createChatDTO: CreateChatDTO,
     @User() { _id }: UserDocument,
+    @UploadedFile() avatar: Express.Multer.File
   ) {
+    createChatDTO.avatar = avatar;
     return await this.chatService.create(createChatDTO, _id);
   }
 

@@ -9,8 +9,11 @@ import {
   Patch,
   Post,
   Req,
+  UploadedFile,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { OrganizationUser } from 'src/organization/schemas/organization-user.schema';
@@ -33,10 +36,13 @@ export class GroupController {
   @ApiBearerAuth()
   @Post()
   @UseGuards(JwtAuthGuard)
+  @UseInterceptors(FileInterceptor('avatar'))
   async createGroup(
     @Body() dto: CreateGroupDTO,
     @User() { _id }: UserDocument,
+    @UploadedFile() avatar: Express.Multer.File
   ) {
+    dto.avatar = avatar;
     return await this.groupService.createGroup(dto, dto.organization, _id);
   }
 

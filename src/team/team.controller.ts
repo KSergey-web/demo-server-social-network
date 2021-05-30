@@ -6,8 +6,11 @@ import {
   Param,
   Patch,
   Post,
+  UploadedFile,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { consoleOut } from 'src/debug';
@@ -32,7 +35,13 @@ export class TeamController {
   @ApiBearerAuth()
   @Post()
   @UseGuards(JwtAuthGuard)
-  async createTeam(@Body() team: CreateTeamDTO, @User() { _id }: UserDocument) {
+  @UseInterceptors(FileInterceptor('avatar'))
+  async createTeam(
+    @Body() team: CreateTeamDTO,
+     @User() { _id }: UserDocument,
+     @UploadedFile() avatar: Express.Multer.File
+     ) {
+      team.avatar = avatar;
     return await this.teamService.createTeam(team, _id);
   }
 

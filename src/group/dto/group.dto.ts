@@ -5,6 +5,7 @@ import {
   IsBoolean,
   IsEnum,
   IsOptional,
+  IsBooleanString,
 } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional, PartialType } from '@nestjs/swagger';
 import { roleUserGroupEnum } from '../enums/role-user.enum';
@@ -19,17 +20,15 @@ export class CreateGroupDTO {
   @ApiProperty()
   description: string;
 
-  @IsString()
-  @ApiProperty()
-  avatar: string;
-
-  @IsBoolean()
+  @IsBooleanString()
   @ApiProperty()
   isOpen: string;
 
   @IsMongoId()
   @ApiProperty()
   organization: string;
+
+  avatar?: any;
 }
 
 export class UpdateGroupDTO extends PartialType(CreateGroupDTO) {}

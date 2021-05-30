@@ -16,6 +16,7 @@ export class FileResourceService {
   ) { }
 
   readonly defImageForUser = 'default_for_user.png';
+  readonly defImage = 'default_photo.png';
   readonly defImagePngType = 'image/png';
 
   async saveFile(file: Express.Multer.File): Promise<FileResourceDocument> {
@@ -49,6 +50,22 @@ export class FileResourceService {
     return {fileRes:createdFile,buffer};
   }
 
+  async getDefaultPhoto(): Promise<FileResAndBuffer>{
+    const fileRes: FileResource = {
+      originalName: this.transliterate(this.defImage),
+      mimetype: this.defImagePngType,
+      name: (new Date().toJSON().slice(0, 19) + path.parse(this.defImage).ext).replace(/\s/g, '').replace(/[:]/g, "")
+    }
+    const buffer = fs.readFileSync(`./assets/originals/${this.defImage}`);
+    await fs.promises.writeFile(
+      `./assets/originals/${fileRes.name}`,
+      buffer
+    );
+    const createdFile = new this.fileResourceModel(fileRes);
+    await createdFile.save();
+    return {fileRes:createdFile,buffer};
+  }
+
   async saveAvatarForUser(file: Express.Multer.File){
     let avatar;
     let fileResId;
@@ -60,6 +77,24 @@ export class FileResourceService {
     }
     else {
       avatar = await this.getDefaultForUser();
+      await this.saveImageAvarage(avatar.buffer as Buffer,avatar.fileRes);
+      await this.saveImageMini(avatar.buffer as Buffer,avatar.fileRes);
+      fileResId = avatar.fileRes._id;
+    }
+    return fileResId;
+  }
+
+  async saveAvatar(file: Express.Multer.File){
+    let avatar;
+    let fileResId;
+    if (file && this.isImage(file.mimetype)){
+      avatar = await this.saveFile(file);
+      await this.saveImageAvarage(file.buffer,avatar);
+      await this.saveImageMini(file.buffer,avatar);
+      fileResId = avatar._id
+    }
+    else {
+      avatar = await this.getDefaultPhoto();
       await this.saveImageAvarage(avatar.buffer as Buffer,avatar.fileRes);
       await this.saveImageMini(avatar.buffer as Buffer,avatar.fileRes);
       fileResId = avatar.fileRes._id;

@@ -2,9 +2,8 @@ import { IsString, IsMongoId, MinLength } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional, PartialType } from '@nestjs/swagger';
 
 export class CreateChatDTO {
-  @IsString()
-  @ApiProperty()
-  avatar: string;
+
+  avatar?: any;
 
   @MinLength(1)
   @ApiProperty()

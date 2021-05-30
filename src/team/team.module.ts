@@ -9,10 +9,12 @@ import { StatusService } from './status.service';
 import { OrganizationModule } from 'src/organization/organization.module';
 import { SocketModule } from 'src/socket/socket.module';
 import { TaskModule } from 'src/task/task.module';
+import { FileResourceModule } from 'src/file-resource/file-resource.module';
 
 @Module({
   imports: [
     OrganizationModule,
+    FileResourceModule,
     MongooseModule.forFeature([
       { name: Team.name, schema: TeamSchema },
       { name: TeamUserLink.name, schema: TeamUserLinkSchema },

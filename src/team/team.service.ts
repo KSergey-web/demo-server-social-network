@@ -2,6 +2,7 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { consoleOut } from 'src/debug';
+import { FileResourceService } from 'src/file-resource/file-resource.service';
 import { OrganizationService } from 'src/organization/organization.service';
 import { User } from 'src/user/schemas/user.schema';
 import {
@@ -28,9 +29,11 @@ export class TeamService {
     private teamUserLinkModel: Model<TeamUserLinkDocument>,
     private readonly statusService: StatusService,
     private readonly organizationService: OrganizationService,
+    private readonly fileResourceService: FileResourceService,
   ) {}
 
   async createTeam(createTeamDTO: CreateTeamDTO, userId: string) {
+    createTeamDTO.avatar = await this.fileResourceService.saveAvatar(createTeamDTO.avatar);
     const team = new this.teamModel({
       ...createTeamDTO,
       organization: createTeamDTO.organization,

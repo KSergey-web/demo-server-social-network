@@ -8,6 +8,7 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { consoleOut } from 'src/debug';
+import { FileResourceService } from 'src/file-resource/file-resource.service';
 import { MessageService } from 'src/message/message.service';
 import { User } from 'src/user/schemas/user.schema';
 import { UserService } from 'src/user/user.service';
@@ -28,9 +29,11 @@ export class ChatService {
     private readonly socketService: SocketService,
     @Inject(forwardRef(() => UserService))
     private readonly userService: UserService,
+    private readonly fileResourceService: FileResourceService,
   ) {}
 
   async create(chatDTO: CreateChatDTO, userId: string) {
+    chatDTO.avatar = await this.fileResourceService.saveAvatar(chatDTO.avatar);
     const createdChat = new this.chatModel(chatDTO);
     await createdChat.save();
     const chatUser: IChatUser = {

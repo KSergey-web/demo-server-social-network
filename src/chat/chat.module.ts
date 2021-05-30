@@ -7,6 +7,7 @@ import { UserModule } from 'src/user/user.module';
 import { ChatUser, ChatUserSchema } from './schemas/chat-user.schema';
 import { SocketModule } from '../socket/socket.module';
 import { MessageModule } from 'src/message/message.module';
+import { FileResourceModule } from 'src/file-resource/file-resource.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { MessageModule } from 'src/message/message.module';
     forwardRef(() => UserModule),
     forwardRef(() => MessageModule),
     forwardRef(() => SocketModule),
+    FileResourceModule
   ],
   controllers: [ChatController],
   providers: [ChatService],

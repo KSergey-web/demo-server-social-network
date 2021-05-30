@@ -11,9 +11,11 @@ import {
   OrganizationUserSchema,
 } from './schemas/organization-user.schema';
 import { UserModule } from '../user/user.module';
+import { FileResourceModule } from 'src/file-resource/file-resource.module';
 
 @Module({
   imports: [
+    FileResourceModule,
     forwardRef(() => UserModule),
     MongooseModule.forFeature([
       { name: Organization.name, schema: OrganizationSchema },

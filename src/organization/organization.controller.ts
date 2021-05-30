@@ -8,7 +8,9 @@ import {
   Post,
   Req,
   Res,
+  UploadedFile,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
 import { ObjectIdDTO } from '../shared/shared.dto';
 import { UserDocument } from '../user/schemas/user.schema';
@@ -28,6 +30,7 @@ import { Response, Request } from 'express';
 import { cookiesEnum } from 'src/enums/cookies.enum';
 import { consoleOut } from 'src/debug';
 import { UserService } from 'src/user/user.service';
+import { FileInterceptor } from '@nestjs/platform-express';
 
 @ApiTags('organization')
 @Controller('organization')
@@ -37,14 +40,18 @@ export class OrganizationController {
     private readonly userService: UserService,
   ) {}
 
+
   @ApiBearerAuth()
   @Post()
   @UseGuards(JwtAuthGuard)
+  @UseInterceptors(FileInterceptor('avatar'))
   async createOrganization(
-    @Body() order: CreateOrganizationDTO,
+    @Body() dto: CreateOrganizationDTO,
     @User() { _id }: UserDocument,
+    @UploadedFile() avatar: Express.Multer.File
   ) {
-    return await this.organizationService.create(order, _id);
+    dto.avatar = avatar;
+    return await this.organizationService.create(dto, _id);
   }
 
   @ApiBearerAuth()
