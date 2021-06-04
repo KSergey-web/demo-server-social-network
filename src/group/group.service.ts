@@ -58,12 +58,14 @@ export class GroupService {
   ): Promise<Array<Group>> {
     await this.organizationService.checkOrganizationById(organizationId);
     const links = await this.groupUserLinkModel.find({ user: userId });
-    const groups = await this.groupModel.find({ organization: organizationId });
-    groups.filter(group => {
+    let groups = await this.groupModel.find({ organization: organizationId });
+    groups = groups.filter(group => {
       if (group.isOpen) return true;
-      return links.find(link => {
-        return link.user.toString() == userId && link.group == group._id;
+      const check= links.find(link => {
+        return ((link.user.toString() == userId) && (link.group.toString() == group._id));
       });
+      if (check) return true;
+      return false;
     });
     return groups;
   }
