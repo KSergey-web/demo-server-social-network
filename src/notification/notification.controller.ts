@@ -1,11 +1,12 @@
 import { Controller, Get, Param, Patch, UseGuards } from '@nestjs/common';
-import { ApiBearerAuth } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.gaurd';
 import { consoleOut } from 'src/debug';
 import { UserDocument } from 'src/user/schemas/user.schema';
 import { User } from 'src/utilities/user.decorator';
 import { NotificationService } from './notification.service';
 
+@ApiTags('notification')
 @Controller('notification')
 export class NotificationController {
   constructor(private readonly notificationService: NotificationService) {}
@@ -18,14 +19,14 @@ export class NotificationController {
   }
 
   @ApiBearerAuth()
-  @Get('all/markreaded')
+  @Get('all/mark-readed')
   @UseGuards(JwtAuthGuard)
   async markAllAsReaded(@User() { _id }: UserDocument) {
     return await this.notificationService.markAllAsReaded(_id);
   }
 
   @ApiBearerAuth()
-  @Get('quantity/notReaded')
+  @Get('quantity/not-readed')
   @UseGuards(JwtAuthGuard)
   async getNotReaded(@User() { _id }: UserDocument) {
     return { quantity: await this.notificationService.getNotReaded(_id) };

@@ -12,6 +12,8 @@ import { colorEnum } from '../enums/color.enum';
 export class ColorMiddleware implements NestMiddleware {
   use(req: Request, res: Response, next: NextFunction) {
     console.log('MDDDDDDDDDDDDD');
+    console.log(req.path);
+    console.log(req.method);
     const color = req.body.color;
     if (color == colorEnum.green) {
       if (!req.body.deadline) {

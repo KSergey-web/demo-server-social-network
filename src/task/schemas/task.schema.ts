@@ -24,6 +24,9 @@ export class Task {
   @Prop({ default: null })
   deadline: Date;
 
+  @Prop({ default: null })
+  completionDate: Date;
+
   @Prop({ required: true, default: new Date() })
   date: Date;
 

@@ -77,8 +77,8 @@ export class SocketGateway
   }
 
   changedTask(task: TaskDocument): void {
-    //consoleOut(task,'check');
-    this.server.to(task.team.toString()).emit('changedTask', task);
+    consoleOut(task,'check');
+    this.server.to((task.team as Team)?._id.toString()).emit('changedTask', task);
   }
 
   taskChangedStatus(task: TaskDocument): void {

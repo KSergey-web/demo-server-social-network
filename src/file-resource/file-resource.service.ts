@@ -23,7 +23,7 @@ export class FileResourceService {
     const fileRes: FileResource = {
       originalName: this.transliterate(file.originalname),
       mimetype: file.mimetype,
-      name: (new Date().toJSON().slice(0, 19) + path.parse(file.originalname).ext).replace(/\s/g, '').replace(/[:]/g, "")
+      name: (new Date().toJSON().slice(0, 23) + path.parse(file.originalname).ext).replace(/\s/g, '').replace(/[:]/g, "")
     }
     const write = await fs.promises.writeFile(
       `./assets/originals/${fileRes.name}`,

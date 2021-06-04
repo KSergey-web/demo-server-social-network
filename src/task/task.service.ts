@@ -151,10 +151,12 @@ export class TaskService {
       roleUserTeamEnum.admin,
     );
     this.compareDeadline(task, dto);
+    if (dto.color == colorEnum.green) dto.deadline = null;
     await task.updateOne(dto);
     this.socketGateway.changedTask(task);
     return await task.populate('status').execPopulate();
   }
+
 
   compareDeadline(task: Task, dto: UpdateTaskDTO) {
     if (task.deadline != dto.deadline) {
@@ -239,7 +241,7 @@ export class TaskService {
     const status = await this.statusService.getStatusHistory(
       task.team as string,
     );
-    await task.updateOne({ status: status._id });
+    await task.updateOne({ status: status._id, completionDate:new Date()});
     return task;
   }
 
@@ -248,7 +250,9 @@ export class TaskService {
     const status = await this.statusService.getStatusHistory(teamId);
     return await this.taskModel
       .find({ status: status })
+      .sort({ date: -1 })
       .populate('users')
+      .populate('files')
       .exec();
   }
 
@@ -290,7 +294,7 @@ export class TaskService {
   initTimerForTask() {
     let timerId = setInterval(() => {
       this.checkPhaseForTasks();
-    }, 60000);
+    }, 10000);
     return timerId;
   }
 }
