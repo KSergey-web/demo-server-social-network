@@ -42,7 +42,7 @@ export class ChatController {
   async createChat(
     @Body() createChatDTO: CreateChatDTO,
     @User() { _id }: UserDocument,
-    @UploadedFile() avatar: Express.Multer.File
+    @UploadedFile() avatar: Express.Multer.File,
   ) {
     createChatDTO.avatar = avatar;
     return await this.chatService.create(createChatDTO, _id);

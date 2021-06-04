@@ -77,8 +77,10 @@ export class SocketGateway
   }
 
   changedTask(task: TaskDocument): void {
-    consoleOut(task,'check');
-    this.server.to((task.team as Team)?._id.toString()).emit('changedTask', task);
+    //consoleOut(task, 'check');
+    this.server
+      .to((task.team as Team)?._id.toString())
+      .emit('changedTask', task);
   }
 
   taskChangedStatus(task: TaskDocument): void {
@@ -89,9 +91,9 @@ export class SocketGateway
     this.server.to(status.team.toString()).emit('addedStatus', status);
   }
 
-  deletedStatus(team:string ,status: string): void {
-    console.warn(status)
-    this.server.to(team.toString()).emit('deletedStatus', {status});
+  deletedStatus(team: string, status: string): void {
+    console.warn(status);
+    this.server.to(team.toString()).emit('deletedStatus', { status });
   }
 
   handleDisconnect(client: Socket) {

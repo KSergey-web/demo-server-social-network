@@ -28,11 +28,14 @@ export class PostService {
       ...createPostDTO,
       date: new Date(),
       user: userId,
-      files: createPostDTO.files
+      files: createPostDTO.files,
     };
     const post = new this.postModel(postObj);
     await post.save();
-    await post.populate('user').populate('files').execPopulate();
+    await post
+      .populate('user')
+      .populate('files')
+      .execPopulate();
     return post;
   }
 
@@ -47,7 +50,10 @@ export class PostService {
     return 'Post deleted';
   }
 
-  async getPosts(groupId: string, userId: string): Promise<Array<PostDocument>> {
+  async getPosts(
+    groupId: string,
+    userId: string,
+  ): Promise<Array<PostDocument>> {
     const group = await this.groupService.getGroupById(groupId);
     if (group.isOpen) {
       await this.organizationService.checkOrganizationAndLink(

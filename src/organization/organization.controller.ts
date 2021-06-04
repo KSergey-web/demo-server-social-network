@@ -40,7 +40,6 @@ export class OrganizationController {
     private readonly userService: UserService,
   ) {}
 
-
   @ApiBearerAuth()
   @Post()
   @UseGuards(JwtAuthGuard)
@@ -48,7 +47,7 @@ export class OrganizationController {
   async createOrganization(
     @Body() dto: CreateOrganizationDTO,
     @User() { _id }: UserDocument,
-    @UploadedFile() avatar: Express.Multer.File
+    @UploadedFile() avatar: Express.Multer.File,
   ) {
     dto.avatar = avatar;
     return await this.organizationService.create(dto, _id);

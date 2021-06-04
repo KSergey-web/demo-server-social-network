@@ -33,7 +33,9 @@ export class TeamService {
   ) {}
 
   async createTeam(createTeamDTO: CreateTeamDTO, userId: string) {
-    createTeamDTO.avatar = await this.fileResourceService.saveAvatar(createTeamDTO.avatar);
+    createTeamDTO.avatar = await this.fileResourceService.saveAvatar(
+      createTeamDTO.avatar,
+    );
     const team = new this.teamModel({
       ...createTeamDTO,
       organization: createTeamDTO.organization,
@@ -200,7 +202,7 @@ export class TeamService {
     return links.map((item): User => item.user as User);
   }
 
-  async addStatus(dto: AddStatusDTO, userId: string): Promise<Status>{
+  async addStatus(dto: AddStatusDTO, userId: string): Promise<Status> {
     await this.checkEnable(dto.team, userId, roleUserTeamEnum.admin);
     return await this.statusService.addStatus(dto);
   }

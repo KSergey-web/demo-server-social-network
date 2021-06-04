@@ -40,7 +40,7 @@ export class GroupController {
   async createGroup(
     @Body() dto: CreateGroupDTO,
     @User() { _id }: UserDocument,
-    @UploadedFile() avatar: Express.Multer.File
+    @UploadedFile() avatar: Express.Multer.File,
   ) {
     dto.avatar = avatar;
     return await this.groupService.createGroup(dto, dto.organization, _id);

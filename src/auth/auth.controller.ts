@@ -39,7 +39,10 @@ export class AuthController {
 
   @Post('register')
   @UseInterceptors(FileInterceptor('file'))
-  async register(@Body() userDTO: RegisterDTO, @UploadedFile() file: Express.Multer.File) {
+  async register(
+    @Body() userDTO: RegisterDTO,
+    @UploadedFile() file: Express.Multer.File,
+  ) {
     const user = await this.userService.create(userDTO, file);
     const payload = {
       login: user.login,

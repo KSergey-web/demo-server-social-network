@@ -21,7 +21,7 @@ import { FileResourceModule } from 'src/file-resource/file-resource.module';
     forwardRef(() => TeamModule),
     SocketModule,
     forwardRef(() => NotificationModule),
-    FileResourceModule
+    FileResourceModule,
   ],
   controllers: [TaskController],
   providers: [TaskService],
@@ -35,6 +35,5 @@ export class TaskModule implements NestModule {
         { path: 'task', method: RequestMethod.POST },
         { path: 'task/*', method: RequestMethod.PATCH },
       );
-      
   }
 }

@@ -18,7 +18,7 @@ import { FileResourceModule } from 'src/file-resource/file-resource.module';
     forwardRef(() => UserModule),
     forwardRef(() => MessageModule),
     forwardRef(() => SocketModule),
-    FileResourceModule
+    FileResourceModule,
   ],
   controllers: [ChatController],
   providers: [ChatService],

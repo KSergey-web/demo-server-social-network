@@ -38,10 +38,10 @@ export class TeamController {
   @UseInterceptors(FileInterceptor('avatar'))
   async createTeam(
     @Body() team: CreateTeamDTO,
-     @User() { _id }: UserDocument,
-     @UploadedFile() avatar: Express.Multer.File
-     ) {
-      team.avatar = avatar;
+    @User() { _id }: UserDocument,
+    @UploadedFile() avatar: Express.Multer.File,
+  ) {
+    team.avatar = avatar;
     return await this.teamService.createTeam(team, _id);
   }
 
@@ -120,7 +120,10 @@ export class TeamController {
   @ApiBearerAuth()
   @Delete(':team/status/:status')
   @UseGuards(JwtAuthGuard)
-  async deleteStatus(@Param() params: DeleteStatusDTO, @User() { _id }: UserDocument) {
+  async deleteStatus(
+    @Param() params: DeleteStatusDTO,
+    @User() { _id }: UserDocument,
+  ) {
     return await this.teamService.deleteStatus(params, _id);
   }
 }

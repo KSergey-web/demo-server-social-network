@@ -1,4 +1,12 @@
-import { Controller, Get, Param, Post, Res, UploadedFile, UseInterceptors } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Param,
+  Post,
+  Res,
+  UploadedFile,
+  UseInterceptors,
+} from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { consoleOut } from 'src/debug';
 import { ObjectIdDTO } from 'src/shared/shared.dto';
@@ -7,7 +15,7 @@ import { FileResourceService } from './file-resource.service';
 
 @Controller('file-resource')
 export class FileResourceController {
-  constructor(private readonly fileResourceService: FileResourceService) { }
+  constructor(private readonly fileResourceService: FileResourceService) {}
 
   @Post('')
   @UseInterceptors(FileInterceptor('file'))
@@ -16,20 +24,28 @@ export class FileResourceController {
   }
 
   @Get(':id')
-  async getFile(@Res({ passthrough: true }) res, @Param() params: ObjectIdDTO,) {
+  async getFile(@Res({ passthrough: true }) res, @Param() params: ObjectIdDTO) {
     const obj = await this.fileResourceService.getFile(params.id);
-    try{
-    res.setHeader('Content-Type', obj.fileRes.mimetype);
-    res.setHeader('Content-disposition', 'attachment; filename=' + obj.fileRes.originalName);
-    }
-    catch(e){
+    try {
+      res.setHeader('Content-Type', obj.fileRes.mimetype);
+      res.setHeader(
+        'Content-disposition',
+        'attachment; filename=' + obj.fileRes.originalName,
+      );
+    } catch (e) {
       consoleOut(e);
     }
     res.send(obj.buffer);
   }
 
   @Get(':file/image/type/:avatartype')
-  async getImage(@Res({ passthrough: true }) res, @Param() params: AvatarTypeDTO,) {
-    return await this.fileResourceService.getAvatar(params.file,params.avatartype);
+  async getImage(
+    @Res({ passthrough: true }) res,
+    @Param() params: AvatarTypeDTO,
+  ) {
+    return await this.fileResourceService.getAvatar(
+      params.file,
+      params.avatartype,
+    );
   }
 }

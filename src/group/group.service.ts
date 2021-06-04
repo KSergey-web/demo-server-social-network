@@ -34,7 +34,9 @@ export class GroupService {
     organizationId: string,
     userId: string,
   ) {
-    createGroupDTO.avatar = await this.fileResourceService.saveAvatar(createGroupDTO.avatar);
+    createGroupDTO.avatar = await this.fileResourceService.saveAvatar(
+      createGroupDTO.avatar,
+    );
     const group = new this.groupModel({
       ...createGroupDTO,
       organization: await this.organizationService.checkOrganizationById(
@@ -61,8 +63,10 @@ export class GroupService {
     let groups = await this.groupModel.find({ organization: organizationId });
     groups = groups.filter(group => {
       if (group.isOpen) return true;
-      const check= links.find(link => {
-        return ((link.user.toString() == userId) && (link.group.toString() == group._id));
+      const check = links.find(link => {
+        return (
+          link.user.toString() == userId && link.group.toString() == group._id
+        );
       });
       if (check) return true;
       return false;

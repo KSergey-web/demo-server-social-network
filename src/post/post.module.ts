@@ -12,7 +12,7 @@ import { FileResourceModule } from 'src/file-resource/file-resource.module';
     MongooseModule.forFeature([{ name: Post.name, schema: PostSchema }]),
     GroupModule,
     OrganizationModule,
-    FileResourceModule
+    FileResourceModule,
   ],
   controllers: [PostController],
   providers: [PostService],

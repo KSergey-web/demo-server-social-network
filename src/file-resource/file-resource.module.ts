@@ -6,10 +6,12 @@ import { FileResource, FileResourceSchema } from './schemas/group.schema';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: FileResource.name, schema: FileResourceSchema }]),
+    MongooseModule.forFeature([
+      { name: FileResource.name, schema: FileResourceSchema },
+    ]),
   ],
   controllers: [FileResourceController],
   providers: [FileResourceService],
-  exports:[FileResourceService]
+  exports: [FileResourceService],
 })
 export class FileResourceModule {}

@@ -52,7 +52,7 @@ export class TaskService {
   }
 
   async deleteTasksFromStatus(status: Status) {
-    const tasks = await this.taskModel.deleteMany({status});
+    const tasks = await this.taskModel.deleteMany({ status });
   }
 
   async getTasks(teamId: string): Promise<Array<TaskDocument>> {
@@ -108,22 +108,22 @@ export class TaskService {
 
   checkUserInTask(task: TaskDocument, userId: string) {
     const filter: any = userId;
-    try{
-    if (!task.users.find(filter)) {
-      throw new HttpException(
-        'The user do not has this task',
-        HttpStatus.BAD_REQUEST,
+    try {
+      if (!task.users.find(filter)) {
+        throw new HttpException(
+          'The user do not has this task',
+          HttpStatus.BAD_REQUEST,
+        );
+      }
+      return;
+    } catch (err) {
+      this.teamService.checkEnable(
+        task.team.toString(),
+        userId,
+        roleUserTeamEnum.admin,
       );
     }
-    return;
-  }catch (err) {
-    this.teamService.checkEnable(
-      task.team.toString(),
-      userId,
-      roleUserTeamEnum.admin,
-    );
   }
-}
 
   async addAnswer(dto: AddAnswerDTO, userId: string) {
     const task = await this.getTaskById(dto.task);
@@ -157,7 +157,6 @@ export class TaskService {
     return await task.populate('status').execPopulate();
   }
 
-
   compareDeadline(task: Task, dto: UpdateTaskDTO) {
     if (task.deadline != dto.deadline) {
       this.notificationService.delete(task._id);
@@ -185,24 +184,18 @@ export class TaskService {
     return task;
   }
 
-  async addFileToTask(taskId: string, fileId: any, userId:string) {
+  async addFileToTask(taskId: string, fileId: any, userId: string) {
     const task = await this.getTaskById(taskId);
-    await this.teamService.checkEnable(
-      task.team.toString(),
-      userId
-    );
+    await this.teamService.checkEnable(task.team.toString(), userId);
     task.files.push(fileId);
     await task.save();
     await task.populate('files').execPopulate();
     return task;
   }
 
-  async deleteFileFromTask(taskId: string, fileId: any, userId:string) {
+  async deleteFileFromTask(taskId: string, fileId: any, userId: string) {
     let task = await this.getTaskById(taskId);
-    await this.teamService.checkEnable(
-      task.team.toString(),
-      userId
-    );
+    await this.teamService.checkEnable(task.team.toString(), userId);
     await task.updateOne({ $pull: { files: fileId } });
     task = await this.getTaskById(taskId);
     await task.populate('files').execPopulate();
@@ -241,7 +234,7 @@ export class TaskService {
     const status = await this.statusService.getStatusHistory(
       task.team as string,
     );
-    await task.updateOne({ status: status._id, completionDate:new Date()});
+    await task.updateOne({ status: status._id, completionDate: new Date() });
     return task;
   }
 
@@ -274,12 +267,12 @@ export class TaskService {
       .populate('team')
       .populate('status')
       .exec();
-    tasks.filter(task => (task.status as Status).position != -1) 
+    tasks.filter(task => (task.status as Status).position != -1);
     for (let i = 0; i < tasks.length; ++i) {
       if (this.taskIsExpired(tasks[i])) {
         this.notificationService.create(tasks[i], phaseEnum.expired);
         await tasks[i].updateOne({ color: colorEnum.red });
-        tasks[i].color =  colorEnum.red;
+        tasks[i].color = colorEnum.red;
         this.socketGateway.changedTask(tasks[i]);
       } else if (this.taskIsleft10(tasks[i])) {
         this.notificationService.create(tasks[i], phaseEnum.left10);

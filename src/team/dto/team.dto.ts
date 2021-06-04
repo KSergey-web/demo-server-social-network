@@ -24,7 +24,6 @@ export class CreateTeamDTO {
   @ApiProperty()
   name: string;
 
-
   avatar?: any;
 
   @IsString()

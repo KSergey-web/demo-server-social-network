@@ -25,8 +25,8 @@ import { PostService } from './post.service';
 export class PostController {
   constructor(
     private readonly postService: PostService,
-    private readonly fileResourceService: FileResourceService
-    ) {}
+    private readonly fileResourceService: FileResourceService,
+  ) {}
 
   //Добавить куки с организацией
 
@@ -37,13 +37,15 @@ export class PostController {
   async createPost(
     @Body() createPostDTO: CreatePostDTO,
     @User() { _id }: UserDocument,
-    @UploadedFiles() files: Array<Express.Multer.File>
+    @UploadedFiles() files: Array<Express.Multer.File>,
   ) {
     const resFiles = await this.fileResourceService.saveFiles(files);
-    createPostDTO.files = resFiles.map(((resFile): string => resFile!._id))
-    const post = await  this.postService.createPost(createPostDTO, _id);
-    post.files.map((file:any) => file.toObject())
-    const filesAndBuffers = await this.fileResourceService.getFilesIfImage(post.files);
+    createPostDTO.files = resFiles.map((resFile): string => resFile!._id);
+    const post = await this.postService.createPost(createPostDTO, _id);
+    post.files.map((file: any) => file.toObject());
+    const filesAndBuffers = await this.fileResourceService.getFilesIfImage(
+      post.files,
+    );
     const res = post.toObject();
     res.files = filesAndBuffers;
     return res;
@@ -66,8 +68,10 @@ export class PostController {
     const posts = await this.postService.getPosts(params.id, _id);
     let res = [];
     let filesAndBuffers;
-    for (let i = 0; i < posts.length; ++i){
-      filesAndBuffers = await this.fileResourceService.getFilesIfImage(posts[i].files);
+    for (let i = 0; i < posts.length; ++i) {
+      filesAndBuffers = await this.fileResourceService.getFilesIfImage(
+        posts[i].files,
+      );
       res.push(posts[i].toObject());
       res[i].files = filesAndBuffers;
     }

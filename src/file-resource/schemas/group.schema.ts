@@ -4,15 +4,14 @@ import * as mongoose from 'mongoose';
 
 export type FileResourceDocument = FileResource & Document;
 
-export interface FileResAndBuffer
-{
-  fileRes:FileResource;
+export interface FileResAndBuffer {
+  fileRes: FileResource;
 
-  buffer?:any;
+  buffer?: any;
 }
 @Schema()
 export class FileResource {
-  _id?:string;
+  _id?: string;
 
   @Prop({ required: true })
   mimetype: string;

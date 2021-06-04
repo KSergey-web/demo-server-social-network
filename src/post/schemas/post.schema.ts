@@ -14,7 +14,7 @@ export class Post {
 
   @Prop({ required: true })
   date: Date;
- 
+
   @Prop({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

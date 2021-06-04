@@ -37,7 +37,9 @@ export class OrganizationService {
   ) {}
 
   async create(organizationDTO: CreateOrganizationDTO, userid: string) {
-    organizationDTO.avatar = await this.fileResourceService.saveAvatar(organizationDTO.avatar);
+    organizationDTO.avatar = await this.fileResourceService.saveAvatar(
+      organizationDTO.avatar,
+    );
     const createdOrganization = new this.organizationModel(organizationDTO);
     await createdOrganization.save();
     const organizationUser: IOrganizationUser = {

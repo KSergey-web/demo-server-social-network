@@ -23,7 +23,7 @@ import { SocketModule } from 'src/socket/socket.module';
     ]),
     OrganizationModule,
     forwardRef(() => TaskModule),
-    forwardRef(() =>TeamModule),
+    forwardRef(() => TeamModule),
     SocketModule,
   ],
   controllers: [NotificationController],

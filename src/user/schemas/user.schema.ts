@@ -39,7 +39,7 @@ export class User {
   birthdate: Date;
 
   @Prop({
-    type: mongoose.Schema.Types.ObjectId, 
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'FileResource',
     required: true,
   })

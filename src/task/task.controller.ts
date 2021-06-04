@@ -38,7 +38,7 @@ export class TaskController {
     private readonly taskService: TaskService,
     private readonly teamService: TeamService,
     private readonly statusService: StatusService,
-    private readonly fileResourceService: FileResourceService
+    private readonly fileResourceService: FileResourceService,
   ) {}
 
   @ApiBearerAuth()
@@ -62,16 +62,27 @@ export class TaskController {
   @Post(':id/addfile')
   @UseInterceptors(FileInterceptor('file'))
   @UseGuards(JwtAuthGuard)
-  async addFile(@UploadedFile() file: Express.Multer.File, @Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
+  async addFile(
+    @UploadedFile() file: Express.Multer.File,
+    @Param() params: ObjectIdDTO,
+    @User() { _id }: UserDocument,
+  ) {
     const resFile = await this.fileResourceService.saveFile(file);
-    return await this.taskService.addFileToTask(params.id,resFile._id, _id);
+    return await this.taskService.addFileToTask(params.id, resFile._id, _id);
   }
 
   @ApiBearerAuth()
   @Delete(':taskid/file/:fileid')
   @UseGuards(JwtAuthGuard)
-  async deleteFile( @Param() params: DeleteFileFromTaskDTO, @User() { _id }: UserDocument) {
-    const task = await this.taskService.deleteFileFromTask(params.taskid,params.fileid, _id);
+  async deleteFile(
+    @Param() params: DeleteFileFromTaskDTO,
+    @User() { _id }: UserDocument,
+  ) {
+    const task = await this.taskService.deleteFileFromTask(
+      params.taskid,
+      params.fileid,
+      _id,
+    );
     await this.fileResourceService.deleteFile(params.fileid);
     return task;
   }

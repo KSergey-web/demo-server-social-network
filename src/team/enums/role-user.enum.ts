@@ -3,7 +3,7 @@ export enum roleUserTeamEnum {
   user = 'user',
 }
 
-export enum directionEnum{
+export enum directionEnum {
   right = 'right',
   left = 'left',
 }

@@ -15,7 +15,10 @@ import { consoleOut } from '../debug';
 import { SocketService } from 'src/socket/socket.service';
 import { userStatusEnum } from 'src/socket/enums/socket.enum';
 import { FileResourceService } from 'src/file-resource/file-resource.service';
-import { FileResource, FileResourceDocument } from 'src/file-resource/schemas/group.schema';
+import {
+  FileResource,
+  FileResourceDocument,
+} from 'src/file-resource/schemas/group.schema';
 
 @Injectable()
 export class UserService {
@@ -33,12 +36,10 @@ export class UserService {
       throw new HttpException('User already exists', HttpStatus.BAD_REQUEST);
     }
     const avatar = await this.fileResourceService.saveAvatarForUser(file);
-    const createdUser = new this.userModel({ avatar, ...userDTO});
+    const createdUser = new this.userModel({ avatar, ...userDTO });
     await createdUser.save();
     return this.sanitizeUser(createdUser);
   }
-
-
 
   async findByLogin(userDTO: LoginDTO) {
     const { login, password } = userDTO;

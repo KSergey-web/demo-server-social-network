@@ -21,7 +21,7 @@ import { FileResourceModule } from 'src/file-resource/file-resource.module';
       { name: Status.name, schema: StatusSchema },
     ]),
     SocketModule,
-    forwardRef(() => TaskModule)
+    forwardRef(() => TaskModule),
   ],
   controllers: [TeamController],
   providers: [TeamService, StatusService],
