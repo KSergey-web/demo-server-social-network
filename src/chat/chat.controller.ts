@@ -57,6 +57,14 @@ export class ChatController {
   }
 
   @ApiBearerAuth()
+  @Post('create-private/:id')
+  @UseGuards(JwtAuthGuard)
+  async createPrivateChat(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
+    return await this.chatService.createPrivateChat(params.id, _id);
+    
+  }
+
+  @ApiBearerAuth()
   @Get(':chat/add/:user')
   @UseGuards(JwtAuthGuard)
   async addUser(

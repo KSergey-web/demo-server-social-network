@@ -50,6 +50,49 @@ export class ChatService {
     return createdChat;
   }
 
+  async checkExistPrivateChat(userId: any, userIdme: any){
+    const links = await this.chatUserModel.find({user: userIdme}).populate('chat').exec();
+    for (let i = 0; i < links.length; ++i ){
+      if (links[i].chat.isPrivate) {
+        let check = await this.chatUserModel.findOne({user:userId, chat: links[i].chat});
+        if (check) return links[i].chat; 
+      }
+    }
+    return false
+  }
+
+  async createPrivateChat(userId: string, userIdme: string){
+    const ch = await this.checkExistPrivateChat(userId, userIdme) 
+    if (ch){
+      await this.getPrivateChat(ch, userIdme);
+      return ch;
+    }
+    const createdChat = new this.chatModel({name:'def', avatar: 'def', isPrivate: true});
+    await createdChat.save();
+    const chatUser: IChatUser = {
+      chat: createdChat._id,
+      user: userId,
+    };
+    const chatUser2: IChatUser = {
+      chat: createdChat._id,
+      user: userIdme,
+    };
+    const createdChatUser = new this.chatUserModel(chatUser);
+    await createdChatUser.save();
+    const createdChatUser2 = new this.chatUserModel(chatUser2);
+    await createdChatUser2.save();
+    await this.getPrivateChat(createdChat, userIdme);
+    return createdChat;
+  }
+
+  async getPrivateChat(chat: any, userId: any){
+    const link = await this.chatUserModel.findOne({chat:chat._id as any, user:{ $ne: userId}}).populate('user').exec();
+    if (!link) return;
+    chat.name = link.user.surname + " " + link.user.name;
+    chat.avatar = link.user.avatar.toString();
+    return chat;
+  }
+
   async checkChatById(id: string): Promise<ChatDocument> {
     const chat = await this.chatModel.findById(id);
     if (!chat) {
@@ -100,9 +143,14 @@ export class ChatService {
       })
       .populate('chat');
     let chats: Array<Chat> = [];
-    links.forEach(function(item, i, arr) {
-      chats.push(item.chat);
-    });
+    for( let i = 0; i < links.length; ++i){
+      
+      if (links[i].chat.isPrivate){
+        chats.push(await this.getPrivateChat(links[i].chat as any, userid));
+      }
+      else 
+      chats.push(links[i].chat);
+    }
     return chats;
   }
 

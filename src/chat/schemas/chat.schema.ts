@@ -10,6 +10,9 @@ export class Chat {
   @Prop({ required: true })
   name: string;
 
+  @Prop({default: false})
+  isPrivate: boolean;
+
   @Prop({ required: true })
   avatar: string;
 
