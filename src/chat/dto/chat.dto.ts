@@ -32,3 +32,13 @@ export class AddUsersToChatDTO {
   @ApiProperty()
   users: Array<string>;
 }
+
+export class DeleteUserFromChatDTO {
+  @IsMongoId()
+  @ApiProperty()
+  chat: string;
+
+  @IsMongoId()
+  @ApiProperty()
+  user: string;
+}

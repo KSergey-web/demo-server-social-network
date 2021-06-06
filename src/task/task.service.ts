@@ -254,7 +254,7 @@ export class TaskService {
     else return false;
   }
 
-  taskIsleft10(task: Task): boolean {
+  taskIsLeft10(task: Task): boolean {
     const interval: number = task.deadline.getTime() - task.date.getTime();
     const per10 = (interval * 10) / 100;
     if (task.deadline.getTime() - new Date().getTime() < per10) return true;
@@ -274,17 +274,17 @@ export class TaskService {
         await tasks[i].updateOne({ color: colorEnum.red });
         tasks[i].color = colorEnum.red;
         this.socketGateway.changedTask(tasks[i]);
-      } else if (this.taskIsleft10(tasks[i])) {
+      } else if (this.taskIsLeft10(tasks[i])) {
         this.notificationService.create(tasks[i], phaseEnum.left10);
       }
     }
   }
 
   onApplicationBootstrap() {
-    this.initTimerForTask();
+    this.initTimerForTasks();
   }
 
-  initTimerForTask() {
+  initTimerForTasks() {
     let timerId = setInterval(() => {
       this.checkPhaseForTasks();
     }, 10000);

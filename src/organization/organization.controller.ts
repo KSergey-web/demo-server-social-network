@@ -84,7 +84,7 @@ export class OrganizationController {
       user,
       params.userId,
     );
-    return 'Worker is fired';
+    return {message:'Worker is fired'};
   }
 
   @ApiBearerAuth()

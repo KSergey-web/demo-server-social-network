@@ -24,6 +24,7 @@ import {
   AddChatUserDTO,
   AddUsersToChatDTO,
   CreateChatDTO,
+  DeleteUserFromChatDTO,
 } from './dto/chat.dto';
 
 @ApiTags('chat')
@@ -49,15 +50,23 @@ export class ChatController {
   }
 
   @ApiBearerAuth()
-  @Delete('leave/:id')
+  @Delete(':id/leave')
   @UseGuards(JwtAuthGuard)
   async leaveChat(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     await this.chatService.leaveChat(params.id, _id);
-    return 'you leave chat';
+    return {message: 'you leave chat'};
   }
 
   @ApiBearerAuth()
-  @Post('create-private/:id')
+  @Delete(':chat/user/:user')
+  @UseGuards(JwtAuthGuard)
+  async deleteUserFromChat(@Param() params: DeleteUserFromChatDTO, @User() { _id }: UserDocument) {
+    //await this.chatService.leaveChat(params.id, _id);
+    return //{message: 'you leave chat'};
+  }
+
+  @ApiBearerAuth()
+  @Post('private/user/:id')
   @UseGuards(JwtAuthGuard)
   async createPrivateChat(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     return await this.chatService.createPrivateChat(params.id, _id);

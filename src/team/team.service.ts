@@ -202,6 +202,15 @@ export class TeamService {
     return links.map((item): User => item.user as User);
   }
 
+  async getTeamUserLinks(teamId: string, userId: string): Promise<Array<TeamUserLink>> {
+    await this.checkEnable(teamId, userId);
+    let links = await this.teamUserLinkModel
+      .find({ team: teamId })
+      .populate('user')
+      .exec();
+    return links;
+  }
+
   async addStatus(dto: AddStatusDTO, userId: string): Promise<Status> {
     await this.checkEnable(dto.team, userId, roleUserTeamEnum.admin);
     return await this.statusService.addStatus(dto);

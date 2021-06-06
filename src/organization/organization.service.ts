@@ -149,7 +149,6 @@ export class OrganizationService {
       user: user,
       organization: organization,
     });
-    await this.checkOwnerOrganization(userlink);
     return await userlink.deleteOne();
   }
 

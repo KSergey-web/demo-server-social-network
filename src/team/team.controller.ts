@@ -20,6 +20,7 @@ import { User } from 'src/utilities/user.decorator';
 import {
   AddStatusDTO,
   AddTeamUserLinkDTO,
+  ChangeRoleUserDTO,
   CreateTeamDTO,
   DeleteStatusDTO,
   DeleteTeamUserLinkDTO,
@@ -64,6 +65,17 @@ export class TeamController {
   }
 
   @ApiBearerAuth()
+  @Patch(':id/user/role')
+  @UseGuards(JwtAuthGuard)
+  async changeRoleUser(
+    @Body() dto: ChangeRoleUserDTO,
+    @User() { _id }: UserDocument,
+    @Param() params: ObjectIdDTO,
+  ) {
+    return //await this.teamService.updateTeam(updateTeamDTO, params.id, _id);
+  }
+
+  @ApiBearerAuth()
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
   async deleteTeam(
@@ -84,7 +96,7 @@ export class TeamController {
   }
 
   @ApiBearerAuth()
-  @Delete(':team/deleteuser/:user')
+  @Delete(':team/user/:user')
   @UseGuards(JwtAuthGuard)
   async fireUser(
     @Param() params: DeleteTeamUserLinkDTO,
@@ -108,6 +120,13 @@ export class TeamController {
   @UseGuards(JwtAuthGuard)
   async getUsers(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
     return await this.teamService.getUsers(params.id, _id);
+  }
+
+  @ApiBearerAuth()
+  @Get(':id/links')
+  @UseGuards(JwtAuthGuard)
+  async getTeamUserLinks(@Param() params: ObjectIdDTO, @User() { _id }: UserDocument) {
+    return await this.teamService.getTeamUserLinks(params.id, _id);
   }
 
   @ApiBearerAuth()

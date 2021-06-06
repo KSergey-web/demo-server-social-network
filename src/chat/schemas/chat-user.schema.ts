@@ -18,8 +18,6 @@ export class ChatUser {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
   user: User;
 
-
-
   @Prop({ select: false })
   __v: Number;
 }

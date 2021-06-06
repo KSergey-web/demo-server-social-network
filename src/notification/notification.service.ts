@@ -42,7 +42,7 @@ export class NotificationService {
     return { days, hours, minutes };
   }
 
-  async getNotification(userId: string) {
+  async getNotification(userId: string): Promise<Array<{}>> {
     const links = await this.notificationUserLinkModel
       .find({ user: userId })
       .populate('notification')

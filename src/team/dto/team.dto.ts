@@ -38,6 +38,15 @@ export class UpdateTeamDTO extends OmitType(PartialType(CreateTeamDTO), [
   'organization',
 ] as const) {}
 
+export class ChangeRoleUserDTO{
+  @IsMongoId()
+  @ApiProperty()
+  user: string;
+
+  @ApiProperty()
+  roleUser: string;
+}
+
 export class AddTeamUserLinkDTO {
   @IsMongoId()
   @ApiProperty()
