@@ -95,12 +95,7 @@ export class TaskController {
     @User() { _id }: UserDocument,
   ) {
     const status = await this.statusService.getStatusById(dto.status);
-    await this.teamService.checkEnable(
-      status.team as string,
-      _id,
-      roleUserTeamEnum.admin,
-    );
-    return await this.taskService.changeStatus(dto, status.team as string);
+    return await this.taskService.changeStatus(dto, status.team as string, _id);
   }
 
   @ApiBearerAuth()

@@ -101,8 +101,9 @@ export class TeamService {
     link: TeamUserLinkDocument,
     ...roles: Array<roleUserTeamEnum>
   ): Promise<TeamUserLinkDocument> {
+    consoleOut(roles);
     let access: boolean = false;
-    let rolestr: string;
+    let rolestr: string = '';
     roles.forEach(function(item, i, arr) {
       if (item == link.roleUser) {
         access = true;
@@ -116,6 +117,20 @@ export class TeamService {
       );
     }
     return link;
+  }
+
+  async getRole(teamId: string, userId: string){
+    consoleOut(teamId);
+    consoleOut(userId);
+    const link = await this.teamUserLinkModel.findOne({team:teamId, user:userId});
+    consoleOut(link)
+    if (!link){
+      throw new HttpException(
+        `No link`,
+        HttpStatus.UNAUTHORIZED,
+      );
+    }
+    return{roleUser: link.roleUser}
   }
 
   async updateTeam(

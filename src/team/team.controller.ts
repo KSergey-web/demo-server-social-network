@@ -76,6 +76,16 @@ export class TeamController {
   }
 
   @ApiBearerAuth()
+  @Get(':id/role')
+  @UseGuards(JwtAuthGuard)
+  async getRole(
+    @User() { _id }: UserDocument,
+    @Param() params: ObjectIdDTO,
+  ) {
+    return await this.teamService.getRole(params.id, _id);
+  }
+
+  @ApiBearerAuth()
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
   async deleteTeam(

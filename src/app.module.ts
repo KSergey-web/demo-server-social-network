@@ -29,9 +29,9 @@ import { FileResourceModule } from './file-resource/file-resource.module';
     SocketModule,
     //ChatModule,
     MessageModule,
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'static'),
-    }),
+    // ServeStaticModule.forRoot({
+    //   rootPath: join(__dirname, '..', 'static'),
+    // }),
     GroupModule,
     PostModule,
     TeamModule,

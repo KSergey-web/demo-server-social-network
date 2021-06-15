@@ -42,6 +42,7 @@ export class ChatService {
     };
     const createdChatUser = new this.chatUserModel(chatUser);
     await createdChatUser.save();
+    this.socketService.addUserToRoom(userId, createdChat._id );
     if (chatDTO.users) {
       chatDTO.users.forEach(async user => {
         await this.addUser({ chat: createdChat._id, user }, userId);
@@ -81,6 +82,8 @@ export class ChatService {
     await createdChatUser.save();
     const createdChatUser2 = new this.chatUserModel(chatUser2);
     await createdChatUser2.save();
+    this.socketService.addUserToRoom(userId, createdChat._id );
+    this.socketService.addUserToRoom(userIdme, createdChat._id );
     await this.getPrivateChat(createdChat, userIdme);
     return createdChat;
   }

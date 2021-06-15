@@ -37,7 +37,7 @@ export class TaskService {
     private readonly statusService: StatusService,
     @Inject(forwardRef(() => NotificationService))
     private readonly notificationService: NotificationService,
-  ) {}
+  ) { }
 
   async createTask(dto: CreateTaskDTO) {
     const task = new this.taskModel({ ...dto, date: new Date() });
@@ -65,11 +65,26 @@ export class TaskService {
       .exec();
   }
 
+  isExecutor(task: TaskDocument, userId: string): boolean {
+    for (let i = 0; i < task.users.length; ++i) {
+      if (task.users[i].toString() == userId) return true;
+    }
+    return false;
+  }
+
   async changeStatus(
     dto: ChangeStatusDTO,
-    teamId: string,
+    teamId: string
+    , userId: string
   ): Promise<TaskDocument> {
     const task = await this.taskModel.findById(dto.task);
+    if (!this.isExecutor(task, userId)) {
+      await this.teamService.checkEnable(
+        task.team as string,
+        userId,
+        roleUserTeamEnum.admin,
+      );
+    }
     if (task.team.toString() != teamId) {
       throw new HttpException(
         'This Task is not belong this team',
@@ -235,6 +250,7 @@ export class TaskService {
       task.team as string,
     );
     await task.updateOne({ status: status._id, completionDate: new Date() });
+    this.socketGateway.changedTask(task);
     return task;
   }
 
@@ -263,12 +279,13 @@ export class TaskService {
 
   async checkPhaseForTasks() {
     let tasks = await this.taskModel
-      .find({ color: colorEnum.orange })
+      .find({ color: colorEnum.orange})
       .populate('team')
       .populate('status')
       .exec();
     tasks.filter(task => (task.status as Status).position != -1);
     for (let i = 0; i < tasks.length; ++i) {
+      if (tasks[i].status.position == -1) continue;
       if (this.taskIsExpired(tasks[i])) {
         this.notificationService.create(tasks[i], phaseEnum.expired);
         await tasks[i].updateOne({ color: colorEnum.red });
@@ -287,7 +304,7 @@ export class TaskService {
   initTimerForTasks() {
     let timerId = setInterval(() => {
       this.checkPhaseForTasks();
-    }, 10000);
+    }, 1000);
     return timerId;
   }
 }
