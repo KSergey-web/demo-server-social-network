@@ -247,4 +247,8 @@ export class OrganizationService {
       .exec();
     return links;
   }
+
+  async getUser(userId): Promise<UserDocument>{
+    return await this.userService.checkUserById(userId);
+  }
 }
