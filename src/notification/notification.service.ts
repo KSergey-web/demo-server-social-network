@@ -22,17 +22,17 @@ import * as nodemailer from 'nodemailer'
 @Injectable()
 export class NotificationService {
 
-        // create reusable transporter object using the default SMTP transport
+  // create reusable transporter object using the default SMTP transport
   transporter = nodemailer.createTransport({
-          host: "smtp.mail.ru",
-          port: 465,
-          secure: true, // true for 465, false for other ports
-          auth: {
-            user: 'inwork1@bk.ru', // generated ethereal user
-            pass: 'Kulaev6324ab', // generated ethereal password
-          },
-        });
-  
+    host: "smtp.mail.ru",
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: 'inwork1@bk.ru', // generated ethereal user
+      pass: 'Kulaev6324ab', // generated ethereal password
+    },
+  });
+
 
   constructor(
     @InjectModel(Notification.name)
@@ -110,22 +110,22 @@ export class NotificationService {
       await createdNotificationUser.save();
       this.socketService.newNotificationEvent(user.toString());
       user = await this.organizationService.getUser(user);
-      try{      
-      let pf: string;
-      const org = await this.organizationService.checkOrganizationById(not.organization as string);
-      const head = `<p>Организация: <b>${org.name}</b> <br/> Команда: <b>${(task.team as Team).name}</b> <br/></p>`
-      not.phase == phaseEnum.left10 ? pf = `<p>Задача <b>"${task.name}"</b> скоро будет просрочена</p>`: pf = `<p>Срок отведенный на выполнение задачи <b>"${task.name}"</b> истек</p>`  
-      // send mail with defined transport object
-      let info = await this.transporter.sendMail({
-        from: '"InWork 👻" <inwork1@bk.ru>', // sender address
-        to: user.email, // list of receivers
-        subject: "Уведомление", // Subject line
-        text: head + pf, // plain text body
-      html: head + pf, // html body
-      });
-    } catch (e){ consoleOut(e,2)}
+      try {
+        let pf: string;
+        const org = await this.organizationService.checkOrganizationById(not.organization as string);
+        const head = `<p>Организация: <b>${org.name}</b> <br/> Команда: <b>${(task.team as Team).name}</b> <br/></p>`
+        not.phase == phaseEnum.left10 ? pf = `<p>Задача <b>"${task.name}"</b> скоро будет просрочена</p>` : pf = `<p>Срок отведенный на выполнение задачи <b>"${task.name}"</b> истек</p>`
+        // send mail with defined transport object
+        let info = await this.transporter.sendMail({
+          from: '"InWork 👻" <inwork1@bk.ru>', // sender address
+          to: user.email, // list of receivers
+          subject: "Уведомление", // Subject line
+          text: head + pf, // plain text body
+          html: head + pf, // html body
+        });
+      } catch (e) { consoleOut(e, 2) }
     });
-    
+
   }
 
   async delete(taskId: string) {
