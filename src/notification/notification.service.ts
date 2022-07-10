@@ -28,8 +28,8 @@ export class NotificationService {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'inwork1@bk.ru', // generated ethereal user
-      pass: 'Kulaev6324ab', // generated ethereal password
+      user: process.env.email, // generated ethereal user
+      pass: process.env.password, // generated ethereal password
     },
   });
 
